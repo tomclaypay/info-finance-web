@@ -1,0 +1,98 @@
+{
+  "heading": "About us",
+  "aboutInfo": {
+    "title": "What we offer",
+    "top": "provide comprehensive information about brokers to help traders make the best decision possible. We help traders compare and evaluate the services of several brokers, sharing their trading experiences and avoid fraudulent ones. ",
+    "t1": "Comprehensive details about brokers",
+    "t2": "Bring you latest market news and trends",
+    "t3": "Create a community for professional traders",
+    "bottom": "We also help traders resolve common trading problems"
+  },
+  "support": {
+    "title": "Assist traders having problems with broker",
+    "top": "Our professional teams have successfully helped thousands of traders get back money from fraudulent brokers. These cases include price manipulation practices, misappropriation of clients' funds, and withholding of client money. Our approaches are totally legal, relying mainly on thorough investigations and negotiations, ensuring our clients take back the most of their fund.   ",
+    "t1": {
+      "t": "Customer support",
+      "d": "Our customer support team has had more than 10 years of experience handling report from customer."
+    },
+    "t2": {
+      "t": "Investigation team",
+      "d": "Our investigation team are based in Europe and Vietnam, responsible for case analysis and collecting technical data."
+    },
+    "t3": {
+      "t": "Lawyers",
+      "d": "InfoFinance has two law offices in Hanoi and Ho Chi Minh City, Vietnam. The lawyers will assist clients if the case is brought to court."
+    },
+    "t4": {
+      "t": "Legal team",
+      "d": "The legal team is responsible for case analysis, gathering evidence and providing legal assistance."
+    }
+  },
+  "vision": {
+    "title": "Vision and Mission",
+    "top": "Become the greatest broker hub where investors and traders can find accurate and up-to-date information about any broker.",
+    "t1": "Commit to defend investors' rights in fraud case and avoid common mistakes that cause them to lose money to fraudsters.",
+    "t2": "Create an inclusive community for traders and investors worldwide, where everyone can learn from each other and beat the market together.",
+    "t3": "Be the friendly guide for new investors who just put their first step into the trillion dollar market, to help them not just survive but grow and become an expert in the market."
+  },
+  "coreValue": {
+    "title": "Core Values",
+    "top": "We aim to be the most trusted partner of brokers and traders. To achieve the goal, we adhere to these core values:",
+    "t1": {
+      "t": "INTEGRITY",
+      "d": "We uphold integrity and transparency while helping our customers"
+    },
+    "t2": {
+      "t": "RESPECT",
+      "d": "We respect our mission, our partners and our investors. We take pride in what we are doing because we believe we are helping a huge community."
+    },
+    "t3": {
+      "t": "FAIRNESS",
+      "d": "We always seek a fair solution for our partners and customers."
+    },
+    "t4": {
+      "t": "COMPLIANCE",
+      "d": "We respect and put in our utmost effort to comply with international law and local regulations."
+    },
+    "t5": {
+      "t": "ETHICS",
+      "d": "We respect all the ethical standard set by the market and society"
+    }
+  },
+  "partner": {
+    "title": "Partner",
+    "top": "Info Finance are proud to announce our partnerships with MerriTrade, The Brokers, Investo and Traderhub. These partnerships allow us to create a worldwide trading community.",
+    "bottom": "Allowing us to bring better services and solutions to each and every trader."
+  },
+  "contact": {
+    "title": "Contact us",
+    "top": "Feel free to leave us a message and we will reply as soon as possible",
+    "t1": {
+      "t": "Hotline",
+      "d": "+84969116052"
+    },
+    "t2": {
+      "t": "Customer service",
+      "d": "cs@infofinance.com"
+    },
+    "t3": {
+      "t": "Technical team",
+      "d": ""
+    },
+    "bottom": "Social media"
+  },
+  "form": {
+    "t1": {
+      "t": "Full name",
+      "d": "Input your full name"
+    },
+    "t2": {
+      "t": "Email",
+      "d": "Input email"
+    },
+    "t3": {
+      "t": "Message",
+      "d": "Type your message"
+    }
+  }
+}

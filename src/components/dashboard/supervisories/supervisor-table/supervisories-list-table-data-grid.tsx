@@ -1,0 +1,209 @@
+import { ROWS_PER_PAGE_OPTIONS } from '@app/components/common'
+import TextCellGrid from '@app/components/common/TextCellGrid'
+import ThumbnailCell from '@app/components/common/ThumbnailCell'
+import ActionButton from '@app/components/dashboard/common/action-button'
+import { Supervisor } from '@app/interfaces/supervisor'
+import { Stack } from '@mui/material'
+// import { DataGrid, GridColDef } from '@mui/x-data-grid'
+import { DataGridPro, GridColDef } from '@mui/x-data-grid-pro'
+import { format, parseISO } from 'date-fns'
+import { useRouter } from 'next/router'
+
+interface NationalsListTableDataGridProps {
+  supervisories?: Supervisor[]
+  totalRows?: number
+  rowsPerPage: number
+  page: number
+  // onRowsPerPageChange: (event: any) => void
+  onPaginationModelChange: (model: any, details: any) => void
+  handleSortFromServer?: (column: any) => void
+}
+
+const SupervisoriesListTableDataGrid = (props: NationalsListTableDataGridProps) => {
+  const { supervisories, totalRows, page, rowsPerPage, onPaginationModelChange, handleSortFromServer } = props
+  const router = useRouter()
+
+  const columns: GridColDef[] = [
+    {
+      field: 'logo',
+      headerName: 'LOGO',
+      filterable: false,
+      sortable: false,
+      width: 180,
+      renderCell: (params: any) => <ThumbnailCell src={params.value} />,
+    },
+    {
+      field: 'name',
+      headerName: 'TÊN',
+      filterable: false,
+      align: 'center',
+      // sortable: false,
+      headerAlign: 'center',
+      width: 300,
+      renderCell: (params) => <TextCellGrid wrap={true}>{params.value}</TextCellGrid>,
+    },
+
+    {
+      field: 'abbreviation_name',
+      headerName: 'TÊN RÚT GỌN',
+      filterable: false,
+      align: 'center',
+      // sortable: false,
+      headerAlign: 'center',
+      width: 190,
+      renderCell: (params) => <TextCellGrid>{params.value}</TextCellGrid>,
+    },
+
+    {
+      field: 'icon',
+      headerName: 'ICON',
+      filterable: false,
+      sortable: false,
+      width: 180,
+      renderCell: (params: any) => <ThumbnailCell src={params.value} />,
+    },
+    {
+      field: 'national',
+      headerName: 'TÊN QUỐC GIA',
+      filterable: false,
+      align: 'center',
+      // sortable: false,
+      headerAlign: 'center',
+      width: 190,
+      renderCell: (params) => <TextCellGrid wrap={true}>{params.value?.name}</TextCellGrid>,
+    },
+
+    {
+      field: 'created_at',
+      headerName: 'TẠO NGÀY',
+      headerAlign: 'center',
+      align: 'center',
+      filterable: false,
+      // sortable: false,
+      width: 180,
+      renderCell: (params) => <TextCellGrid>{`${format(parseISO(params.value), 'dd/MM/yyyy HH:mm')}`}</TextCellGrid>,
+    },
+    {
+      field: 'updated_at',
+      headerName: 'CHỈNH SỬA LẦN CUỐI',
+      headerAlign: 'center',
+      align: 'center',
+      filterable: false,
+      // sortable: false,
+      width: 180,
+      renderCell: (params) => <TextCellGrid>{`${format(parseISO(params.value), 'dd/MM/yyyy HH:mm')}`}</TextCellGrid>,
+    },
+    {
+      field: 'id',
+      sortable: false,
+      filterable: false,
+      headerName: 'HÀNH ĐỘNG',
+      width: 150,
+      align: 'center',
+      headerAlign: 'center',
+      disableColumnMenu: true,
+      renderCell: (params) => (
+        <Stack direction="row" spacing={1.5}>
+          <ActionButton
+            type="edit"
+            onClick={() =>
+              router.push({
+                pathname: `/dashboard/supervisories/${params.value}/edit`,
+                query: {
+                  page: page,
+                  limit: rowsPerPage,
+                },
+              })
+            }
+          />
+        </Stack>
+      ),
+    },
+  ]
+
+  return (
+    <DataGridPro
+      sx={{
+        '& .mui-style-1iyq7zh-MuiDataGrid-columnHeaders': {
+          backgroundColor: '#F3F4F6',
+        },
+
+        '& .mui-style-y599qu': {
+          backgroundColor: '#F3F4F6',
+        },
+        '& .mui-style-1fe2u81': {
+          backgroundColor: '#F3F4F6',
+        },
+        '& .mui-style-9ffb5l': {
+          borderTop: '0.5px solid rgba(0,0,0,0.5)!important',
+        },
+
+        '& .mui-style-8ruzqp-MuiDataGrid-pinnedColumnHeaders': {
+          backgroundColor: '#F3F4F6',
+        },
+
+        '& .mui-style-1jbbcbn-MuiDataGrid-columnHeaderTitle': {
+          fontWeight: '600',
+          fontSize: '12px',
+          color: '#374151',
+        },
+
+        '& .mui-style-cc8tf1': {
+          fontWeight: '600',
+          fontSize: '12px',
+          color: '#374151',
+        },
+
+        '& .MuiDataGrid-columnSeparator': {
+          visibility: 'visible',
+        },
+
+        '& .MuiDataGrid-iconSeparator': {
+          color: 'rgba(0,0,0,0.5)',
+        },
+
+        '& .MuiDataGrid-cell:hover': {
+          color: 'primary.main',
+        },
+
+        '& .MuiDataGrid-row': {
+          borderTop: '0.5px solid rgba(0,0,0,0.2)',
+        },
+
+        '& .mui-style-wop1k0-MuiDataGrid-footerContainer': {
+          borderTop: '0.5px solid rgba(0,0,0,0.5)',
+        },
+        '& .MuiDataGrid-cell': {
+          border: 'none',
+        },
+      }}
+      componentsProps={{
+        pagination: {
+          labelRowsPerPage: 'Số hàng trên 1 trang',
+        },
+      }}
+      rowHeight={84}
+      autoHeight
+      pagination
+      paginationMode="server"
+      sortingMode="server"
+      onSortModelChange={handleSortFromServer}
+      rowCount={totalRows}
+      rows={supervisories || []}
+      columns={columns}
+      // rowsPerPageOptions={ROWS_PER_PAGE_OPTIONS}
+      // page={page}
+      // pageSize={rowsPerPage}
+      // disableSelectionOnClick
+      // onPageChange={onPageChange}
+      // onPageSizeChange={onRowsPerPageChange}
+      pageSizeOptions={ROWS_PER_PAGE_OPTIONS}
+      paginationModel={{ page: page, pageSize: rowsPerPage }}
+      onPaginationModelChange={onPaginationModelChange}
+      disableRowSelectionOnClick
+      initialState={{ pinnedColumns: { right: ['id'] } }}
+    />
+  )
+}
+
+export default SupervisoriesListTableDataGrid

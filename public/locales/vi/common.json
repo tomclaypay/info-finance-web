@@ -1,0 +1,194 @@
+{
+  "searchPlacehoder": "Nhập tên sàn cần tìm kiếm",
+  "search": "Tìm kiếm",
+  "nonResult": "Thật tiếc, không có kết quả bạn mong muốn!",
+  "thanks": "cảm ơn",
+  "image": "Hình ảnh",
+  "all": "Tất cả",
+  "profile": "Trang cá nhân",
+  "logOut": "Đăng xuất",
+  "logIn": "Đăng nhập",
+  "header": {
+    "home": "Trang chủ",
+    "complaint": "Đánh giá sàn",
+    "news": "Tin tức",
+    "exchange": "Tra cứu sàn",
+    "aboutUs": "Về chúng tôi",
+    "event": "Sự kiện",
+    "knowledge": "Kiến thức",
+    "economic-calendar": "Lịch kinh tế",
+    "payment-service": "Dịch vụ thanh toán"
+  },
+  "footer": {
+    "description1": "Website Info Finance (Mã số doanh nghiệp là 202130301C) được thành lập tại C3 HOLDINGS PTE. LTD. Singapore là đơn vị cung cấp thông tin của tất cả các sàn môi giới trên toàn cầu.Giấy phép số 32/GP-STTTT do Sở Thông tin và Truyền thông Thành phố Hồ Chí Minh cấp ngày 01 tháng 07 năm 2022.",
+    "description2": "Tất cả thông tin trên trang web của chúng tôi mang tính chất tham khảo tổng hợp, nhà đầu tư cần cân nhắc và tự chịu trách nhiệm về mọi hành vi đầu tư của mình. Info Finance không chịu trách nhiệm về bất kỳ hành động nào của nhà đầu tư.",
+    "ground": {
+      "t1": "Về Info Finance",
+      "t2": "Câu hỏi thường gặp",
+      "t3": "Điều khoản sử dụng",
+      "t4": "Chính sách bảo mật",
+      "t5": "Chúng tôi hân hạnh hợp tác cùng",
+      "t6": "Mạng xã hội",
+      "t7": "Tin tức",
+      "t8": "Đánh giá sàn"
+    },
+    "contact": {
+      "t1": {
+        "t": "Địa chỉ liên hệ",
+        "d": "1 đường số 10, phường Thảo Điền, quận 2, TP. Hồ Chí Minh"
+      },
+      "t2": {
+        "t": "Liên hệ hợp tác"
+      }
+    }
+  },
+  "text": {
+    "seeMore": "Xem thêm",
+    "seeLess": "Rút gọn",
+    "moreInfo": "Tìm hiểu thêm",
+    "copied": "Liên kết đã được sao chép!"
+  },
+  "button": {
+    "send": "Gửi",
+    "cancel": "Yêu cầu huỷ",
+    "complaint": {
+      "send": "Gửi đánh giá",
+      "continue": "Tiếp tục đánh giá",
+      "cancel": "Huỷ đánh giá",
+      "your": "Đơn đánh giá của bạn"
+    }
+  },
+  "news": {
+    "another": "Các tin khác",
+    "seeAll": "Xem tất cả",
+    "title": "Tin tức",
+    "latest": "Tin tức mới nhất",
+    "relative": "Tin liên quan",
+    "moreLatest": "Xem thêm tin tức mới nhất",
+    "hot": "Tin nổi bật",
+    "world": "Tin tức thế giới",
+    "moreWorld": "Xem thêm tin tức thế giới",
+    "warning": "Tin cảnh báo",
+    "moreWarning": "Xem thêm tin tức cảnh báo",
+    "market": "Tin tức thị trường",
+    "moreMarket": "Xem thêm tin tức thị trường",
+    "domestic": "Tin tức trong nước",
+    "moreDomestic": "Xem thêm tin tức trong nước",
+    "other": "Tin khác",
+    "moreOther": "Xem thêm tin khác",
+    "categories": {
+      "t1": "Tất cả",
+      "t2": "Tin thị trường",
+      "t3": "Tin cảnh báo",
+      "t4": "Tin thế giới",
+      "t5": "Tin trong nước",
+      "t6": "Tin khác"
+    }
+  },
+  "knowledge": {
+    "title": "Kiến thức",
+    "investment": "Kiến thức đầu tư",
+    "broker": "Lựa chọn nhà môi giới",
+    "news": "Các kiến thức mới nhất",
+    "another": "Các kiến thức khác",
+    "moreInvestment": "Xem thêm kiến thức đầu tư",
+    "moreBroker": "Xem thêm lựa chọn nhà môi giới",
+    "moreInvestmentIdea": "Xem thêm ý tưởng đầu tư",
+    "seeAll": "Xem tất cả",
+    "relative": "Kiến thức liên quan",
+    "categories": {
+      "t1": "Tất cả",
+      "t2": "Kiến thức đầu tư",
+      "t3": "Lựa chọn nhà môi giới",
+      "t4": "Ý tưởng đầu tư"
+    },
+    "investmentIdea": "Ý tưởng đầu tư"
+  },
+  "calendar": {
+    "economic": "Lịch Kinh Tế",
+    "dividends": "Lịch Cổ Tức"
+  },
+  "complaints": {
+    "top": "",
+    "categories": {
+      "t1": "Lừa đảo",
+      "t2": "Hộp thư đánh giá và góp ý từ nhà đầu tư",
+      "t3": "Đánh giá tổng quát",
+      "t4": "Lý do khác"
+    },
+    "different": "Xem các khiếu nại khác",
+    "my": "Đơn khiếu nại của bạn",
+    "years": "Website",
+    "year": "năm",
+    "done": "Gửi khiếu nại thành công!",
+    "thanks": "Cảm ơn bạn đã gửi khiếu nại. Chúng tôi sẽ liên hệ bạn trong vài ngày tới"
+  },
+  "event": {
+    "t1": "Sự kiện sắp diễn ra",
+    "t2": "Sự kiện đã đăng ký",
+    "t3": "Đổi sang dạng lịch",
+    "t4": "Đổi sang danh sách",
+    "t5": "Lịch sự kiện",
+    "t6": "Sự kiện đã kết thúc",
+    "detail": "Chi tiết",
+    "registered": "Đã đăng ký",
+    "register": "Đăng ký",
+    "participants": "Người tham gia",
+    "sponsor": "Nhà tài trợ",
+    "organization": "Ban tổ chức",
+    "share": "Chia sẻ",
+    "finished": "Đã kết thúc",
+    "image": "Hình ảnh của sự kiện"
+  },
+  "tabs": {
+    "tab1": "Tra cứu sàn",
+    "tab2": "Đánh giá sàn",
+    "tab3": "Tin tức"
+  },
+  "authen": {
+    "displayName": "Tên hiển thị",
+    "emailPlaceholder1": "Email",
+    "login": "Đăng nhập",
+    "signup": "Đăng ký",
+    "register": "Đăng ký tài khoản",
+    "questions": "Bạn chưa có tài khoản?",
+    "googleLogin": "Đăng nhập với Google",
+    "facebookLogin": "Đăng nhập với Facebook",
+    "or": "hoặc",
+    "emailPlaceholder": "Địa chỉ email",
+    "missingEmail": "Bạn cần nhập email",
+    "validateEmail": "Email không hợp lệ",
+    "passPlaceholder": "Mật khẩu",
+    "remmember": "Nhớ tài khoản",
+    "fogot": "Quên mật khẩu?",
+    "haveAcc": "Bạn đã có tài khoản?",
+    "iread": "Tôi đã đọc",
+    "policy": "Điều khoản và điều kiện sử dụng"
+  },
+  "exchange-review": {
+    "scam": "scam",
+    "investor-feedback-and-comments-mailbox": "investor-feedback-and-comments-mailbox",
+    "general-review": "general-review",
+    "other-problems": "other-problems",
+    "lua-dao": "scam",
+    "hop-thu-danh-gia-va-gop-y-tu-nha-dau-tu": "investor-feedback-and-comments-mailbox",
+    "danh-gia-tong-quat": "general-review",
+    "ly-do-khac": "other-problems"
+  },
+  "warning-words": {
+    "title": "Miễn trừ trách nhiệm Infofinance.com",
+    "description": "Tất cả thông tin trên trang web của chúng tôi mang tính chất tham khảo tổng hợp, nhà đầu tư cần cân nhắc và tự chịu trách nhiệm về mọi hành vi đầu tư của mình. Info Finance không chịu trách nhiệm về bất kỳ hành động nào của nhà đầu tư."
+  },
+  "update-profile": "Cập nhật thông tin cá nhân",
+  "display-name": "Họ và tên",
+  "email": "Email",
+  "phone": "Số điện thoại",
+  "birthday": "Ngày sinh",
+  "address": "Địa chỉ",
+  "gender": "Giới tính",
+  "male": "Nam",
+  "female": "Nữ",
+  "other": "Khác",
+  "cancel": "Hủy",
+  "save": "Lưu"
+}

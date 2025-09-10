@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+Disallow: */authentication.
+Disallow: */404
+Disallow: */search?*
+Disallow: */tra-cuu-san?*
+Disallow: */broker?*
+Disallow: */fbclid?*
+Disallow: *?category=*
+Disallow: *?page=*
+
+Sitemap: https://infofinance.com/sitemap.xml

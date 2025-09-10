@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  infofx-website:
+    image: 737938582190.dkr.ecr.ap-southeast-1.amazonaws.com/fe-infofx-dev:latest
+    container_name: infofx-website
+    build:
+      context: .
+    restart: always
+    ports:
+      - 3000:3000
+    env_file:
+      - .env.local
+    networks:
+      - infofx-networks
+
+networks:
+  infofx-networks:

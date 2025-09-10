@@ -1,0 +1,91 @@
+{
+  "intro": "Brokers Hub",
+  "search": "Nhập tên sàn cần tìm kiếm",
+  "supervisors": "Về đội ngũ khảo sát của InfoFinance",
+  "topExchange": "Sàn môi giới hàng đầu",
+  "userChoosing": "Người dùng tin chọn",
+  "cheatComplaint": "Khiếu nại lừa đảo",
+  "all": "Tất cả",
+  "ratePoint": "Điểm đánh giá",
+  "readRate": "Đọc đánh giá",
+  "toWebsite": "Đến website",
+  "country": "Quốc gia",
+  "products": "Sản phẩm",
+  "description": "Mô tả",
+  "pointStandard": {
+    "license": "Tất cả các thông tin giấy phép đăng ký trong ngành tài chính Forex, chứng khoán, giao dịch vàng,.. được kiểm duyệt bởi bộ phận Pháp chế Info Finance có kinh nghiệm trong thị trường Tài chính thông qua việc kết nối trực tiếp với các cơ quan có thẩm quyền cấp phép uy tín trên thị trường tài chính toàn cầu.",
+    "market": "Được đánh giá bởi bộ phận Nghiên cứu thị trường của Info Finance trên toàn thế giới dựa trên quy mô phát triển, tính minh bạch trong thị trường và mức ký quỹ bên cơ quan Cấp phép tài chính.",
+    "business": "Được đánh giá bởi bộ phận Nghiên cứu thị trường của Info Finance dựa trên mức độ tăng trưởng của doanh nghiệp, mở rộng thị trường và vốn chủ sở hữu.",
+    "risk": "Được bộ phận Pháp chế Info Finance kiểm soát và hệ thống Artificial Intelligence Info Finance theo dõi và xử lý nhanh chóng như tính thanh khoản, số vốn nhà đầu tư gởi, phản ảnh của khách hàng và tuân thủ các quy định của cơ quan cấp phép, v.v. Sau đó hệ thống Artificial Intelligence thu thập dữ liệu và đưa ra đánh giá tổng hợp",
+    "software": "Được bộ phận IT Info Finance giám sát tính ổn định và pháp lý của phần mềm, tính bảo mật cao và tốc độ xử lý cao của hệ thống, v.v."
+  },
+  "detail": {
+    "fullName": "Tên đầy đủ",
+    "tradingProduct": "Sản phẩm giao dịch",
+    "tradingPlatform": "Nền tảng giao dịch",
+    "status": "Tình trạng giám sát",
+    "supportEmail": "Email hỗ trợ",
+    "supportPhone": "Điện thoại liên hệ",
+    "license": "Giấy phép",
+    "rateRisk": "Chất lượng kiểm soát rủi ro",
+    "rateManage": "Chất lượng quản lý",
+    "rateOperator": "Chất lượng vận hành",
+    "rateSoftware": "Chất lượng phần mềm",
+    "supervisor": "Cơ quan giám sát"
+  },
+  "license": {
+    "introOffice": "Giới thiệu cơ quan pháp lý",
+    "status": "Tình trạng trước mắt",
+    "type": "Loại giấy phép",
+    "country": "Quốc gia, vùng lãnh thổ cai quản",
+    "numOfLicense": "Số giấy phép",
+    "owner": "Công ty được cấp phép",
+    "email": "Email công ty được cấp phép",
+    "website": "Website công ty được cấp phép",
+    "address": "Địa chỉ công ty được cấp phép",
+    "evidence": "Hồ sơ chứng minh của cơ quan chứng nhận",
+    "check": "Kiểm tra hồ sơ giấy phép",
+    "effectiveTime": "Thời gian có hiệu lực",
+    "expirationTime": "Thời gian hết hiệu lực",
+    "phone": "Điện thoại cơ quan được cấp phép"
+  },
+  "supervisor": {
+    "search": "Nhập tên viết tắt"
+  },
+  "comment": {
+    "total": "nhà đầu tư đánh giá sàn này",
+    "have": "Có",
+    "write": "Viết đánh giá của bạn",
+    "exchangePoint": "Điểm sàn",
+    "comment": "Đánh giá về sàn",
+    "edit": "Chỉnh sửa",
+    "send": "Đánh giá",
+    "delete": "Xóa",
+    "editSuccess": "Chỉnh sửa đánh giá thành công",
+    "editFailed": "Chỉnh sửa đánh giá thất bại",
+    "editAgain": "Vui lòng bạn gửi đánh giá lại",
+    "editThanks": "Cảm ơn bạn đã chia sẻ đánh giá của mình",
+    "deleteSuccess": "Xoá đánh giá thành công",
+    "deleteFailed": "Xoá đánh giá thất bại",
+    "deleteThanks": "Cảm ơn bạn đã quan tâm về sàn",
+    "deleteAgain": "Vui lòng bạn xoá đánh giá lại",
+    "sendSuccess": "Gửi đánh giá thành công",
+    "sendFailed": "Gửi đánh giá thất bại",
+    "close": "Đóng",
+    "loginRequest": "Bạn cần đăng nhập để viết đánh giá về sàn này.",
+    "login": "Đăng nhập",
+    "placeholder": "Vui lòng chia sẻ thêm cảm nghĩ của bạn về sàn (200 chữ)."
+  },
+  "complaint": {
+    "list": "Danh sách các khiếu nại về sàn do nhà đầu tư gửi đến InfoFinance để được hỗ trợ",
+    "detail": "Đọc chi tiết"
+  },
+  "filter": {
+    "score": "Lọc theo điểm",
+    "name": "Bộ lọc",
+    "grid": "Lưới",
+    "list": "Danh sách",
+    "latest": "Mới nhất",
+    "oldest": "Cũ nhất"
+  }
+}

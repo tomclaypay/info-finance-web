@@ -1,0 +1,114 @@
+{
+  "home": {
+    "t0": "Các vấn đề trong việc rút tiền từ Tài khoản Nhà đầu tư như sàn giam tiền không rõ nguyên nhân đưa ra nhiều lý do không hợp lý, quy trình rút không rõ ràng hoặc với thời hạn rút quá lâu.",
+    "t1": "Các vấn đề bất kỳ trong việc nhân viên hoặc IB của sàn môi giới tự ý đánh cháy Tài khoản, rút Bonus của nhà đầu tư làm cháy tài khoản,... Hoặc tất cả các vấn đề liên quan trong việc sàn môi giới thao túng, chiếm đoạt tài sản của nhà đầu tư và không có dấu hiệu hoàn trả.",
+    "t2": "Các vấn đề trong việc rút tiền từ Tài khoản Nhà đầu tư, như sàn giam tiền không rõ nguyên nhân, sàn có những dấu hiệu không hoàn trả tài sản cho nhà đầu tư.biện minh nhiều lý do không hợp lý, quy trình rút không rõ ràng hoặc với thời hạn rút quá mức quy định chung.",
+    "t3": "Các vấn đề về mức giá giao dịch công bố tại sàn như giá chênh lệch so với thị trường chung, sàn cố ý thực hiện giao dịch mua bán để tạo ra xu hướng giá giả tạo, dao động thất thường, hoặc phát sinh chốt lời - cắt lỗ không đúng thời điểm,... gây tác động trực tiếp đến phiên giao dịch.",
+    "t4": "Các vấn đề khiếu nại, trục trặc phát sinh khác giữa sàn môi giới và nhà đầu tư trong quá trình giao dịch.",
+    "searchText": "Nhập tên sàn để tìm kiếm",
+    "relativeTitle": "Các khiếu nại liên quan đến sàn: "
+  },
+  "cancelRequest": "Yêu cầu huỷ",
+  "report": "Khiếu nại",
+  "yourComplaint": {
+    "left": {
+      "infoExchange": {
+        "title": "Tra cứu sàn bị khiếu nại",
+        "t1": "Sô năm thành lập",
+        "t2": "Các loại khiếu nại",
+        "t3": "Tên đơn khiếu nại",
+        "t4": "Hợp đồng"
+      },
+      "detail": {
+        "title": "Chi tiết đơn ",
+        "t1": "Loại khiếu nại",
+        "t2": "Nội dung khiếu nại"
+      },
+      "image": "Hình ảnh liên quan"
+    },
+    "right": {
+      "top": "Quá trình xử lý",
+      "bottom": {
+        "title": "Mọi thắc mắc xin vui lòng liên hệ",
+        "t1": "Hotline",
+        "t2": "Chăm sóc khách hàng",
+        "t3": "Thẩm định chất lượng"
+      }
+    },
+    "popUp": {
+      "title": "Lý do hủy của bạn là gì ?",
+      "t1": "Sàn đã liên hệ giải quyết",
+      "t2": "Thay đổi sàn giao dịch",
+      "t3": "Đổi ý, không muốn khiếu nại nữa",
+      "t4": "Lý do khác",
+      "text": "Hãy chúng tôi biết lý do"
+    }
+  },
+  "detail": {
+    "detail": {
+      "t1": "Sàn bị khiếu nại",
+      "t2": "Các khiếu nại khác của sàn"
+    },
+    "middle1a": "Bạn cũng gặp ",
+    "middle1b": "vấn đề ",
+    "middle1c": "tương tự ?",
+    "middle2a": "Hãy để chúng tôi ",
+    "middle2b": "hỗ trợ ",
+    "middle2c": "bạn"
+  },
+  "create": {
+    "title": "Tạo khiếu nại",
+    "banner": {
+      "title": "NÓI KHÔNG VỚI LỪA ĐẢO !",
+      "top": "If you are interested to share, please fill in the form below. Please read our full privacy state before using this form. Please note that you have to fill in all the fields in the form."
+    },
+    "left": {
+      "t1": {
+        "title": "Thông tin cá nhân",
+        "t1": "Tên của bạn"
+      },
+      "t2": {
+        "title": "Tra cứu sàn giao dịch",
+        "t1": "Tên sàn giao dịch",
+        "t2": "Đường liên kết"
+      },
+      "t3": {
+        "title": "Chi tiết đơn ",
+        "t1": "Loại khiếu nại",
+        "t2": "Sẽ rất hữu ích nếu bạn chia sẻ chi tiết với chúng tôi. VD:Xảy ra như thế nào ? - Khi nào ?...."
+      },
+      "t4": {
+        "title": "Tải hình ảnh lên",
+        "t1": "Hình ảnh bằng chứng liên quan đến sự việc"
+      }
+    },
+    "right": "Mọi thắc mắc vui lòng liên hệ",
+    "popUp": {
+      "title": "",
+      "t1": ""
+    }
+  },
+  "your": {
+    "title": "Đơn khiếu nại của bạn",
+    "top": {
+      "send": "Đã gửi",
+      "draft": "Nháp"
+    },
+    "t1": "Ngày tạo",
+    "t2": "Nội dung",
+    "t3": "Phân loại",
+    "t4": "Sàn giao dịch",
+    "t5": "Trạng thái"
+  },
+  "banner1": "NÓI KHÔNG VỚI LỪA ĐẢO!",
+  "phone": "Số điện thoại",
+  "banner2": "Nếu bạn quan tâm để chia sẻ, xin vui lòng điền vào mẫu dưới đây. Vui lòng đọc trạng thái bảo mật đầy đủ của chúng tôi trước khi sử dụng biểu mẫu này. Xin lưu ý rằng bạn phải điền vào tất cả các trường trong biểu mẫu.",
+  "inputAlert": {
+    "require": "Vui lòng nhập thông tin!",
+    "emailMalformed": "Email không đúng định dạng!",
+    "confirmPassword": "Mật khẩu không trùng khớp!",
+    "phoneMalformed": "Số điện thoại không đúng định dạng",
+    "minLength": "Mật khẩu phải 8 ký tự trở lên",
+    "memberPassword": "Mật khẩu phải 8 ký tự trở lên, ít nhất 1 chữ in Hoa, 1 số, 1 chữ thường"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "intro": "Brokers Hub",
+  "search": "Please enter name of the broker",
+  "supervisors": "Info Finance's survey team",
+  "topExchange": "Highly Recommended",
+  "userChoosing": "Trader's Favorites",
+  "cheatComplaint": "Broker complaint",
+  "all": "All",
+  "ratePoint": "Score",
+  "readRate": "Read review",
+  "toWebsite": "Visit broker",
+  "country": "Country",
+  "products": "Products",
+  "description": "Description",
+  "pointStandard": {
+    "license": "All license information registered in the financial industry: Forex, securities, gold trading,.. is moderated by Info Finance Legal department with experiences in the Financial market through direct connection with reputable licensing authorities in the global financial market.",
+    "market": "Evaluated by the Info Finance Market Research departments around the world on growth scale, market transparency and margin levels by the financial licensing authority.",
+    "business": "Evaluated by the Info Finance Market Research departments based on business growth, market expansion and equity.",
+    "risk": "Controlled by the Info Finance Legal department and the Artificial Intelligence Info Finance system that tracks and processes such as liquidity, investor deposite, customer feedback and compliance with licensing authority regulations, etc. Then, the Artificial Intelligence system collects the data and makes an aggregated assessment.",
+    "software": "Monitored by Info Finance IT department for the stability and legality of the software, high security and high processing speed of the system, etc."
+  },
+  "detail": {
+    "fullName": "Full name",
+    "tradingProduct": "Instruments",
+    "tradingPlatform": "Trading platform",
+    "status": "Supervision status",
+    "supportEmail": "Support email",
+    "supportPhone": "Hotline",
+    "license": "License score",
+    "rateRisk": "Risk-control score",
+    "rateManage": "Management score",
+    "rateOperator": "Business score",
+    "rateSoftware": "Software score",
+    "supervisor": "Supervisor"
+  },
+  "license": {
+    "introOffice": "Licensor Introduction",
+    "type": "License Type",
+    "country": "Regulated By",
+    "numOfLicense": "License Number",
+    "owner": "Licensee's name",
+    "email": "Licensee's email",
+    "website": "Approved domains",
+    "address": "Business address",
+    "evidence": "Documents published by Licensor",
+    "check": "View documents",
+    "effectiveTime": "Effective date",
+    "expirationTime": "Expiry date",
+    "phone": "Licensee's telephone number",
+    "status": "Current status"
+  },
+  "supervisor": {
+    "search": "Enter the name of supervisor"
+  },
+  "comment": {
+    "total": "investors rating this broker",
+    "write": "Write your review",
+    "edit": "Edit",
+    "delete": "Delete",
+    "send": "Send",
+    "have": "Have",
+    "exchangePoint": "Rating point of reviews",
+    "comment": "Rating point of reviews",
+    "editSuccess": "Edited your review successfully",
+    "editFailed": "Edited your review failed",
+    "editAgain": "Please, edit your comment again",
+    "editThanks": "Thank you for sharing your review",
+    "deleteSuccess": "Deleted your comment successfully",
+    "deleteFailed": "Deleted your comment failed",
+    "deleteThanks": "Thank you for sharing your review",
+    "deleteAgain": "Please, delete your comment again",
+    "sendSuccess": "Sent your review successfully",
+    "sendFailed": "Sent your review failed",
+    "close": "Close",
+    "loginRequest": "You need to login to write your review this broker.",
+    "login": "Login",
+    "placeholder": "Please share your thoughts about this broker (200 words)."
+  },
+  "complaint": {
+    "list": "List of complaints sent by investors to Info Finance for support",
+    "detail": "See more"
+  },
+  "filter": {
+    "score": "Filter by score",
+    "name": "Filter",
+    "grid": "Grid",
+    "list": "List",
+    "latest": "Latest",
+    "oldest": "Oldest"
+  }
+}

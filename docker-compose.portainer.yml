@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  infofx-website:
+    container_name: infofx-website
+    image: infofx-website
+    build:
+      context: .
+    restart: always
+    ports:
+      - 3000:3000
+    env_file:
+      - stack.env
+    networks:
+      - infofx-networks
+
+networks:
+  infofx-networks:

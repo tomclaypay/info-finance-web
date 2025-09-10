@@ -1,0 +1,85 @@
+.ql-align-right {
+  text-align: right;
+}
+.ql-align-center {
+  text-align: center;
+}
+.ql-align-left {
+  text-align: left;
+}
+
+.slick-dots li {
+  margin: 0px !important;
+}
+
+.slick-dots li button:before {
+  content: none !important;
+}
+.slick-dots li button {
+  border: 0.5px solid #e4e4e4 !important;
+  border-radius: 100%;
+  width: 8px !important;
+  height: 8px !important;
+}
+
+.slick-dots .slick-active > button {
+  background-color: #2a559c !important;
+}
+
+/* go to top ex top = 0 */
+.go-to-top {
+  animation: goToTop 0.3s ease-in-out;
+  animation-fill-mode: both; 
+  transform: translateY(0);
+  transition: all 0.1s ease-in-out;
+}
+@keyframes goToTop {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(calc(-200px));
+  }
+}
+.go-from-top {
+  animation: goFromTop 0.2s ease-in-out;
+  animation-fill-mode: both; 
+  transform: translateY(calc(-200px));
+  transition: all 0.2s ease-in-out;
+}
+@keyframes goFromTop {
+  0% {
+    transform: translateY(calc(-200px));
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.go-to-top-mobile {
+  animation: goToTopMobile 0.3s ease-in-out;
+  animation-fill-mode: both; 
+  transform: translateY(0);
+  transition: all 0.1s ease-in-out;
+}
+@keyframes goToTopMobile {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(calc(-64px));
+  }
+}
+.go-from-top-mobile {
+  animation: goFromTopMobile 0.2s ease-in-out;
+  animation-fill-mode: both; 
+  transform: translateY(calc(-64px));
+  transition: all 0.2s ease-in-out;
+}
+@keyframes goFromTopMobile {
+  0% {
+    transform: translateY(calc(-64px));
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

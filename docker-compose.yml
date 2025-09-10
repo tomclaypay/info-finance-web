@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  info_finance_website:
+    container_name: info_finance_website
+    image: registry.gitlab.com/vnd4992/info-finance-website:prod
+    restart: always
+    ports:
+      - 3000:3000
+    env_file:
+      - ./.env.local

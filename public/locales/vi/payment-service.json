@@ -1,0 +1,35 @@
+{
+  "title": "Dịch vụ thanh toán",
+  "description": "Payment service",
+  "whatIsEpay": {
+    "title": "Giới thiệu EPAY",
+    "description1": "EPAY là hệ thống trung gian thanh toán trực tuyến hiện đại, tiên tiến nhất hiện nay. Đơn vị có trụ sở tại Singapore đã cung cấp hỗ trợ cho bản phát hành đầu tiên tại Việt Nam. Ứng dụng cho phép người dùng xử lý các giao dịch linh hoạt. Thanh toán trong nước và quốc tế sẽ được thực hiện dễ dàng theo cách thuận tiện.",
+    "description2": "Giao diện của ứng dụng có thiết kế thân thiện, dễ sử dụng, không có chi tiết thừa và tiết kiệm thời gian. Quá trình giao dịch nhanh như chớp và cực kỳ an toàn. EPAY sẽ cho phép bạn chuyển tiền cho dịch vụ ngân hàng di động, chuyển khoản, dịch vụ và mọi loại thanh toán hóa đơn, theo dõi chi phí, tỷ giá hối đoái cạnh tranh,..."
+  },
+  "whatWeOffer": "Những gì chúng tôi cung cấp",
+  "service": {
+    "t1": "Giải pháp CNTT cổng thanh toán",
+    "t2": "Hỗ trợ tích hợp",
+    "t3": "Bảo trì phần mềm trong công nghệ tài chính",
+    "t4": "Hỗ trợ CNTT cho người dùng cuối",
+    "t5": "Hỗ trợ hành chính",
+    "t6": "Tư vấn tiếp thị trong lĩnh vực công nghệ tài chính"
+  },
+  "whyChooseUs": "Tại sao chọn chúng tôi",
+  "reasons": {
+    "t1": "Bảo vệ rủi ro",
+    "d1": "An toàn tiền gửi không phải là cam kết duy nhất tại EPAY. Bảo vệ rủi ro cũng là vấn đề đáng quan tâm, được hỗ trợ bởi khoản bồi thường vật chất trong trường hợp xảy ra tình huống tiêu cực không mong muốn. Về phần mình, chính sách như vậy chứng tỏ trách nhiệm đáng kể của EPAY.",
+    "t2": "Xử lý nhanh",
+    "d2": "Mọi giao dịch trên EPAY đều được xử lý trong thời gian ngắn. Tất cả các khoản thanh toán thường được xử lý trong vòng vài phút, tối đa là vài giờ. Cổng thanh toán EPAY cung cấp sự mượt mà, tiện lợi và hiệu quả cho cả người dùng cá nhân và các tổ chức doanh nghiệp.",
+    "t3": "Chi phí thấp",
+    "d3": "Vậy EPAY là gì - tại sao nó lại được nhiều người dùng ưa chuộng đến vậy? Để trả lời, điểm mạnh của cổng thanh toán này là cung cấp các dịch vụ chi phí thấp. Hầu hết các trải nghiệm trên EPAY đều có mức phí cực kỳ cạnh tranh so với các đối thủ khác trên thị trường hiện tại. Tóm lại, EPAY giúp bạn tiết kiệm được rất nhiều tiền, thế thôi!",
+    "t4": "Hỗ trợ khách hàng 24/7",
+    "d4": "Có một đội ngũ chuyên nghiệp tại EPAY phụ trách dịch vụ khách hàng và sẵn sàng hỗ trợ 24/7. Với chính sách như vậy, đảm bảo rằng mọi giao dịch của bạn sẽ được hoàn thành một cách an toàn và hiệu quả. Bất kỳ yêu cầu hỗ trợ nào cũng phải được EPAY phản hồi đúng lúc. Vì vậy, hãy thoải mái gọi cho chúng tôi."
+  },
+  "feedbackForm": "Biểu mẫu phản hồi",
+  "send": "Gửi",
+  "understandingMission": {
+    "t1": "Hiểu rằng mỗi thương gia đều có nhu cầu riêng biệt dựa trên các hạn chế về quyền hạn và thị trường mục tiêu, chúng tôi ưu tiên lắng nghe bạn.",
+    "t2": "Sứ mệnh của chúng tôi là đảm bảo tích hợp liền mạch, cung cấp dịch vụ chất lượng cao và hỗ trợ liên tục để kết nối bạn với các lựa chọn có lợi nhất cho doanh nghiệp của bạn."
+  }
+}

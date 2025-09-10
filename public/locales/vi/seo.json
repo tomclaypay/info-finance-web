@@ -1,0 +1,126 @@
+{
+  "homepage": {
+    "title": "Info Finance - Đánh giá sàn uy tín hàng đầu, Lựa chọn sàn giao dịch tin cậy",
+    "description": "Nguồn tài nguyên hàng đầu để xác minh các nhà môi giới Forex, giải quyết các khiếu nại cho nhà đầu tư và cập nhật tin tức tài chính mới nhất."
+  },
+  "broker": {
+    "title": "Trang đánh giá các sàn giao dịch uy tín - Info Finance",
+    "description": "Đánh giá các sàn giao dịch uy tín trên nhiều tiêu chí bởi đội ngũ chuyên gia của Info Finance, giúp bạn đưa ra quyết định đầu tư thông minh và an toàn"
+  },
+  "broker-detail": {
+    "title": "Tổng hợp các đánh giá về sàn ${} chi tiết nhất - Info Finance.",
+    "description": ""
+  },
+  "news": {
+    "title": "Tin tức thị trường tài chính, chứng khoán, tiền tệ quốc tế - Info Finance",
+    "description": "Nơi cập nhật các tin tức về thị trường tài chính chứng khoán trong nước và quốc tế mỗi ngày, các bản tin về tình hình kinh tế thế giới "
+  },
+  "knowledge": {
+    "title": "Kiến thức về thị trường tài chính, chứng khoán, tiền tệ quốc tế - Info Finance",
+    "description": "Info Finance cập nhật  kiến thức về thị trường chứng khoán trong nước và quốc tế hàng ngày, tin tức kinh tế thế giới."
+  },
+  "news-detail": {
+    "title": "",
+    "description": ""
+  },
+  "broker-news": {
+    "title": "Thông tin các sàn giao dịch forex mới nhất | Info Finance",
+    "description": "Các sàn giao dịch forex tại Việt Nam, cách chọn sàn forex uy tín nhất 2023, top sàn forex uy tín thế giới, thông tin về sàn giao dịch forex."
+  },
+  "warning-news": {
+    "title": "Cập nhật cảnh báo từ nhà đầu tư về các sàn giao dịch forex | Info Finance",
+    "description": "Bạn đang có ý định đầu tư vào thị trường Forex, nhưng không biết nên chọn sàn giao dịch nào vì lo ngại về vấn đề lừa đảo. Vậy hãy xem trước những cảnh báo về sàn Forex, các sàn uy tín được cấp phép tại Việt Nam"
+  },
+  "market-news": {
+    "title": "Thông tin thị trường tài chính, forex được cập nhật hàng ngày | Info Finance",
+    "description": "Cung cấp thông tin về tin tức Forex từ thị trường tiền tệ toàn cầu: tiền tệ, chỉ số kinh tế, ngân hàng trung ương, vàng và dầu."
+  },
+  "world-news": {
+    "title": "Tin tức cập nhật hàng ngày về thị trường tài chính thế giới | Info Finance",
+    "description": "Cung cấp thông tin về tin tức Forex từ các thị trường tiền tệ toàn cầu: tiền tệ, chỉ số kinh tế, ngân hàng trung ương, vàng và dầu."
+  },
+  "domestic-news": {
+    "title": "Tin tức cập nhật hàng ngày về thị trường tài chính trong nước | Info Finance",
+    "description": "Cung cấp thông tin về tin tức Forex từ các thị trường tiền tệ trong nước: tiền tệ, chỉ số kinh tế, ngân hàng trung ương, vàng và dầu."
+  },
+  "other-news": {
+    "title": "Tin tức cập nhật hàng ngày về thị trường tài chính | Info Finance",
+    "description": "Cung cấp thông tin về tin tức Forex từ các thị trường tiền tệ toàn cầu: tiền tệ, chỉ số kinh tế, ngân hàng trung ương, vàng và dầu."
+  },
+  "event": {
+    "title": "Nơi theo dõi và cập nhật các sự kiện về tài chính - Info Finance",
+    "description": "Info Finance đồng hành và cập nhật thông tin về các sự kiện tài chính được tổ chức trong nước và quốc tế bởi các chuyên gia tài chính và tổ chức có uy tín."
+  },
+  "event-end": {
+    "title": "Nơi tổng hợp những sự kiện đã được Info Finance đồng hành",
+    "description": "Info Finance đồng hành và cập nhật thông tin về các sự kiện tài chính được tổ chức trong nước và quốc tế bởi các chuyên gia tài chính và tổ chức có uy tín."
+  },
+  "event-detail": {
+    "title": "",
+    "description": ""
+  },
+  "create-review": {
+    "title": "Gửi khiếu nại sàn - Info Finance",
+    "description": "Info Finance: Báo cáo gian lận, thao túng thị trường | Bảo vệ quyền lợi nhà đầu tư. Thông tin bạn hoàn toàn bảo mật. Gửi khiếu nại ngay!"
+  },
+  "exchange-review": {
+    "title": "Tổng hợp các khiếu nại về sàn forex có sai phạm, lừa đảo - Info Finance",
+    "description": "Quy tắc khiếu nại nhà môi giới lên cơ quan quản lý: Bạn là nhà đầu tư (trader)? Bị nhà môi giới lừa? Tìm hiểu cách khiếu nại sàn môi giới sai phạm hiệu quả."
+  },
+  "exchange-review-fraud": {
+    "title": "Tổng hợp các khiếu nại về sàn forex có dấu hiệu lừa đảo - Info Finance",
+    "description": "Trang tổng hợp các khiếu nại về sàn forex có dấu hiệu lừa đảo, cung cấp thông tin cảnh báo và bảo vệ nhà đầu tư khỏi những rủi ro tài chính"
+  },
+  "exchange-review-lose-cash": {
+    "title": "Tổng hợp các khiếu nại về sàn forex không cho rút tiền - Info Finance",
+    "description": "Trang tổng hợp các khiếu nại về sàn forex có dấu hiệu chiếm đoạt tài sản, cung cấp thông tin quan trọng để bảo vệ nhà đầu tư và tránh rủi ro tài chính"
+  },
+  "exchange-review-price-mainpulation": {
+    "title": "Tổng hợp các khiếu nại về sàn forex thao túng giá - Info Finance",
+    "description": "Trang tổng hợp các khiếu nại về sàn forex có dấu hiệu thao túng giá, trượt giá và chênh lệch giá nghiêm trọng, giúp nhà đầu tư nhận diện và tránh rủi ro tài chính."
+  },
+  "exchange-review-problems": {
+    "title": "Tổng hợp các khiếu nại khác về sàn forex - Info Finance",
+    "description": "Trang tổng hợp các khiếu nại khác về các sàn forex, cung cấp thông tin chi tiết và cảnh báo để bảo vệ nhà đầu tư khỏi các rủi ro tài chính tiềm ẩn"
+  },
+  "exchange-review-detail": {
+    "title": "",
+    "description": ""
+  },
+  "term": {
+    "title": "Info Finance | Điều khoản sử dụng",
+    "description": "Info Finance điều khoản sử dụng. Info Finance là nền tảng tra cứu các sàn giao dịch trên thị trường forex."
+  },
+  "policy": {
+    "title": "Info Finance | Chính sách bảo mật  ",
+    "description": "Info Finance chính sách bảo mật. Info Finance là nền tảng tra cứu các sàn giao dịch trên thị trường forex."
+  },
+  "faq": {
+    "title": "Info Finance | Câu hỏi thường gặp",
+    "description": "Bạn đang đầu tư nhưng có nhiều câu hỏi không biết giải quyết thế nào? Hãy liên hệ chúng tôi ngay để có câu trả lời chính xác nhất. Info Finance sẽ giải đáp tất cả các câu hỏi của bạn."
+  },
+  "about": {
+    "title": "Info Finance - Chúng tôi là những chuyên gia giải quyết khiếu nại hàng đầu Việt Nam",
+    "description": "Info Finance - Nền tảng giải quyết khiếu nại uy tín hàng đầu Việt Nam, bảo vệ quyền lợi và hỗ trợ nhà đầu tư an toàn trong thị trường tài chính"
+  },
+  "calendar": {
+    "title": "Lịch các sự kiện tài chính - Info Finance",
+    "description": "Info Finance - Cập nhật và tổng hợp thông tin về các sự kiện tài chính đã tổ chức trong nước và quốc tế bởi các chuyên gia tài chính và tổ chức có uy tín."
+  },
+  "investment-knowledge": {
+    "title": "Kiến thức đầu tư tài chính - Info Finance",
+    "description": "Info Finance - Cung cấp kiến thức đầu tư tài chính, chứng khoán và tiền tệ quốc tế, giúp bạn có cái nhìn tổng quan về thị trường tài chính."
+  },
+  "choose-broker": {
+    "title": "Hướng dẫn chọn sàn giao dịch forex uy tín - Info Finance",
+    "description": "Info Finance - Hướng dẫn chọn sàn giao dịch forex uy tín, giúp bạn đưa ra quyết định đầu tư thông minh và an toàn trong thị trường tài chính."
+  },
+  "paymentService": {
+    "title": "Dịch vụ thanh toán - Info Finance",
+    "description": "Info Finance - Dịch vụ thanh toán đơn giản và nhanh chóng"
+  },
+  "investment-ideas": {
+    "title": "Ý tưởng đầu tư tài chính - Info Finance",
+    "description": "Info Finance - Cung cấp y tưởng đầu tư tài chính, chứng khoán và tiền tệ quốc tế, giúp baise có cài nhìn tổng quan về thị trường tài chính."
+  }
+}

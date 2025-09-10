@@ -1,0 +1,47 @@
+version: 0.2
+
+env:
+  variables:
+    AWS_DEFAULT_REGION: ap-southeast-1
+    AWS_ECR_URI: 737938582190.dkr.ecr.ap-southeast-1.amazonaws.com
+    REPOSITORY_URI: 737938582190.dkr.ecr.ap-southeast-1.amazonaws.com/fe-infofx-dev
+    SECRET_NAME: fe-infofx/dev
+
+  secrets-manager:
+    DOCKER_USERNAME: tienpvse-docker-credential:DOCKER_USERNAME
+    DOCKER_PASSWORD: tienpvse-docker-credential:DOCKER_PASSWORD
+
+phases:
+  pre_build:
+    commands:
+      - echo "Logging into AWS ECR"
+      - aws ecr get-login-password --region ap-southeast-1 | docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      - IMAGE_TAG=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
+      - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
+      - IMAGE_TAG=${COMMIT_HASH:=latest}
+
+      - echo "Create .env file"
+      - echo "#!/bin/bash" >> .env.local
+      - values=$(aws secretsmanager get-secret-value --secret-id $SECRET_NAME --query SecretString --output text)
+      - echo $values | jq -r 'keys[] as $k | "\($k)=\(.[$k])"' >> .env.local
+      - chmod +x .env.local
+
+  build:
+    commands:
+      - echo Build started on `date`
+      - docker build -t $REPOSITORY_URI:latest .
+      - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
+
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - echo Pushing image to ECR...
+      - aws ecr get-login-password --region ap-southeast-1 | docker login --username AWS --password-stdin $AWS_ECR_URI
+      - docker push $REPOSITORY_URI:latest
+
+artifacts:
+  files:
+    - .env.local
+    - deployments/dev/appspec.yml
+    - deployments/dev/codedeploy/**/*
+  discard-paths: yes

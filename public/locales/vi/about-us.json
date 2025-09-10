@@ -1,0 +1,98 @@
+{
+  "heading": "Về chúng tôi",
+  "aboutInfo": {
+    "title": "Về chúng tôi",
+    "top": "cung cấp thông tin, xếp hạng sàn dưa theo tiêu chí: độ tin cậy của thương hiệu, mức độ kiểm soát rủi ro, cảm nhận về trải nghiệm giao dịch của người dùng,.. một cách hệ thống, chính xác, nhanh nhất để các nhà đầu tư chọn lựa mã giao dịch phù hợp nhằm tối đa hóa lợi nhuận trong thị trường tài chính.",
+    "t1": "Đơn vị cung cấp thông tin tra cứu sàn môi giới",
+    "t2": "Cập nhật tin tức tài chính trên toàn cầu",
+    "t3": "Kết nối và giao lưu các nhà giao dịch chuyên nghiệp",
+    "bottom": "Ngoài ra chúng tôi hỗ trợ nhanh chóng khi nhà đầu tư gặp khó khăn trong quá trình giao dịch và đầu tư."
+  },
+  "support": {
+    "title": "Giúp bạn giải quyết các vấn đề với sàn giao dịch",
+    "top": "Lợi thế lớn nhất của Info Finance đó là xử lý được hầu như đa số các vấn đề khó khăn như trượt giá, không rút được tiền, can thiệp lệnh,… mà các nhà đầu tư gặp phải.",
+    "t1": {
+      "t": "Chăm sóc khách hàng",
+      "d": "Bộ phận chăm sóc khách hàng chịu trách nhiệm tiếp nhận đơn khiếu nại của nhà đầu tư đã có hơn 10 năm thâm niên kinh nghiệm."
+    },
+    "t2": {
+      "t": "Kỹ thuật",
+      "d": "Bộ phận phân tích kỹ thuật làm việc ở Châu Âu và Việt Nam chịu trách nhiệm phân tích chuyên môn các lệnh, trượt giá, gian lận giá với hơn 20 chuyên gia với hơn 10 năm kinh nghiệm."
+    },
+    "t3": {
+      "t": "Luật sư",
+      "d": "Info Finance có 2 văn phòng luật sư ở Hà Nội và TP. Hồ Chí Minh sẵn sàng đứng ra khởi kiện cho nhà đầu tư trong trường hợp bộ phận pháp lý đã tư vấn và chuyển giao."
+    },
+    "t4": {
+      "t": "Pháp lý",
+      "d": "Bộ phận pháp lý chịu trách nhiệm phân tích, xác minh thông tin, tư vấn pháp luật."
+    }
+  },
+  "vision": {
+    "title": "Sứ mệnh và Tầm nhìn",
+    "top": "Trở thành biểu tượng niềm tin hàng đầu cho cộng đồng tài chính là cán cân công lý mang lại sự công bằng, minh bạch cho tất cả nhà đầu tư và các sàn.",
+    "t1": "Info Finance cam kết là cầu nối vững chắc, luôn mang lại quyền lợi tốt nhất, giải quyết dứt điểm tất cả các vấn đề khó khăn mà nhà đầu tư đang gặp phải.",
+    "t2": "Tạo ra một cộng đồng tài chính công bằng minh bạch với đội ngũ chuyên viên dày dặn thâm niên trong ngành tài chính bằng tình yêu và trách nhiệm cao của mình với cuộc sống và xã hội.",
+    "t3": "Info Finance quyết tâm luôn mang đến sự an toàn và là người bạn đồng hành trong quá trình đầu tư thị trường tài chính nghìn tỷ đô này."
+  },
+  "coreValue": {
+    "title": "Giá trị cốt lõi",
+    "top": "Trở thành biểu tượng niềm tin hàng đầu cho cộng đồng tài chính là cán cân công lý mang lại sự công bằng, minh bạch cho tất cả nhà đầu tư và các sàn.",
+    "t1": {
+      "t": "CHÍNH TRỰC",
+      "d": "Liêm chính, Trung thực trong ứng xử và trong tất cả các giao dịch."
+    },
+    "t2": {
+      "t": "TÔN TRỌNG",
+      "d": "Tôn trọng bản thân, Tôn trọng đồng nghiệp, Tôn trọng Công ty, Tôn trọng nhà đầu đầu tư, Tôn trọng đối tác, Hợp tác trong sự tôn trọng."
+    },
+    "t3": {
+      "t": "CÔNG BẰNG",
+      "d": "Công bằng với nhân viên, nhà đầu tư, nhà giao dịch, IB, sàn và các bên liên quan khác."
+    },
+    "t4": {
+      "t": "TUÂN THỦ",
+      "d": "Tuân thủ Luật pháp, Bộ Quy Tắc Ứng Xử và các quy chế, chính sách, quy định của Công ty, cộng đồng tài chính quốc tế."
+    },
+    "t5": {
+      "t": "ĐẠO ĐỨC",
+      "d": "Tôn trọng các tiêu chuẩn đã được thiết lập và hành động một cách đạo đức."
+    }
+  },
+  "partner": {
+    "title": "Đối tác dự án",
+    "top": "Info Finance vui mừng công bố kế hoạch hợp tác phát triển chính thức cùng MerriTrade, The Brokers, Investo và Traderhub. Với thương vụ hợp tác này, Info Finance cam kết mang đến hệ sinh thái đầu tư phát triển toàn diện.",
+    "bottom": "Dựa trên mạng lưới nhà đầu tư vô cùng rộng lớn, chúng tôi mang đến 1 hệ thống thông tin được cập nhật liên tục, cùng với diễn đàn trao đổi-chia sẻ kiến thức đầu tư đầy giá trị. Chiến lược hợp tác này chính là động lực to lớn để Info Finance ngày càng phát triển và hoàn thành sứ mệnh hoạt động của mình."
+  },
+  "contact": {
+    "title": "Liên hệ với chúng tôi",
+    "top": "Hãy thoải mái liên hệ với chúng tôi và chúng tôi sẽ phản hồi lại sớm nhất có thể",
+    "t1": {
+      "t": "Hotline",
+      "d": "+84969116052"
+    },
+    "t2": {
+      "t": "Chăm sóc khách hàng",
+      "d": "cs@infofinance.com"
+    },
+    "t3": {
+      "t": "Thẩm định chất lượng",
+      "d": ""
+    },
+    "bottom": "Mạng xã hội"
+  },
+  "form": {
+    "t1": {
+      "t": "Họ tên",
+      "d": "Nhập họ tên của bạn"
+    },
+    "t2": {
+      "t": "Email",
+      "d": "Nhập email"
+    },
+    "t3": {
+      "t": "Lời nhắn",
+      "d": "Nhập lời nhắn"
+    }
+  }
+}

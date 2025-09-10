@@ -1,0 +1,35 @@
+{
+  "title": "Payment service",
+  "description": "Payment service",
+  "whatIsEpay": {
+    "title": "What is EPAY?",
+    "description1": "EPAY is the up-to-date, state-of-the-art online payment intermediary system at the moment. The Singapore-based entity has already provided support for its initial release in Vietnam. The application allows user to handle flexible transactions. Domestic and international payments would be done at ease in a conve- nient manner.",
+    "description2": "The app’s interface features a friendly, easy-to-use design with no redundant details and time saving. The transaction process is lightning fast and highly secure. EPAY would allow you to transfer money for mobile banking, wire transfer, service and all type of bill payment, expense tracking, competitive exchange rates, and more."
+  },
+  "whatWeOffer": "What we offer",
+  "service": {
+    "t1": "Payment gateway IT solutions",
+    "t2": "Integration support",
+    "t3": "Software maintenance in fintech",
+    "t4": "End user IT assistance",
+    "t5": "Administrative support",
+    "t6": "Marketing consultancy in fintech"
+  },
+  "whyChooseUs": "Why choose us",
+  "reasons": {
+    "t1": "Risk protection",
+    "d1": "Deposit safety is not the only commitment at EPAY. Risk protection is also a matter of concern, backed by material compensation in case of a negative unwanted situation. For its part, such policy demonstrates significant responsibili-ty of EPAY.",
+    "t2": "Fast processing",
+    "d2": "Every transaction on EPAY is processed within a short time. All payments are typically handled within minutes, max up to hours. EPAY payment gateway provides smoothness, convenience and efficiency to both individual users and corporate entities.",
+    "t3": "Low cost",
+    "d3": "So what is EPAY - why is it preferred by so many users? To give an answer, the strength of the payment gateway is delivering low-cost services. Most experi- ence on EPAY are ultra competitive in terms of fees compared to other compet- itors in the existing market. Long story short, EPAY saves you tons of cash, that’s it!",
+    "t4": "24/7 Customer Support",
+    "d4": "There is a whole professional team at EPAY who are in charge of customer ser- vice and ready for support 24/7. With such policy in place, it ensures that all of your transactions would be completed with safety and efficiency. Any request of support should be found with proper feedback from EPAY at any given time. So, just feel free to give us a call."
+  },
+  "feedbackForm": "Feedback form",
+  "send": "Send",
+  "understandingMission": {
+    "t1": "Understanding that each merchant has distinct needs based on jurisdictional constraints and target markets, we prioritize listening to you.",
+    "t2": " Our mission is to ensure seamless integration, delivering high-quality service and unwavering support to connect you with the most advantageous options for your business."
+  }
+}

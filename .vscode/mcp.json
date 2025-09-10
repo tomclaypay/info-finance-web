@@ -1,0 +1,9 @@
+{
+  "servers": {
+    "my-mcp-server-73198ecf": {
+      "type": "stdio",
+      "command": "gitlab",
+      "args": []
+    }
+  }
+}

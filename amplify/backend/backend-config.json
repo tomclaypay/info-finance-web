@@ -1,0 +1,77 @@
+{
+  "auth": {
+    "infofinancedev029533bf": {
+      "customAuth": false,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "serviceType": "imported"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_auth_infofinancedev029533bf_nativeClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "infofinancedev029533bf"
+        }
+      ]
+    },
+    "AMPLIFY_auth_infofinancedev029533bf_userPoolId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "infofinancedev029533bf"
+        }
+      ]
+    },
+    "AMPLIFY_auth_infofinancedev029533bf_userPoolName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "infofinancedev029533bf"
+        }
+      ]
+    },
+    "AMPLIFY_auth_infofinancedev029533bf_webClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "infofinancedev029533bf"
+        }
+      ]
+    },
+    "AMPLIFY_auth_infofinancedevcbc812a5_nativeClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "infofinancedevcbc812a5"
+        }
+      ]
+    },
+    "AMPLIFY_auth_infofinancedevcbc812a5_userPoolId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "infofinancedevcbc812a5"
+        }
+      ]
+    },
+    "AMPLIFY_auth_infofinancedevcbc812a5_userPoolName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "infofinancedevcbc812a5"
+        }
+      ]
+    },
+    "AMPLIFY_auth_infofinancedevcbc812a5_webClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "infofinancedevcbc812a5"
+        }
+      ]
+    }
+  }
+}

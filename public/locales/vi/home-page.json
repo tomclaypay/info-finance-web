@@ -1,0 +1,51 @@
+{
+  "top": {
+    "t1": "hướng dẫn chọn sàn giao dịch uy tín cùng info finance",
+    "t2": "dấu hiệu nhận biết lừa đảo từ các sàn môi giới",
+    "t3": "hướng dẫn khiếu nại sàn giao dịch lừa đảo tại info finance",
+    "t4": "giới thiệu hệ sinh thái info finance"
+  },
+  "see-more": "Xem thêm",
+  "complaint": {
+    "left": {
+      "title": "Tin tức mới nhất",
+      "des": "Số đơn khiếu nại tiếp nhận"
+    },
+    "right": {
+      "title1": "Tin tức sàn giao dịch",
+      "title2": "Tin tức cảnh báo",
+      "title3": "Tin tức thị trường"
+    },
+    "title": "Trung tâm giải quyết khiếu nại hàng đầu Việt Nam",
+    "recommend": "đề cử",
+    "top": "có đội ngũ nhân sự chuyên nghiệp có thể giúp bạn giải quyết các vấn đề với sàn giao dịch như phát sinh lừa đảo, không rút được tiền, v.v...",
+    "middle": {
+      "t1": "Chúng tôi đã tiếp nhận",
+      "t2": "đơn khiếu nại từ các nhà đầu tư"
+    },
+    "bottom": {
+      "t1": "Tổng số đơn khiếu nại đã tiếp nhận",
+      "t2": "Số đơn đã giải quyết"
+    },
+    "form": {
+      "search": "Nhập tên sàn cần tìm kiếm ",
+      "t1": "Tên của bạn",
+      "t2": "Số điện thoại",
+      "t3": "Loại khiếu nại"
+    }
+  },
+  "decision": {
+    "title": "Chúng tôi giúp bạn đưa ra quyết định tài chính thông minh",
+    "t1": "Chúng tôi mang đến cho Nhà đầu tư những thông tin mới nhất về chất lượng của Sàn môi giới.",
+    "t2": "Chúng tôi đưa ra Bảng xếp hạng Sàn môi giới dựa trên những quy trình & tiêu chuẩn thẩm định của mình.",
+    "t3": "Chúng tôi đưa ra Bảng xếp hạng Sàn môi giới dựa trên những quy trình & tiêu chuẩn thẩm định của mình.",
+    "t4": "Chúng tôi đưa ra Bảng xếp hạng Sàn môi giới dựa trên những quy trình & tiêu chuẩn thẩm định của mình.",
+    "t5": "Chúng tôi thay mặt Nhà đầu tư, khiếu nại vấn đề khúc mắc lên các cơ quan thẩm quyền và mang lại công bằng cho Nhà đầu tư."
+  },
+  "event": {
+    "title": "Sự kiện trong tháng"
+  },
+  "cooperate": "Chúng tôi hân hạnh hợp tác cùng",
+  "title_left": "Hộp thư góp ý và đánh giá từ nhà đầu tư",
+  "title_right": "Đơn khiếu nại"
+}

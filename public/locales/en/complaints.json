@@ -1,0 +1,125 @@
+{
+  "home": {
+    "t0": "The forex investment has caused many concerns with many criticisms by society. In fact, there are always many cases of being scammed, defrauded by warning brokers and losing a lot of money. Info Finance is the first and most trusted Complaint settlement center, which supports traders in solving problems with IBs and brokers via a 10-year-experience legal team.",
+    "t1": "This happens when the broker gained unauthorized access to your account to execute trading orders without your knowledge, or transfer your money to someone else' account. ",
+    "t2": "This happens when you have difficulties withdrawing money from the broker. It could be either you cannot withdraw all your fund or can only withdraw a portion of your fund, or the processing time takes longer than usual. Besides that, you are not provided with any clear reasons why this is happening from the broker.",
+    "t3": "This happens when the brokers intend to trade against you by holding prices artificially high or low to trigger your stop loss. They can also manipulate price by changing spreads and depth of market (DOM) to lock traders into losing positions and then exit the trade for a tiny profit.",
+    "t4": "Other types of problems related to your trading activities. ",
+    "searchText": "Enter broker name to search",
+    "relativeTitle": "Complaints related to brokers: "
+  },
+  "cancelRequest": "Request cancellation",
+  "report": "Report",
+  "yourComplaint": {
+    "left": {
+      "infoExchange": {
+        "title": "Broker",
+        "t1": "Year founded",
+        "t2": "Report types",
+        "t3": "Name of report",
+        "t4": "Contract"
+      },
+      "detail": {
+        "title": "Report details",
+        "t1": "Report type",
+        "t2": "Content"
+      },
+      "image": "Photos"
+    },
+    "right": {
+      "top": "Process",
+      "bottom": {
+        "title": "Please contact here for more support",
+        "t1": "Hotline",
+        "t2": "Customer support",
+        "t3": "QA"
+      }
+    },
+    "popUp": {
+      "title": "Reasons for cancelling this report",
+      "t1": "I have settled with the broker",
+      "t2": "Wrong broker",
+      "t3": "I changed my mind",
+      "t4": "Other reasons",
+      "text": "Please tell us the reasons"
+    }
+  },
+  "detail": {
+    "detail": {
+      "t1": "Reported Broker",
+      "t2": "Other reports about this broker"
+    },
+    "middle1a": "Do you face the same ",
+    "middle1b": "problem ",
+    "middle1c": "?",
+    "middle2a": "Let us ",
+    "middle2b": "help you ",
+    "middle2c": "get back your money"
+  },
+  "create": {
+    "title": "Create complaint",
+    "banner": {
+      "title": "SAY NO TO FRAUD",
+      "top": "If you have been in a similar situation, please do not hesitate to contact us. We are here to help traders take back what they have lost to these fraudulent brokers. "
+    },
+    "left": {
+      "t1": {
+        "title": "Your information",
+        "t1": "Full name"
+      },
+      "t2": {
+        "title": "Broker information",
+        "t1": "Broker name",
+        "t2": "URL"
+      },
+      "t3": {
+        "title": "Your report",
+        "t1": "Report type",
+        "t2": "Please share with us as much details as possible"
+      },
+      "t4": {
+        "title": "Upload photos",
+        "t1": "Photos related to the problem"
+      }
+    },
+    "right": "Your contact information",
+    "popUp": {
+      "title": "",
+      "t1": ""
+    }
+  },
+  "your": {
+    "title": "Your report(s)",
+    "top": {
+      "send": "Sent",
+      "draft": "Draft"
+    },
+    "t1": "Created",
+    "t2": "Details",
+    "t3": "Name",
+    "t4": "Broker",
+    "t5": "Status"
+  },
+  "banner1": "Say no to scams!",
+  "phone": "Phone",
+  "banner2": "If you are interested to share, please fill in the form below. Please read our full privacy state before using this form. Please note that you have to fill in all the fields in the form.",
+
+  "inputAlert": {
+    "require": "Please enter information!",
+    "emailMalformed": "Email invalidate!",
+    "confirmPassword": "Passwords do not match!",
+    "phoneMalformed": "The phone number is not in the correct format",
+    "minLength": "Password must be 8 characters or more",
+    "memberPassword": "Password must be 8 characters or more, at least 1 uppercase letter, 1 number, 1 lowercase letter"
+  },
+  "url": {
+    "scam": "lua-dao",
+    "investor-feedback-and-comments-mailbox": "hop-thu-danh-gia-va-gop-y-tu-nha-dau-tu",
+    "general-review": "san-thao-tun-gia",
+    "other-problems": "ly-do-khac",
+    "lua-dao": "lua-dao",
+    "hop-thu-danh-gia-va-gop-y-tu-nha-dau-tu": "hop-thu-danh-gia-va-gop-y-tu-nha-dau-tu",
+    "san-thao-tun-gia": "san-thao-tun-gia",
+    "ly-do-khac": "ly-do-khac"
+  }
+}

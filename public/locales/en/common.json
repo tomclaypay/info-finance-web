@@ -1,0 +1,193 @@
+{
+  "searchPlacehoder": "Enter the broker name to search",
+  "search": "Search",
+  "nonResult": "Sorry! No result found",
+  "thanks": "Thank you",
+  "image": "Images",
+  "all": "All",
+  "profile": "Your profile",
+  "logOut": "Log out",
+  "logIn": "Log in",
+  "header": {
+    "home": "Homepage",
+    "complaint": "Report broker",
+    "news": "News",
+    "exchange": "Brokers",
+    "aboutUs": "About us",
+    "event": "Events",
+    "knowledge": "Knowledge",
+    "economic-calendar": "Economic calendar",
+    "payment-service": "Payment service"
+  },
+  "footer": {
+    "description1": "Info Finance (registration number 202130301C) is headquartered at C3 HOLDINGS PTE. LTD. Singapore. The company holds license number 32/GP-STTTT provided by Department of Information and Communications, Ho Chi Minh City.",
+    "description2": "InfoFinance do not provide investment advice. Please note that by investing in and/or trading financial instruments, commodities and any other assets, you are taking a high degree of risk and you can lose all your deposited money. You should engage in any such activity only if you are fully aware of the relevant risks",
+    "ground": {
+      "t1": "About Info Finance",
+      "t2": "Common questions",
+      "t3": "General terms and conditions",
+      "t4": "Privacy policies",
+      "t5": "Our partners",
+      "t6": "Social Media",
+      "t7": "News",
+      "t8": "Report broker"
+    },
+    "contact": {
+      "t1": {
+        "t": "Contact address",
+        "d": "1 Street 10, Thao Dien Ward, District 2, Ho Chi Minh City"
+      },
+      "t2": {
+        "t": "Contact for cooperation"
+      }
+    }
+  },
+  "text": {
+    "seeMore": "View more",
+    "seeLess": "Read less",
+    "moreInfo": "Find out more",
+    "copied": "The link has been copied!"
+  },
+  "button": {
+    "send": "Send",
+    "cancel": "Cancel request",
+    "complaint": {
+      "send": "Send review",
+      "continue": "Continue",
+      "cancel": "Cancel review",
+      "your": "Your review(s)"
+    }
+  },
+  "news": {
+    "title": "News",
+    "seeAll": "View all",
+    "another": "Another news",
+    "latest": "Latest news",
+    "relative": "Related news",
+    "moreLatest": "View more latest news",
+    "hot": "Hot news",
+    "world": "World news",
+    "moreWorld": "View more world news",
+    "warning": "Warning news",
+    "moreWarning": "View more warning news",
+    "domestic": "Domestic news",
+    "other": "Other news",
+    "market": "Market news",
+    "moreMarket": "View more market news",
+    "categories": {
+      "t1": "All",
+      "t2": "Market news",
+      "t3": "Scam news",
+      "t4": "World news",
+      "t5": "Domestic news",
+      "t6": "Other news"
+    },
+    "moreDomestic": "See more domestic news",
+    "moreOther": "See more news"
+  },
+  "knowledge": {
+    "title": "Knowledge",
+    "investment": "Investment knowledge",
+    "broker": "Choose broker",
+    "investmentIdea": "Investment ideas",
+    "moreInvestment": "View more Investment knowledge",
+    "moreBroker": "View more choose broker",
+    "news": "Latest knowledge",
+    "another": "Another knowledge",
+    "seeAll": "View all",
+    "relative": "Related knowledge",
+    "categories": {
+      "t1": "All",
+      "t2": "Investment knowledge",
+      "t3": "Choose broker",
+      "t4": "Investment ideas"
+    },
+    "moreInvestmentIdea": "See more investment ideas"
+  },
+  "calendar": {
+    "economic": "Economic calendar",
+    "dividends": "Dividend calendar"
+  },
+  "complaints": {
+    "top": "",
+    "categories": {
+      "t1": "Scam",
+      "t2": "Unable to withdraw money",
+      "t3": "General Review",
+      "t4": "Other problems"
+    },
+    "different": "Other problems",
+    "my": "Your complaints",
+    "years": "Website",
+    "year": "years",
+    "done": "Complaint submitted successfully",
+    "thanks": "Thank you for submitting your complaint. We will contact you in the next few days"
+  },
+  "event": {
+    "t1": "Upcoming events",
+    "t2": "Registered events",
+    "t3": "Change to calendar",
+    "t4": "Change to list",
+    "t5": "Event calendar",
+    "t6": "Event has ended",
+    "detail": "Detail",
+    "registered": "Registered",
+    "register": "Register",
+    "participants": "Participants",
+    "sponsor": "Sponsors",
+    "organization": "Organizing committee",
+    "share": "Share",
+    "finished": "Finished",
+    "image": "Images of event"
+  },
+  "tabs": {
+    "tab1": "Broker",
+    "tab2": "Report broker",
+    "tab3": "News"
+  },
+  "authen": {
+    "displayName": "Display name",
+    "emailPlaceholder1": "Email",
+    "login": "Login",
+    "signup": "Sign Up",
+    "register": "Register an account",
+    "questions": "Do not have an account?",
+    "googleLogin": "Sign in with Google",
+    "facebookLogin": "Login with Facebook",
+    "or": "or",
+    "emailPlaceholder": "Email address",
+    "missingEmail": "You need to enter your email",
+    "validateEmail": "Invalid email",
+    "passPlaceholder": "Password",
+    "remmember": "Remember me",
+    "fogot": "Forgot password?",
+    "haveAcc": "Already have an account?",
+    "iread": "I have read ",
+    "policy": "the terms and conditions"
+  },
+  "exchange-review": {
+    "scam": "lua-dao",
+    "investor-feedback-and-comments-mailbox": "hop-thu-danh-gia-va-gop-y-tu-nha-dau-tu",
+    "general-review": "danh-gia-tong-quat",
+    "other-problems": "ly-do-khac",
+    "lua-dao": "lua-dao",
+    "hop-thu-danh-gia-va-gop-y-tu-nha-dau-tu": "hop-thu-danh-gia-va-gop-y-tu-nha-dau-tu",
+    "danh-gia-tong-quat": "danh-gia-tong-quat",
+    "ly-do-khac": "ly-do-khac"
+  },
+  "warning-words": {
+    "title": "Infofinance.com disclaimer",
+    "description": "All information on our website is for general reference only, investors need to consider and take responsibility for all their investment actions. Info Finance is not responsible for any actions of investors."
+  },
+  "update-profile": "Update personal information",
+  "display-name": "Display name",
+  "email": "Email",
+  "birthday": "Birthday",
+  "phone": "Phone number",
+  "address": "Address",
+  "gender": "Gender",
+  "male": "Male",
+  "female": "Female",
+  "other": "Other",
+  "save": "Save"
+}

@@ -1,0 +1,31 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-infofinancedev-dev-130331-authRole",
+      "UnauthRoleArn": "arn:aws:iam::368808428413:role/amplify-infofinancedev-dev-130331-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::368808428413:role/amplify-infofinancedev-dev-130331-authRole",
+      "Region": "ap-southeast-1",
+      "DeploymentBucketName": "amplify-infofinancedev-dev-130331-deployment",
+      "UnauthRoleName": "amplify-infofinancedev-dev-130331-unauthRole",
+      "StackName": "amplify-infofinancedev-dev-130331",
+      "StackId": "arn:aws:cloudformation:ap-southeast-1:368808428413:stack/amplify-infofinancedev-dev-130331/4c777110-3a68-11ee-a5da-0a66fd261458",
+      "AmplifyAppId": "d1dopubx8yzwe8"
+    },
+    "categories": {
+      "auth": {
+        "infofinancedevcbc812a5": {
+          "userPoolId": "ap-southeast-1_DM0gzGbKv",
+          "userPoolName": "infofx-dev",
+          "webClientId": "1dugqqe5au219mjgsl2mp1779k",
+          "nativeClientId": "1dugqqe5au219mjgsl2mp1779k"
+        },
+        "infofinancedev029533bf": {
+          "userPoolId": "ap-southeast-1_DM0gzGbKv",
+          "userPoolName": "infofx-dev",
+          "webClientId": "1dugqqe5au219mjgsl2mp1779k",
+          "nativeClientId": "1dugqqe5au219mjgsl2mp1779k"
+        }
+      }
+    }
+  }
+}
