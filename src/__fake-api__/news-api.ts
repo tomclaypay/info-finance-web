@@ -1,0 +1,257 @@
+export const newsList = [
+  {
+    id: '1',
+    href: '/news',
+    type: 'Sàn giao dịch',
+    title: 'Motley Fool Stock Advisor Takes The Guesswork Out Of Investing',
+    date: 'June 27, 2022',
+    image:
+      'https://infofinance-dev.s3.ap-southeast-1.amazonaws.com/image1_8af6327773.jpg?updated_at=2022-08-25T09:27:30.499Z',
+  },
+  {
+    id: '2',
+    href: '/news',
+    type: 'Thị trường',
+    title: 'Motley Fool Stock Advisor Takes The Guesswork Out Of Investing',
+    date: 'June 27, 2022',
+    image:
+      'https://infofinance-dev.s3.ap-southeast-1.amazonaws.com/image2_4785524865.jpg?updated_at=2022-08-25T09:27:30.694Z',
+  },
+  {
+    id: '3',
+    href: '/news',
+    type: 'Cảnh báo',
+    title: 'Motley Fool Stock Advisor Takes The Guesswork Out Of Investing',
+    date: 'June 27, 2022',
+    image:
+      'https://infofinance-dev.s3.ap-southeast-1.amazonaws.com/image3_d2cc387b34.jpg?updated_at=2022-08-25T09:27:30.970Z',
+  },
+  {
+    id: '4',
+    href: '/news',
+    type: 'Sàn giao dịch',
+    title: 'Motley Fool Stock Advisor Takes The Guesswork Out Of Investing',
+    date: 'June 27, 2022',
+    image:
+      'https://infofinance-dev.s3.ap-southeast-1.amazonaws.com/image4_e6df7e455a.jpg?updated_at=2022-08-25T09:27:31.139Z',
+  },
+  {
+    id: '5',
+    href: '/news',
+    type: 'Thị trường',
+    title: 'Motley Fool Stock Advisor Takes The Guesswork Out Of Investing',
+    date: 'June 27, 2022',
+    image:
+      'https://infofinance-dev.s3.ap-southeast-1.amazonaws.com/image5_567aa4c949.jpg?updated_at=2022-08-25T09:27:31.397Z',
+  },
+  {
+    id: '6',
+    href: '/news',
+    type: 'Sàn giao dịch',
+    title: 'Motley Fool Stock Advisor Takes The Guesswork Out Of Investing',
+    date: 'June 27, 2022',
+    image:
+      'https://infofinance-dev.s3.ap-southeast-1.amazonaws.com/image6_cee9a31592.jpg?updated_at=2022-08-25T09:27:31.203Z',
+  },
+]
+
+class NewsApi {
+  getNews() {
+    const news = {
+      point: 0,
+      type: 'news',
+      totalLike: 0,
+      totalView: 4,
+      pin: false,
+      hashtags: [],
+      slug: 'dong-nhan-dan-te-va-do-la-dai-loan-giam-khi-dong-do-la-tang-gia',
+      content:
+        '<p style="text-align:justify;"><span style="background-color:rgb(255,255,255);color:rgb(51,51,51);">Đồng nhân dân tệ của Trung Quốc và đô la Đài Loan giảm xuống vào thứ Sáu, các đồng tiền châu Á cũng giảm giá khi đồng đô la mạnh lên trước nhiều tín hiệu về chính sách tiền tệ của Hoa Kỳ từ Hội nghị chuyên đề Jackson Hole.</span></p><figure class="image image-style-align-center"><img src="https://traderhub-bucket.s3.ap-southeast-1.amazonaws.com/traderhub_nhandante_20220826_21607a114a.jpg" alt="dong-nhan-dan-te-va-do-la-dai-loan-giam-khi-dong-do-la-tang-gia"></figure><p style="text-align:justify;">Nhân dân tệ của Trung Quốc giảm 0,1% xuống 6,8549, trong khi Đô la Đài Loan giảm 0,2%. Lo ngại về mối quan hệ giữa hai nước ngày càng xấu đi sau khi một nhà lập pháp Hoa Kỳ trong Ủy ban Thương mại và Vũ trang của Thượng viện đến Đài Bắc vào thứ Năm, theo Reuters.</p><p style="text-align:justify;">&nbsp;</p><p style="text-align:justify;">Động thái này đánh dấu chuyến thăm thứ ba của một quan chức Hoa Kỳ tới hòn đảo trong tháng này và có khả năng khiến Bắc Kinh phẫn nộ.</p><p style="text-align:justify;">&nbsp;</p><p style="text-align:justify;">Đầu tháng này, Đài Loan đã tiến hành các cuộc tập trận quân sự gần hòn đảo này sau chuyến thăm của Chủ tịch Hạ viện Hoa Kỳ Nancy Pelosi. Động thái này đã làm chao đảo thị trường tài chính trong một thời gian ngắn.</p><p style="text-align:justify;">&nbsp;</p><p style="text-align:justify;">Về mặt kinh tế, các nhà giao dịch cũng đang chờ đợi nhiều biện pháp kích thích hơn từ Trung Quốc, sau khi chính phủ cắt giảm lãi suất và thông báo chi tiêu nhiều hơn cho cơ sở hạ tầng trong tuần này.</p><p style="text-align:justify;">&nbsp;</p><p style="text-align:justify;">Điều này đã đẩy đồng nhân dân tệ xuống mức thấp nhất trong hai năm. Trung Quốc đang phải đối mặt với tình trạng tăng trưởng chậm lại nghiêm trọng do các biện pháp phong tỏa chống COVID, thị trường bất động sản đang gặp khó khăn và tình trạng thiếu điện tiềm ẩn.</p><p style="text-align:justify;">&nbsp;</p><p style="text-align:justify;">Các đồng tiền châu Á rộng hơn đã giảm khi chỉ số dollar index tăng nhẹ, bám sát mức cao nhất gần 20 năm. Đồng bạc xanh cũng được thúc đẩy bởi một loạt dữ liệu kinh tế mạnh mẽ của Hoa Kỳ, điều này cho phép Cục Dự trữ Liên bang có thêm không gian để tăng lãi suất một cách mạnh mẽ.</p><p style="text-align:justify;">&nbsp;</p><p style="text-align:justify;">Chỉ số Dollar index tương lai không đổi vào thứ Sáu.</p><p style="text-align:justify;">&nbsp;</p><p style="text-align:justify;">Các thị trường hiện đang chờ đợi bài phát biểu của Chủ tịch Fed Jerome Powell tại hội nghị Jackson Hole ở Wyoming, vào cuối ngày hôm nay, để đánh giá mức độ chặt chẽ của ngân hàng trung ương.</p><p style="text-align:justify;">&nbsp;</p><p style="text-align:justify;">Tại khu vực Châu Á - Thái Bình Dương, Đô la New Zealand giảm gần 0,5% và là đồng tiền có hoạt động kém nhất trong khu vực sau khi Thống đốc Ngân hàng Trung ương Adrian Orr cho biết rằng chu kỳ thắt chặt gần đây có thể kết thúc.</p><p style="text-align:justify;">&nbsp;</p><p style="text-align:justify;">Ngân hàng Dự trữ New Zealand đã tăng mạnh lãi suất kể từ cuối năm 2021 để kiềm chế lạm phát gia tăng.</p><p style="text-align:justify;">&nbsp;</p><p style="text-align:justify;">Đồng yên Nhật đã giảm 0,2% vào thứ Sáu sau khi dữ liệu cho thấy lạm phát ở Tokyo, thành phố lớn nhất của nước này, tăng với tốc độ cao nhất trong 30 năm vào tháng Tám.</p><p style="text-align:justify;">&nbsp;</p><p style="text-align:justify;">Lạm phát gia tăng, cùng với việc Ngân hàng Trung ương Nhật Bản miễn cưỡng thắt chặt chính sách, đã khiến đồng yên bị sụt giá nghiêm trọng trong năm nay.</p><p style="text-align:justify;">&nbsp;</p><p style="text-align:right;"><i><strong>Theo Investing</strong></i></p>',
+      description:
+        'Đồng nhân dân tệ của Trung Quốc và đô la Đài Loan giảm xuống vào thứ Sáu, các đồng tiền châu Á cũng giảm giá khi đồng đô la mạnh lên trước nhiều tín hiệu về chính sách tiền tệ của Hoa Kỳ từ Hội nghị chuyên đề Jackson Hole.',
+      title: 'Đồng Nhân Dân Tệ Và Đô La Đài Loan Giảm Khi Đồng Đô La Tăng Giá',
+      createdAt: '2022-08-26T04:59:21.509Z',
+      updatedAt: '2022-08-26T06:43:33.184Z',
+      articleCategories: {
+        type: 'news',
+        name: 'Tin Nhanh Chứng Khoán',
+        slug: 'tin-nhanh-chung-khoan',
+        thumbnail: {
+          _id: '60dc11390a2ae3134b41fcf6',
+          name: 'Screenshot_9.png',
+          alternativeText: '',
+          caption: '',
+          hash: 'Screenshot_9_0a45a21446',
+          ext: '.png',
+          mime: 'image/png',
+          size: 3.29,
+          width: 128,
+          height: 128,
+          url: 'https://s3.ap-southeast-1.amazonaws.com/files.gigantecmedia.com/ForumTradehub/Screenshot_9_0a45a21446.png',
+          provider: 'aws-s3',
+          related: ['60781ab714916611fff25fae'],
+          createdAt: '2021-06-30T06:37:45.910Z',
+          updatedAt: '2021-06-30T06:37:47.858Z',
+          __v: 0,
+          id: '60dc11390a2ae3134b41fcf6',
+        },
+        description: 'Đây là Description của Tin Nhanh Chứng Khoán',
+        id: '60781ab714916611fff25fae',
+        articles: [
+          {
+            point: 0,
+            type: 'news',
+            totalLike: 0,
+            totalView: 4,
+            pin: false,
+            hashtags: [],
+            slug: 'my-du-kien-day-manh-xuat-khau-dau-sang-chau-au-trong-nam-2023',
+            description:
+              'Doanh thu xuất khẩu dầu thô của Mỹ được dự báo sẽ tiếp tục đạt kỷ lục trong năm tới khi nước này đang ngày càng chiếm lĩnh nhiều thị phần ở châu Âu, theo Bloomberg.',
+            title: 'Mỹ Dự Kiến Đẩy Mạnh Xuất Khẩu Dầu Sang Châu Âu Trong Năm 2023',
+            createdAt: '2022-08-26T05:02:25.246Z',
+            updatedAt: '2022-08-26T06:43:03.060Z',
+            articleCategories: '60781ab714916611fff25fae',
+            created_by: {
+              _id: '60c99e8fa590815a23314e50',
+              username: null,
+              firstname: 'Uploader',
+              lastname: '1',
+              __v: 0,
+              id: '60c99e8fa590815a23314e50',
+            },
+            thumbnail:
+              'https://traderhub-bucket.s3.ap-southeast-1.amazonaws.com/traderhub_xuatkhaudau_20220826_17bf7b4634.jpg',
+            updated_by: '60c99e8fa590815a23314e50',
+            id: '630853e1df3d17001cd0d977',
+          },
+          {
+            point: 0,
+            type: 'news',
+            totalLike: 0,
+            totalView: 4,
+            pin: false,
+            hashtags: [],
+            slug: 'dow-tiep-tuc-tang-do-co-phieu-cong-nghe-tang-manh-truoc-bai-phat-bieu-cua-powell',
+            description:
+              'Chỉ số Dow đã tiếp tục tăng vào thứ Năm, dẫn đầu bởi đà tăng trong lĩnh vực công nghệ khi các nhà đầu tư chuyển sự chú ý sang các manh mối chính sách tiền tệ, trước khi hội nghị chuyên đề Jackson Hole của Cục Dự trữ Liên bang khai mạc.',
+            title: 'Dow Tiếp Tục Tăng Do Cổ Phiếu Công Nghệ Tăng Mạnh Trước Bài Phát Biểu Của Powell',
+            createdAt: '2022-08-26T04:56:25.029Z',
+            updatedAt: '2022-08-26T06:43:57.979Z',
+            articleCategories: '60781ab714916611fff25fae',
+            created_by: {
+              _id: '60c99e8fa590815a23314e50',
+              username: null,
+              firstname: 'Uploader',
+              lastname: '1',
+              __v: 0,
+              id: '60c99e8fa590815a23314e50',
+            },
+            thumbnail: 'https://traderhub-bucket.s3.ap-southeast-1.amazonaws.com/traderhub_dow_20220826_6735b64c10.jpg',
+            updated_by: '60c99e8fa590815a23314e50',
+            id: '63085279df3d17001cd0d96f',
+          },
+          {
+            point: 0,
+            type: 'news',
+            totalLike: 0,
+            totalView: 4,
+            pin: false,
+            hashtags: [],
+            slug: 'ck-uc-mo-cua-tang-0-6-co-phieu-smartgroup-tang-15-2-sau-khi-bao-cao-thu-nhap',
+            description:
+              'S & P / ASX 200 đã tăng thêm 44,8 điểm tương đương 0,6% lên 7.092,9 sau giờ giao dịch đầu tiên của ngày thứ Sáu, kéo dài mức tăng trong phiên thứ ba liên tiếp, sau khi thị trường chứng khoán Hoa Kỳ tăng qua đêm, với tâm lý rủi ro vẫn ổn định.',
+            title: 'CK Úc Mở Cửa Tăng 0,6%, Cổ Phiếu Smartgroup Tăng 15,2% Sau Khi Báo Cáo Thu Nhập',
+            createdAt: '2022-08-26T04:53:21.848Z',
+            updatedAt: '2022-08-26T06:44:25.801Z',
+            articleCategories: '60781ab714916611fff25fae',
+            created_by: {
+              _id: '60c99e8fa590815a23314e50',
+              username: null,
+              firstname: 'Uploader',
+              lastname: '1',
+              __v: 0,
+              id: '60c99e8fa590815a23314e50',
+            },
+            thumbnail:
+              'https://traderhub-bucket.s3.ap-southeast-1.amazonaws.com/traderhub_ckuc_20220826_dfdd64aabf.jpg',
+            updated_by: '60c99e8fa590815a23314e50',
+            id: '630851c1df3d17001cd0d969',
+          },
+          {
+            point: 0,
+            type: 'news',
+            totalLike: 0,
+            totalView: 3,
+            pin: false,
+            hashtags: [],
+            slug: 'ck-my-tuong-lai-giam-nhe-truoc-bai-phat-bieu-cua-chu-tich-fed',
+            description:
+              'Hợp đồng tương lai của chứng khoán Hoa Kỳ giao dịch giảm không đáng kể vào tối thứ Năm, sau khi các chỉ số chính tiếp tục tăng trong phiên thứ hai liên tiếp khi các nhà đầu tư hướng tới bài phát biểu của Chủ tịch Cục Dự trữ Liên bang Jerome Powell trong hội nghị tại Jackson Hole .',
+            title: 'CK Mỹ Tương Lai Giảm Nhẹ Trước Bài Phát Biểu Của Chủ Tịch Fed',
+            createdAt: '2022-08-26T04:49:41.917Z',
+            updatedAt: '2022-08-26T06:44:51.024Z',
+            articleCategories: '60781ab714916611fff25fae',
+            created_by: {
+              _id: '60c99e8fa590815a23314e50',
+              username: null,
+              firstname: 'Uploader',
+              lastname: '1',
+              __v: 0,
+              id: '60c99e8fa590815a23314e50',
+            },
+            thumbnail:
+              'https://traderhub-bucket.s3.ap-southeast-1.amazonaws.com/traderhub_ckmy_20220826_1a5099b533.jpg',
+            updated_by: '60c99e8fa590815a23314e50',
+            id: '630850e5df3d17001cd0d966',
+          },
+          {
+            point: 0,
+            type: 'news',
+            totalLike: 0,
+            totalView: 1,
+            pin: false,
+            hashtags: [],
+            slug: 'khung-hoang-phi-sinh-hoat-tai-anh-them-tram-trong-do-dinh-cong',
+            description:
+              'Chi phí sinh hoạt tăng cao do lạm phát đã dẫn đến làn sóng đình công trên khắp Vương quốc Anh khi các gia đình phải vật lộn để đối phó với cuộc khủng hoảng phí sinh hoạt.',
+            title: 'Khủng Hoảng Phí Sinh Hoạt Tại Anh Thêm Trầm Trọng Do Đình Công',
+            createdAt: '2022-08-26T04:46:16.530Z',
+            updatedAt: '2022-08-26T04:53:04.388Z',
+            articleCategories: '60781ab714916611fff25fae',
+            created_by: {
+              _id: '60c99e8fa590815a23314e50',
+              username: null,
+              firstname: 'Uploader',
+              lastname: '1',
+              __v: 0,
+              id: '60c99e8fa590815a23314e50',
+            },
+            thumbnail:
+              'https://traderhub-bucket.s3.ap-southeast-1.amazonaws.com/traderhub_khunghoangchiphi_20220826_975b18fae8.jpg',
+            updated_by: '60c99e8fa590815a23314e50',
+            id: '63085018df3d17001cd0d963',
+          },
+        ],
+      },
+      created_by: {
+        _id: '60c99e8fa590815a23314e50',
+        username: null,
+        firstname: 'Uploader',
+        lastname: '1',
+        __v: 0,
+        id: '60c99e8fa590815a23314e50',
+      },
+      thumbnail: 'https://traderhub-bucket.s3.ap-southeast-1.amazonaws.com/traderhub_nhandante_20220826_21607a114a.jpg',
+      updated_by: '60c99e8fa590815a23314e50',
+      id: '63085329df3d17001cd0d972',
+      relatedArticles: [],
+      answers: [],
+      totalAnswer: 0,
+    }
+
+    return Promise.resolve(news)
+  }
+}
+
+export const newsApi = new NewsApi()
