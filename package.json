@@ -96,7 +96,7 @@
     "react-share": "^4.4.1",
     "react-slick": "^0.29.0",
     "react-syntax-highlighter": "^15.4.3",
-    "sharp": "^0.30.7",
+    "sharp": "^0.34.3",
     "simplebar": "^5.3.6",
     "simplebar-react": "^2.3.6",
     "slick-carousel": "^1.8.1",
