@@ -17,16 +17,17 @@ import GET_EXCHANGES_WEBSITE from '@app/operations/queries/exchanges/get-exchang
 import { ExchangeListResponse } from '@app/interfaces/exchange'
 import GET_HIGHLIGHT_EXCHANGES from '@app/operations/queries/exchanges/get-highlight-exchanges'
 import { articleCategorySlugType, getSlugs } from '@app/pages/news'
+import { GET_HOMEPAGE_BANNERS } from '@app/operations/queries/banners/home-banners'
 
 interface HomeProps {
   dataLatestArticles: any
   dataExchanges: ExchangeListResponse
   dataHotArticles: any
   dataHighlightTopBrokerExchanges: ExchangeListResponse
-  bannerData: any
+  dataBanner: any
 }
 const Home = ({
-  bannerData,
+  dataBanner,
   dataLatestArticles,
   dataExchanges,
   dataHighlightTopBrokerExchanges,
@@ -71,7 +72,7 @@ const Home = ({
         <link rel="canonical" href={locale === 'vi' ? domain.vi : domain.en} />
       </Head>
       <main>
-        <HomeSlider banners={bannerData?.banners} />
+        <HomeSlider banners={dataBanner?.home} />
         <Stack
           sx={{
             width: '100%',
@@ -82,7 +83,11 @@ const Home = ({
             height: '100%',
           }}
         >
-          <HomeLeftRightBanner position="left" setLeftRightHome={(value) => setLeftHome(value)} />
+          <HomeLeftRightBanner
+            dataBanner={dataBanner.left_home_desktop}
+            position="left"
+            setLeftRightHome={(value) => setLeftHome(value)}
+          />
           <Stack
             maxWidth={{
               xs: '100%',
@@ -98,12 +103,17 @@ const Home = ({
               dataExchanges={dataExchanges}
               dataHighlightTopBrokerExchanges={dataHighlightTopBrokerExchanges}
               dataPinArticles={dataHotArticles}
+              dataBanner={dataBanner.home_desktop}
             />
-            <HomeLargeBanner />
-            <HomePopup />
+            <HomeLargeBanner dataBanner={dataBanner.home_large_desktop} />
+            <HomePopup dataBanner={dataBanner.home_popup_desktop} />
             <HomeExchangeReview />
           </Stack>
-          <HomeLeftRightBanner position="right" setLeftRightHome={(value) => setRightHome(value)} />
+          <HomeLeftRightBanner
+            dataBanner={dataBanner.right_home_desktop}
+            position="right"
+            setLeftRightHome={(value) => setRightHome(value)}
+          />
         </Stack>
       </main>
     </>
@@ -118,7 +128,7 @@ export async function getServerSideProps({ locale }: any) {
   try {
     const [
       { data: dataLatestArticles },
-      { data: bannerData },
+      { data: dataBanner },
       { data: dataExchanges },
       { data: dataHighlightTopBrokerExchanges },
       { data: dataHotArticles },
@@ -148,8 +158,8 @@ export async function getServerSideProps({ locale }: any) {
         },
       }),
       client.query({
-        query: GET_BANNERS,
-        variables: { positionEqual: 'home' },
+        query: GET_HOMEPAGE_BANNERS,
+        variables: { lang: locale === 'vi' ? 'vn' : 'en' },
       }),
       client.query({
         query: GET_EXCHANGES_WEBSITE,
@@ -191,7 +201,7 @@ export async function getServerSideProps({ locale }: any) {
 
     return {
       props: {
-        bannerData,
+        dataBanner,
         dataLatestArticles: dataLatestArticles,
         dataExchanges: dataExchanges,
         dataHighlightTopBrokerExchanges: dataHighlightTopBrokerExchanges,
@@ -203,7 +213,7 @@ export async function getServerSideProps({ locale }: any) {
     console.log(error)
     return {
       props: {
-        bannerData: null,
+        dataBanner: null,
         dataLatestArticles: null,
         dataExchanges: null,
         dataHighlightTopBrokerExchanges: null,

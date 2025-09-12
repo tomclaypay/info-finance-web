@@ -1,20 +1,19 @@
 import { useMobile } from '@app/components/common'
-import useBanner, { BannerPosition } from '@app/hooks/useBanner'
+import { Banner } from '@app/operations/queries/banners/home-banners'
 import { Stack } from '@mui/system'
 import Image from 'next/image'
-import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
 const HomeLeftRightBanner = ({
   position,
   setLeftRightHome,
+  dataBanner,
 }: {
   position: 'left' | 'right'
   setLeftRightHome: (value: boolean) => void
+  dataBanner?: Banner[]
 }) => {
-  const { data } = useBanner({
-    position: position === 'left' ? BannerPosition.LeftHomeDesktop : BannerPosition.RightHomeDesktop,
-  })
+  const data = dataBanner?.[0]
   const [isFixed, setIsFixed] = useState(false)
   const isMobile = useMobile()
   useEffect(() => {
@@ -30,7 +29,7 @@ const HomeLeftRightBanner = ({
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  if (!data || !data.link?.[0] || isMobile) {
+  if (!dataBanner?.[0] || !dataBanner?.[0].link?.[0] || isMobile) {
     setLeftRightHome(false)
     return null
   } else {
@@ -49,8 +48,8 @@ const HomeLeftRightBanner = ({
         height: 'calc(100vh - 20px)', // Đảm bảo vừa với viewport
       }}
     >
-      <a href={data?.url?.[0] ?? ''} target="_blank" rel="nofollow noreferrer">
-        <Image alt="banner" layout="fill" src={data?.link?.[0]} objectFit="cover" loading="lazy" />
+      <a href={dataBanner?.[0]?.url?.[0] ?? ''} target="_blank" rel="nofollow noreferrer">
+        <Image alt="banner" layout="fill" src={dataBanner?.[0]?.link?.[0]} objectFit="cover" loading="lazy" />
       </a>
     </Stack>
   )

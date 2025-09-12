@@ -3,12 +3,12 @@ import { Box, Container, Grid, Typography } from '@mui/material'
 import Image from 'next/image'
 import { useMobile } from '../common'
 import { useTranslation } from 'react-i18next'
+import { Banner } from '@app/operations/queries/banners/home-banners'
 
-const HomeLargeBanner = () => {
+const HomeLargeBanner = ({ dataBanner }: { dataBanner: Banner[] }) => {
   const isMobile = useMobile()
   const { t } = useTranslation(['home-page'])
-  const { data } = useBanner({ position: isMobile ? BannerPosition.LargeHomeMobile : BannerPosition.LargeHomeDesktop })
-  if (!data) {
+  if (!dataBanner || dataBanner.length === 0) {
     return null
   }
   return (
@@ -23,10 +23,10 @@ const HomeLargeBanner = () => {
         </Typography>
       </Box>
       <Grid container justifyContent="center" mb={8} spacing={[4, 2]} alignItems="center">
-        {data?.link?.map((url: string, index: number) => (
+        {dataBanner[0]?.link?.map((url: string, index: number) => (
           <Grid item key={index} md={4} sm={4} xs={12} justifyContent="center">
             <a
-              href={data?.url?.[index] ?? '#'}
+              href={dataBanner[0]?.url?.[index] ?? '#'}
               target="_blank"
               rel="nofollow noreferrer"
               style={{ display: 'block', width: '100%' }}

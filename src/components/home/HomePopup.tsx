@@ -7,12 +7,11 @@ import { useRouter } from 'next/router'
 import { useState } from 'react'
 import CloseIcon from '@mui/icons-material/Close'
 import { useDesktop, useMobile } from '../common'
+import { Banner } from '@app/operations/queries/banners/home-banners'
 
-const HomePopup = () => {
-  const { locale } = useRouter()
+const HomePopup = ({ dataBanner }: { dataBanner: Banner[] }) => {
   const isMobile = useMobile()
   const isDesktop = useDesktop()
-  // const [persistedOpen, setPersistedOpen] = useSessionStorage('@infofinace/banner-state', true)
   const [persistedOpen, setPersistedOpen] = useState(true)
   const [open, setOpen] = useState(true)
 
@@ -21,13 +20,7 @@ const HomePopup = () => {
     setPersistedOpen(false)
   }
 
-  const { data } = useQuery<BannersListResponse>(GET_BANNERS, {
-    variables: {
-      positionEqual: isMobile ? 'home_popup_mobile' : 'home_popup_desktop',
-    },
-  })
-
-  const banner = data?.banners.find((item) => item.language === (locale === 'en' ? 'en' : 'vn'))
+  const banner = dataBanner[0]
 
   return (
     <Dialog

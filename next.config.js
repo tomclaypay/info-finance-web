@@ -4,6 +4,7 @@
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
+  openAnalyzer: false,
 })
 
 // Chỉ import phần i18n từ next-i18next (KHÔNG kéo các key khác như localePath vào i18n)
@@ -23,6 +24,7 @@ const nextConfig = {
       'infofx.s3.amazonaws.com',
       'images.dmca.com',
     ],
+    formats: ['image/avif', 'image/webp'],
   },
 
   eslint: { ignoreDuringBuilds: true },
@@ -54,6 +56,7 @@ const nextConfig = {
       '@fullcalendar/list',
       '@fullcalendar/timegrid',
       '@fullcalendar/timeline',
+      'date-fns',
     ],
   },
 

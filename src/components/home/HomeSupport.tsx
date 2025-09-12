@@ -15,17 +15,20 @@ import HomeMiddleBanner from '../banner/HomeMiddleBanner'
 import { getColorFromScore } from '@app/utils/exchange'
 import LatestNewsItem from '@app/components/news/LatestNews-item'
 import HomeSliderHotNews from '@app/components/home/HomeSliderHotNews'
+import { Banner } from '@app/operations/queries/banners/home-banners'
 
 const HomeSupport = ({
   dataLatestArticles,
   dataExchanges,
   dataHighlightTopBrokerExchanges,
   dataPinArticles,
+  dataBanner,
 }: {
   dataLatestArticles: any
   dataExchanges: ExchangeListResponse
   dataHighlightTopBrokerExchanges: ExchangeListResponse
   dataPinArticles: any
+  dataBanner: Banner[]
 }) => {
   const router = useRouter()
   const { t } = useTranslation(['home-page', 'common'])
@@ -248,7 +251,7 @@ const HomeSupport = ({
 
       <HomeSliderHotNews dataPinArticles={dataPinArticles?.articles?.data} />
 
-      <HomeMiddleBanner />
+      <HomeMiddleBanner dataBanner={dataBanner} />
 
       <Container maxWidth={!isMobile && 'lg'} sx={{ padding: 0 }}>
         <Stack
