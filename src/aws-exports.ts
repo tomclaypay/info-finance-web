@@ -6,8 +6,8 @@ const awsmobile = {
   oauth: {
     domain: 'infofinance.auth.ap-southeast-1.amazoncognito.com',
     scope: ['aws.cognito.signin.user.admin', 'email', 'openid', 'phone', 'profile'],
-    redirectSignIn: 'http://localhost:3000/,https://infofinance.com/',
-    redirectSignOut: 'http://localhost:3000/,https://infofinance.com/',
+    redirectSignIn: 'http://localhost:3000/,https://infofinance.com/,https://info-finance-web.vercel.app/',
+    redirectSignOut: 'http://localhost:3000/,https://infofinance.com/,https://info-finance-web.vercel.app/',
     responseType: 'token',
   },
   federationTarget: 'COGNITO_USER_POOLS',
