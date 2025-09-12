@@ -27,6 +27,7 @@ import '../../public/assets/css/embla.css'
 import '../../public/assets/css/global.css'
 import '../../public/assets/css/content.css'
 import BannerProvider from '@app/contexts/bannerContext'
+import nextI18NextConfig from '../../next-i18next.config'
 Router.events.on('routeChangeStart', nProgress.start)
 Router.events.on('routeChangeError', nProgress.done)
 Router.events.on('routeChangeComplete', nProgress.done)
@@ -111,4 +112,4 @@ const App = (props: any) => {
   )
 }
 
-export default appWithTranslation(App)
+export default appWithTranslation(App, nextI18NextConfig)
