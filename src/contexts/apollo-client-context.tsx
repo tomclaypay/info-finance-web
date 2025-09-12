@@ -1,7 +1,6 @@
 import React, { createContext, ReactNode, useMemo, useState } from 'react'
 import { ApolloClient, ApolloProvider, InMemoryCache, NormalizedCacheObject } from '@apollo/client'
 import { defaultLinks } from '@app/apolloConfig'
-import { create } from 'domain'
 
 export const client = new ApolloClient({
   link: defaultLinks,
@@ -34,9 +33,8 @@ export const ApolloClientContext = createContext<
 interface ApolloClientProviderProps {
   children: ReactNode
 }
-
 export const ApolloClientContextProvider = ({ children }: ApolloClientProviderProps) => {
-  const [apolloClient, setApolloClient] = useState<ApolloClient<any> | null>(client)
+  const [apolloClient, setApolloClient] = useState<ApolloClient<NormalizedCacheObject> | null>(null)
   // Chỉ tạo 1 client trên browser; server sẽ được tạo mới mỗi request
   const client = useMemo(() => apolloClient ?? createApolloClient(), [apolloClient])
   return (
