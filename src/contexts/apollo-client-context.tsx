@@ -17,7 +17,7 @@ function createApolloClient() {
     ssrMode: typeof window === 'undefined',
     // Trì hoãn 100ms để tránh refetch lúc hydrate (Next 15  React 18)
     ssrForceFetchDelay: typeof window !== 'undefined' ? 100 : undefined,
-    connectToDevTools: process.env.NODE_ENV === 'development' && typeof window !== 'undefined',
+    devtools: { enabled: process.env.NODE_ENV === 'development' && typeof window !== 'undefined' },
     queryDeduplication: true,
   })
 }
