@@ -133,15 +133,8 @@ Exchanges.getLayout = (page: any) => <MainLayout>{page}</MainLayout>
 export default Exchanges
 
 export async function getStaticProps({ locale }: GetStaticPropsContext) {
-  const { data: bannerData } = await client.query({
-    query: GET_BANNERS,
-    variables: {
-      positionEqual: 'home',
-    },
-  })
   return {
     props: {
-      bannerData,
       ...(await serverSideTranslations(locale ?? 'vi', ['common', 'exchange', 'seo'])),
       // Will be passed to the page component as props
     },

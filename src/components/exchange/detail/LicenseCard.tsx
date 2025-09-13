@@ -261,8 +261,8 @@ const LicenseCard = ({ license, dataSupervisories, onNameSupervisorChange }: Lic
                 layout="fill"
                 objectFit="cover"
                 objectPosition="center"
-                width="400px"
-                height="226px"
+                width={400}
+                height={226}
                 loading="lazy"
               />
             </Box>

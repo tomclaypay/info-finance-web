@@ -2,7 +2,7 @@ import { Exchange } from '@app/interfaces/exchange'
 import { Box, Stack } from '@mui/system'
 import React from 'react'
 import Image from 'next/image'
-import { Divider, Typography } from '@mui/material'
+import { Divider, Link, Typography } from '@mui/material'
 import { getColorFromScore } from '@app/utils/exchange'
 import NextLink from 'next/link'
 import { useMobile } from '@app/components/common'
@@ -19,7 +19,7 @@ export default function ExchangeGridCard({ exchange }: IExchangeGridCardProps) {
   const { locale } = useRouter()
 
   return (
-    <NextLink href={`/${locale === 'vi' ? 'tra-cuu-san' : 'broker'}/${exchange.slug}`} passHref>
+    <Link component={NextLink} href={`/${locale === 'vi' ? 'tra-cuu-san' : 'broker'}/${exchange.slug}`} passHref>
       <Stack
         sx={{
           width: '100%',
@@ -30,16 +30,25 @@ export default function ExchangeGridCard({ exchange }: IExchangeGridCardProps) {
         }}
         position="relative"
       >
-        <Box sx={{ padding: 2 }}>
+        <Box
+          sx={{
+            p: 2,
+            position: 'relative',
+            width: 1,
+            aspectRatio: '1 / 1', // giữ tỉ lệ 1:1
+            display: 'grid',
+            placeItems: 'center',
+          }}
+        >
           <Image
             src={
               exchange?.logo ||
               'https://infofinance-dev.s3.ap-southeast-1.amazonaws.com/Screenshot_2018_12_16_at_21_06_29_f07726afef.png?updated_at=2022-11-30T08:25:12.500Z'
             }
             alt="logo"
-            objectFit="contain"
-            width={243}
-            height={243}
+            fill // fill vào Box ở trên
+            sizes="(max-width: 600px) 100vw, (max-width: 1200px) 33vw, 243px"
+            style={{ objectFit: 'contain', display: 'block' }} // luôn fit, không tràn
             loading="lazy"
           />
         </Box>
@@ -78,7 +87,7 @@ export default function ExchangeGridCard({ exchange }: IExchangeGridCardProps) {
             <Box>
               <Stack direction="row" gap={1} flexWrap="wrap">
                 {exchange?.website?.map((web) => (
-                  <a href={web.url} target="_blank" rel="noreferrer" key={web.url}>
+                  <NextLink href={web.url} target="_blank" rel="noreferrer" key={web.url}>
                     <Stack key={web.url} direction="row">
                       <Image
                         src={dataNationals?.nationals?.find((e: any) => e.id === web.national_id)?.logo ?? ''}
@@ -88,13 +97,13 @@ export default function ExchangeGridCard({ exchange }: IExchangeGridCardProps) {
                         loading="lazy"
                       />
                     </Stack>
-                  </a>
+                  </NextLink>
                 ))}
               </Stack>
             </Box>
           </Stack>
         </Stack>
       </Stack>
-    </NextLink>
+    </Link>
   )
 }

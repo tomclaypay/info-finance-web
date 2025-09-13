@@ -95,7 +95,11 @@ const HomeSupport = ({
                 spacing={2}
                 justifyContent="space-between"
               >
-                <NextLink href={`/${locale === 'vi' ? 'tra-cuu-san' : 'broker'}/${exchange.slug}`} passHref>
+                <Link
+                  component={NextLink}
+                  href={`/${locale === 'vi' ? 'tra-cuu-san' : 'broker'}/${exchange.slug}`}
+                  passHref
+                >
                   <Stack
                     sx={{
                       width: '100%',
@@ -155,7 +159,7 @@ const HomeSupport = ({
                       </Stack>
                     </Stack>
                   </Stack>
-                </NextLink>
+                </Link>
               </Stack>
             ))}
           </Stack>

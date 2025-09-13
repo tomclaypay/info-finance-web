@@ -196,8 +196,8 @@ ExchangeDetailProps) => {
                   'https://infofinance-dev.s3.ap-southeast-1.amazonaws.com/Screenshot_2018_12_16_at_21_06_29_f07726afef.png?updated_at=2022-11-30T08:25:12.500Z'
                 }
                 alt="icon"
-                width="400px"
-                height="226px"
+                width={400}
+                height={226}
                 loading="lazy"
               />
             </Box>
@@ -213,7 +213,7 @@ ExchangeDetailProps) => {
                   {t('country')}:
                 </Typography>
                 {exchange?.national?.logo && (
-                  <Image src={exchange?.national.logo} alt="icon" width={24} height="18px" loading="lazy" />
+                  <Image src={exchange?.national.logo} alt="icon" width={24} height={18} loading="lazy" />
                 )}
                 <Typography variant="body2" sx={{ fontSize: 16, color: '#000' }} ml={0.5}>
                   {router.locale === 'vi' && exchange?.national?.name_vn !== '' && exchange?.national?.name_vn !== null
