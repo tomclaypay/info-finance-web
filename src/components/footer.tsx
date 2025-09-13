@@ -166,18 +166,18 @@ export const Footer = () => {
                   <Box sx={{ flex: '1' }}>
                     {sections.left.map((section, index) => (
                       <Grid item xs={12} key={index} sx={{ marginBottom: '7px' }}>
-                        <NextLink href={section.href} passHref>
-                          <Link>{section.title}</Link>
-                        </NextLink>
+                        <Link component={NextLink} href={section.href} passHref>
+                          {section.title}
+                        </Link>
                       </Grid>
                     ))}
                   </Box>
                   <Box>
                     {sections.right.map((section, index) => (
                       <Grid item xs={12} key={index} sx={{ marginBottom: '7px' }}>
-                        <NextLink href={section.href} passHref>
-                          <Link>{section.title}</Link>
-                        </NextLink>
+                        <Link component={NextLink} href={section.href} passHref>
+                          {section.title}
+                        </Link>
                       </Grid>
                     ))}
                   </Box>
@@ -212,17 +212,15 @@ export const Footer = () => {
                     </Typography>
                     <Stack gap={1.5} direction="row" alignItems="center">
                       {socials.map((item) => (
-                        <NextLink href={item.link} passHref key={item.image}>
-                          <Link target="_blank">
-                            <Box
-                              sx={{
-                                cursor: 'pointer',
-                              }}
-                            >
-                              <Image loading="lazy" src={item.image} alt="icon" width={24} height={24} />
-                            </Box>
-                          </Link>
-                        </NextLink>
+                        <Link component={NextLink} target="_blank" href={item.link} passHref key={item.image}>
+                          <Box
+                            sx={{
+                              cursor: 'pointer',
+                            }}
+                          >
+                            <Image loading="lazy" src={item.image} alt="icon" width={24} height={24} />
+                          </Box>
+                        </Link>
                       ))}
                     </Stack>
                   </Stack>

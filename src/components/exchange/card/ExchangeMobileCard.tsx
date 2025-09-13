@@ -2,7 +2,6 @@ import { Exchange } from '@app/interfaces/exchange'
 import { Box, Stack, Typography } from '@mui/material'
 import { useTranslation } from 'next-i18next'
 import Image from 'next/image'
-import NextLink from 'next/link'
 
 interface ExchangeMobileCardProps {
   exchange?: Exchange
@@ -33,7 +32,7 @@ const ExchangeMobileCard = ({ exchange }: ExchangeMobileCardProps) => {
           loading="lazy"
         />
       </Box>
-      <Typography textAlign="center" lineHeight="24px" fontWeight={700} fontSize={16}>
+      <Typography textAlign="center" lineHeight={24} fontWeight={700} fontSize={16}>
         {exchange?.name}
       </Typography>
     </Stack>

@@ -118,14 +118,12 @@ const FAQ = ({ data }: FAQProps) => {
                 {item?.attributes?.description === '' ? (
                   <Stack direction={isMobile ? 'column' : 'row'} spacing={3} mt={1.5}>
                     {socials.map((social) => (
-                      <NextLink href={social.href} passHref key={social.icon}>
-                        <Link target="_blank">
-                          <Stack direction="row" spacing={1} alignItems="center">
-                            <Image loading="lazy" src={social.icon} width="24px" height="24px" alt="icon-social" />
-                            <Typography>{social.text}</Typography>
-                          </Stack>
-                        </Link>
-                      </NextLink>
+                      <Link component={NextLink} target="_blank" href={social.href} passHref key={social.icon}>
+                        <Stack direction="row" spacing={1} alignItems="center">
+                          <Image loading="lazy" src={social.icon} width={24} height={24} alt="icon-social" />
+                          <Typography>{social.text}</Typography>
+                        </Stack>
+                      </Link>
                     ))}
                   </Stack>
                 ) : (

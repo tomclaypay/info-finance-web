@@ -74,11 +74,15 @@ const Login = () => {
                     <Typography color="textSecondary" variant="body2">
                       Bạn chưa có tài khoản?
                     </Typography>
-                    <NextLink href={'/authentication/register'} passHref>
-                      <Link fontWeight={500} variant="body2">
-                        Đăng ký
-                      </Link>
-                    </NextLink>
+                    <Link
+                      component={NextLink}
+                      href={'/authentication/register'}
+                      passHref
+                      fontWeight={500}
+                      variant="body2"
+                    >
+                      Đăng ký
+                    </Link>
                   </Stack>
                 </Box>
                 <Box

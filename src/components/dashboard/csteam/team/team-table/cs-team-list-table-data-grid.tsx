@@ -89,13 +89,17 @@ const CsTeamListTableDataGrid = (props: CsTeamListTableDataGridProps) => {
         return (
           <>
             {leader?.length > 0 ? (
-              <NextLink href={`/dashboard/csteam/members/${leader?.[0].id}`} passHref>
-                <Link target="_blank" sx={{ cursor: 'pointer' }}>
-                  <TextCellGrid fontWeight="500" color="primary.main">
-                    {leader?.[0]?.user.displayName}
-                  </TextCellGrid>
-                </Link>
-              </NextLink>
+              <Link
+                component={NextLink}
+                href={`/dashboard/csteam/members/${leader?.[0].id}`}
+                passHref
+                target="_blank"
+                sx={{ cursor: 'pointer' }}
+              >
+                <TextCellGrid fontWeight="500" color="primary.main">
+                  {leader?.[0]?.user.displayName}
+                </TextCellGrid>
+              </Link>
             ) : (
               <Typography variant="body2">Chưa có</Typography>
             )}

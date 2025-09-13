@@ -71,17 +71,15 @@ const About4 = () => {
           >
             {partners.map((partner) => (
               <Grid key={partner.link} item xs={4} sm={4} md={3} p={3.5}>
-                <NextLink href={partner.link} passHref>
-                  <Link target="_blank">
-                    <Image
-                      src={partner.image.url}
-                      alt="Hình ảnh"
-                      width={partner.image.width}
-                      height={partner.image.height}
-                      loading="lazy"
-                    />
-                  </Link>
-                </NextLink>
+                <Link component={NextLink} target="_blank" href={partner.link} passHref>
+                  <Image
+                    src={partner.image.url}
+                    alt="Hình ảnh"
+                    width={Number(partner.image.width) ?? 10}
+                    height={Number(partner.image.height) ?? 10}
+                    loading="lazy"
+                  />
+                </Link>
               </Grid>
             ))}
           </Grid>

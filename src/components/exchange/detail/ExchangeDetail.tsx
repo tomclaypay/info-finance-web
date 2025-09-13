@@ -213,7 +213,7 @@ ExchangeDetailProps) => {
                   {t('country')}:
                 </Typography>
                 {exchange?.national?.logo && (
-                  <Image src={exchange?.national.logo} alt="icon" width="24px" height="18px" loading="lazy" />
+                  <Image src={exchange?.national.logo} alt="icon" width={24} height="18px" loading="lazy" />
                 )}
                 <Typography variant="body2" sx={{ fontSize: 16, color: '#000' }} ml={0.5}>
                   {router.locale === 'vi' && exchange?.national?.name_vn !== '' && exchange?.national?.name_vn !== null

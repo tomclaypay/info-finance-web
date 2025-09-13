@@ -47,14 +47,6 @@ export default function MainNavbarItem({ item }: MainNavbarItemProps) {
             },
           },
         }}
-        // className={
-        //   !item.children && router.pathname === item.href
-        //     ? 'active'
-        //     : (item.children || item.href === '/events') &&
-        //       router.pathname.startsWith(item.href.split('/lua-dao-chiem-doat-tai-san')[0])
-        //     ? 'active'
-        //     : ''
-        // }
         className={
           router.pathname === item.href
             ? 'active'
@@ -69,18 +61,21 @@ export default function MainNavbarItem({ item }: MainNavbarItemProps) {
         onClick={item.children && handleClick}
         onMouseEnter={item.children && handleClick}
       >
-        <NextLink href={item.href} passHref>
-          <Link
-            sx={{
-              marginRight: '4px',
-              display: 'flex',
-              alignItems: 'center',
-              height: '100%',
-            }}
-          >
-            {item.title}
-          </Link>
-        </NextLink>
+        <Link
+          component={NextLink}
+          sx={{
+            marginRight: '4px',
+            display: 'flex',
+            alignItems: 'center',
+            height: '100%',
+          }}
+          href={item.href}
+          passHref
+          underline="none"
+          prefetch={false}
+        >
+          {item.title}
+        </Link>
         {item.children ? (
           <ExpandMoreRounded
             sx={{

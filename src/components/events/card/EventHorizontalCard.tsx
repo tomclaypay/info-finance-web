@@ -69,24 +69,22 @@ const EventHorizontalCard = ({ event, ended, registered }: EventHorizontalCardPr
 
       <Stack sx={{ flex: '2', pl: 2, pb: 1 }} justifyContent="space-between">
         <Stack>
-          <NextLink href={`/event`} passHref>
-            <Link>
-              <Typography
-                variant="h3"
-                sx={{
-                  color: 'text.main',
-                  textWrap: 'wrap',
-                  WebkitLineClamp: 2,
-                  display: '-webkit-box',
-                  overflow: 'hidden',
-                  WebkitBoxOrient: 'vertical',
-                  mt: 1,
-                }}
-              >
-                {event.title}
-              </Typography>
-            </Link>
-          </NextLink>
+          <Link component={NextLink} href={`/event`} passHref>
+            <Typography
+              variant="h3"
+              sx={{
+                color: 'text.main',
+                textWrap: 'wrap',
+                WebkitLineClamp: 2,
+                display: '-webkit-box',
+                overflow: 'hidden',
+                WebkitBoxOrient: 'vertical',
+                mt: 1,
+              }}
+            >
+              {event.title}
+            </Typography>
+          </Link>
 
           <Stack direction="row" spacing={1} alignItems="flex-end">
             <Image
@@ -162,30 +160,31 @@ const EventHorizontalCard = ({ event, ended, registered }: EventHorizontalCardPr
             <Typography variant="button">{STATUS_OF_EVENT(event, 'text', locale)}</Typography>
           </Stack>
 
-          <NextLink href={`/${locale === 'vi' ? 'su-kien' : 'events'}/${event.slug}`} passHref>
-            <Link
-              sx={{
-                color: 'primary.main',
-                marginRight: '5px',
-                fontSize: '1rem',
-                display: 'flex',
-                alignItems: 'center',
-              }}
-            >
-              <Typography variant="button" sx={{ mr: 1 }}>
-                {t('event.detail')}
-              </Typography>
-              <Image
-                src={
-                  'https://infofinance-dev.s3.ap-southeast-1.amazonaws.com/Arrow_Right_18e705d65a.png?updated_at=2022-08-25T09:28:40.108Z'
-                }
-                alt="icon"
-                width={20}
-                height={20}
-                loading="lazy"
-              />
-            </Link>
-          </NextLink>
+          <Link
+            component={NextLink}
+            href={`/${locale === 'vi' ? 'su-kien' : 'events'}/${event.slug}`}
+            passHref
+            sx={{
+              color: 'primary.main',
+              marginRight: '5px',
+              fontSize: '1rem',
+              display: 'flex',
+              alignItems: 'center',
+            }}
+          >
+            <Typography variant="button" sx={{ mr: 1 }}>
+              {t('event.detail')}
+            </Typography>
+            <Image
+              src={
+                'https://infofinance-dev.s3.ap-southeast-1.amazonaws.com/Arrow_Right_18e705d65a.png?updated_at=2022-08-25T09:28:40.108Z'
+              }
+              alt="icon"
+              width={20}
+              height={20}
+              loading="lazy"
+            />
+          </Link>
         </Stack>
       </Stack>
     </Stack>

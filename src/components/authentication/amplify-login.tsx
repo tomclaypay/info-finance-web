@@ -40,7 +40,6 @@ export const AmplifyLogin = (props: any) => {
           await router.push(returnUrl)
         }
       } catch (err: any) {
-
         if (isMounted()) {
           if (err.code === 'UserNotConfirmedException') {
             sessionStorage.setItem('username', values.email)
@@ -154,11 +153,9 @@ export const AmplifyLogin = (props: any) => {
           </Typography>
         </Box>
 
-        <NextLink href={'/authentication/password-recovery'} passHref>
-          <Link fontWeight={500} variant="body2">
-            {t('authen.fogot')}
-          </Link>
-        </NextLink>
+        <Link component={NextLink} href={'/authentication/password-recovery'} passHref fontWeight={500} variant="body2">
+          {t('authen.fogot')}
+        </Link>
       </Stack>
       <Box sx={{ mt: 6 }}>
         <Button

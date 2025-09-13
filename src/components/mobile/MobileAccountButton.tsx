@@ -28,11 +28,9 @@ function MobileAccountButton() {
 
   if (!isAuthenticated) {
     return (
-      <NextLink href="/authentication/login" passHref>
-        <Link>
-          <PermIdentityRoundedIcon />
-        </Link>
-      </NextLink>
+      <Link component={NextLink} href="/authentication/login" passHref>
+        <PermIdentityRoundedIcon />
+      </Link>
     )
   } else {
     return (

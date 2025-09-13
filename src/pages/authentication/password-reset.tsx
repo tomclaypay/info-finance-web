@@ -6,8 +6,8 @@ import { useEffect } from 'react'
 import { AmplifyPasswordReset } from '../../components/authentication/amplify-password-reset'
 import { GuestGuard } from '../../components/authentication/guest-guard'
 import { gtm } from '../../lib/gtm'
-import {useRouter} from "next/router";
-import {PASSWORD_RESET_TYPE} from "@app/constants";
+import { useRouter } from 'next/router'
+import { PASSWORD_RESET_TYPE } from '@app/constants'
 
 const PasswordReset = () => {
   const isMobile = useMobile()
@@ -51,9 +51,7 @@ const PasswordReset = () => {
         >
           <Stack alignItems="center" justifyContent="center" spacing={4}>
             <NextLink href="/" passHref>
-              <a>
-                <img height={64} alt="" src={`/static/full-logo.png`} />
-              </a>
+              <img height={64} alt="" src={`/static/full-logo.png`} />
             </NextLink>
             <Card elevation={16} sx={{ p: 4, borderRadius: 2 }}>
               <Box
@@ -65,8 +63,9 @@ const PasswordReset = () => {
                 }}
               >
                 <Typography variant="h4">Tạo mật khẩu mới</Typography>
-                <Typography color="textSecondary" sx={{ mt: 2, textAlign: "center" }} variant="body2">
-                  {query?.type === PASSWORD_RESET_TYPE.PASSWORD_EXPIRED && 'Mật khẩu của bạn đã hết hạn.'} Đặt lại mật khẩu của bạn với mật mã gửi qua mail của bạn.
+                <Typography color="textSecondary" sx={{ mt: 2, textAlign: 'center' }} variant="body2">
+                  {query?.type === PASSWORD_RESET_TYPE.PASSWORD_EXPIRED && 'Mật khẩu của bạn đã hết hạn.'} Đặt lại mật
+                  khẩu của bạn với mật mã gửi qua mail của bạn.
                 </Typography>
               </Box>
               <Box

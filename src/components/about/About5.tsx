@@ -195,11 +195,9 @@ const About5 = () => {
                 <Stack direction="row" spacing={5} sx={{ pl: 1, mb: 2 }}>
                   {socialsImg.map((item) => (
                     <Stack key={item.id} sx={{ cursor: 'pointer' }}>
-                      <NextLink href={item.href} passHref>
-                        <Link target="_blank">
-                          <Image src={item.image} alt="icon" width="24px" height="24px" loading="lazy" />
-                        </Link>
-                      </NextLink>
+                      <Link component={NextLink} target="_blank" href={item.href} passHref>
+                        <Image src={item.image} alt="icon" width={24} height={24} loading="lazy" />
+                      </Link>
                     </Stack>
                   ))}
                 </Stack>
@@ -312,11 +310,9 @@ const About5 = () => {
                 <Stack direction="row" spacing={5} sx={{ pl: 1 }}>
                   {socialsImg.map((item) => (
                     <Stack key={item.id} sx={{ cursor: 'pointer' }}>
-                      <NextLink href={item.href} passHref>
-                        <Link target="_blank">
-                          <Image src={item.image} alt="icon" width="24px" height="24px" loading="lazy" />
-                        </Link>
-                      </NextLink>
+                      <Link component={NextLink} target="_blank" href={item.href} passHref>
+                        <Image src={item.image} alt="icon" width={24} height={24} loading="lazy" />
+                      </Link>
                     </Stack>
                   ))}
                 </Stack>

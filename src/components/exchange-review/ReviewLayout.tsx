@@ -84,7 +84,7 @@ const ReviewLayout = (props: any) => {
                 sx={{ color: 'text.main' }}
                 fontSize={20}
                 fontWeight={600}
-                lineHeight="24px"
+                lineHeight={24}
                 variant={mapReviewCategorySlug === undefined ? 'h1' : 'h2'}
               >
                 {t(`yourComplaint.left.infoExchange.t2`)}

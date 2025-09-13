@@ -567,31 +567,32 @@ const ReviewCategorySlug = ({ exchangeSEO }: any) => {
                 {t('complaints.different', { ns: 'common' })}
               </Typography>
               {!isMobile && (
-                <NextLink href={`/${locale === 'vi' ? 'danh-gia-san/lua-dao' : 'exchange-review/scam'}`} passHref>
-                  <Link
-                    sx={{
-                      color: 'primary.main',
-                      marginRight: '5px',
-                      fontSize: '1rem',
-                      display: 'flex',
-                      alignItems: 'center',
-                    }}
-                  >
-                    <Typography variant="button" sx={{ mr: 1 }}>
-                      {t('text.seeMore', { ns: 'common' })}
-                    </Typography>
-                    <Box sx={{ '& > span > img': { position: 'static' } }}>
-                      <img
-                        src={
-                          'https://infofinance-dev.s3.ap-southeast-1.amazonaws.com/Arrow_Right_18e705d65a.png?updated_at=2022-08-25T09:28:40.108Z'
-                        }
-                        alt="icon"
-                        width={24}
-                        height={24}
-                      />
-                    </Box>
-                  </Link>
-                </NextLink>
+                <Link
+                  component={NextLink}
+                  href={`/${locale === 'vi' ? 'danh-gia-san/lua-dao' : 'exchange-review/scam'}`}
+                  passHref
+                  sx={{
+                    color: 'primary.main',
+                    marginRight: '5px',
+                    fontSize: '1rem',
+                    display: 'flex',
+                    alignItems: 'center',
+                  }}
+                >
+                  <Typography variant="button" sx={{ mr: 1 }}>
+                    {t('text.seeMore', { ns: 'common' })}
+                  </Typography>
+                  <Box sx={{ '& > span > img': { position: 'static' } }}>
+                    <img
+                      src={
+                        'https://infofinance-dev.s3.ap-southeast-1.amazonaws.com/Arrow_Right_18e705d65a.png?updated_at=2022-08-25T09:28:40.108Z'
+                      }
+                      alt="icon"
+                      width={24}
+                      height={24}
+                    />
+                  </Box>
+                </Link>
               )}
             </Stack>
 
@@ -610,31 +611,32 @@ const ReviewCategorySlug = ({ exchangeSEO }: any) => {
             </Grid>
             {isMobile && (
               <Stack justifyContent="center" alignItems="center">
-                <NextLink href={`/${locale === 'vi' ? 'danh-gia-san/lua-dao' : 'exchange-review/scam'}`} passHref>
-                  <Link
-                    sx={{
-                      color: 'primary.main',
-                      marginRight: '5px',
-                      fontSize: '1rem',
-                      display: 'flex',
-                      alignItems: 'center',
-                      mb: 2,
-                    }}
-                  >
-                    <Typography variant="button" sx={{ mr: 1 }}>
-                      {t('text.seeMore', { ns: 'common' })}
-                    </Typography>
-                    <Image
-                      src={
-                        'https://infofinance-dev.s3.ap-southeast-1.amazonaws.com/Arrow_Right_18e705d65a.png?updated_at=2022-08-25T09:28:40.108Z'
-                      }
-                      alt="icon"
-                      width={24}
-                      height={24}
-                      loading="lazy"
-                    />
-                  </Link>
-                </NextLink>
+                <Link
+                  component={NextLink}
+                  href={`/${locale === 'vi' ? 'danh-gia-san/lua-dao' : 'exchange-review/scam'}`}
+                  passHref
+                  sx={{
+                    color: 'primary.main',
+                    marginRight: '5px',
+                    fontSize: '1rem',
+                    display: 'flex',
+                    alignItems: 'center',
+                    mb: 2,
+                  }}
+                >
+                  <Typography variant="button" sx={{ mr: 1 }}>
+                    {t('text.seeMore', { ns: 'common' })}
+                  </Typography>
+                  <Image
+                    src={
+                      'https://infofinance-dev.s3.ap-southeast-1.amazonaws.com/Arrow_Right_18e705d65a.png?updated_at=2022-08-25T09:28:40.108Z'
+                    }
+                    alt="icon"
+                    width={24}
+                    height={24}
+                    loading="lazy"
+                  />
+                </Link>
               </Stack>
             )}
           </Container>

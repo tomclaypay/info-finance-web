@@ -232,13 +232,16 @@ const ReviewDetail = () => {
                       <Typography variant="body2">{`${t('complaints.years', {
                         ns: 'common',
                       })}:`}</Typography>
-                      <NextLink href={data.complaints_by_pk.exchange.website?.[0]?.url ?? ''} passHref>
-                        <Link target="_blank">
-                          <Typography variant="body2" sx={{ fontWeight: 500, ':hover': { color: 'primary.main' } }}>
-                            {data.complaints_by_pk.exchange.website?.[0]?.url}
-                          </Typography>
-                        </Link>
-                      </NextLink>
+                      <Link
+                        component={NextLink}
+                        href={data.complaints_by_pk.exchange.website?.[0]?.url ?? ''}
+                        passHref
+                        target="_blank"
+                      >
+                        <Typography variant="body2" sx={{ fontWeight: 500, ':hover': { color: 'primary.main' } }}>
+                          {data.complaints_by_pk.exchange.website?.[0]?.url}
+                        </Typography>
+                      </Link>
                     </Stack>
                   </Stack>
                 </Stack>
@@ -415,7 +418,7 @@ const ReviewDetail = () => {
                 {contactArr.map((item, index) => (
                   <Stack key={index} direction="row" spacing={2} sx={{ alignItems: 'center' }}>
                     <Stack>
-                      <Image src={item.image} alt="icon" width="48px" height="48px" loading="lazy" />
+                      <Image src={item.image} alt="icon" width={48} height={48} loading="lazy" />
                     </Stack>
                     <Stack sx={{ ml: 2, flex: '1' }}>
                       <Typography variant="body1" sx={{ color: 'subtitle.main' }}>

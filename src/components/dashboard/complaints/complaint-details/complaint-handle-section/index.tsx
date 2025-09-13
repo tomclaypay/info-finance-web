@@ -20,13 +20,16 @@ export const ComplaintHandleSection = ({ complaint }: ComplaintHandleSectionProp
         <Divider />
         <List disablePadding>
           <PropertyListItem align={align} label="Tên người xử lý">
-            <NextLink href={`/dashboard/csteam/members/${complaint?.handle_by?.id}`} passHref>
-              <Link target="_blank">
-                <Typography color="primary.main" fontWeight="500" variant="body2" sx={{ cursor: 'pointer' }}>
-                  {complaint?.handle_by?.user?.displayName}
-                </Typography>
-              </Link>
-            </NextLink>
+            <Link
+              component={NextLink}
+              href={`/dashboard/csteam/members/${complaint?.handle_by?.id}`}
+              passHref
+              target="_blank"
+            >
+              <Typography color="primary.main" fontWeight="500" variant="body2" sx={{ cursor: 'pointer' }}>
+                {complaint?.handle_by?.user?.displayName}
+              </Typography>
+            </Link>
           </PropertyListItem>
         </List>
       </Card>

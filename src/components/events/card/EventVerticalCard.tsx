@@ -180,29 +180,30 @@ const EventVerticalCard = ({ event, ended, registered, hasStatus }: EventVertica
 
         {event?.slug && (
           <Stack direction="row" justifyContent="space-between">
-            <NextLink href={`/${locale === 'vi' ? 'su-kien' : 'events'}/${event?.slug}`} passHref>
-              <Link
-                sx={{
-                  color: 'primary.main',
-                  marginRight: '5px',
-                  display: 'flex',
-                  alignItems: 'center',
-                }}
-              >
-                <Typography variant="button" sx={{ mr: 1, fontSize: '15px' }}>
-                  {t('event.detail')}
-                </Typography>
-                <Image
-                  src={
-                    'https://infofinance-dev.s3.ap-southeast-1.amazonaws.com/Arrow_Right_18e705d65a.png?updated_at=2022-08-25T09:28:40.108Z'
-                  }
-                  alt="icon"
-                  width={20}
-                  height={20}
-                  loading="lazy"
-                />
-              </Link>
-            </NextLink>
+            <Link
+              component={NextLink}
+              href={`/${locale === 'vi' ? 'su-kien' : 'events'}/${event?.slug}`}
+              passHref
+              sx={{
+                color: 'primary.main',
+                marginRight: '5px',
+                display: 'flex',
+                alignItems: 'center',
+              }}
+            >
+              <Typography variant="button" sx={{ mr: 1, fontSize: '15px' }}>
+                {t('event.detail')}
+              </Typography>
+              <Image
+                src={
+                  'https://infofinance-dev.s3.ap-southeast-1.amazonaws.com/Arrow_Right_18e705d65a.png?updated_at=2022-08-25T09:28:40.108Z'
+                }
+                alt="icon"
+                width={20}
+                height={20}
+                loading="lazy"
+              />
+            </Link>
           </Stack>
         )}
       </Stack>

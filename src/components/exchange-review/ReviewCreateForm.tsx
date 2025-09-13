@@ -584,7 +584,7 @@ const ReviewCreateForm = ({ dataCategories, dataUser, dataInput }: ReviewCreateF
                 {contactArr.map((item, index) => (
                   <Stack key={index} direction="row" spacing={2} sx={{ alignItems: 'center' }}>
                     <Stack>
-                      <Image loading="lazy" src={item.image} alt="icon" width="48px" height="48px" />
+                      <Image loading="lazy" src={item.image} alt="icon" width={48} height={48} />
                     </Stack>
                     <Stack sx={{ ml: 2, flex: '1' }}>
                       <Typography variant="body1" sx={{ color: 'subtitle.main' }}>
@@ -696,20 +696,18 @@ const ReviewCreateForm = ({ dataCategories, dataUser, dataInput }: ReviewCreateF
                 size="large"
                 onClick={() => setOpen(false)}
               >
-                <NextLink
+                <Link
+                  component={NextLink}
                   href={`${locale === 'vi' ? '/danh-gia-san/danh-gia-cua-ban' : '/exchange-review/your-review'}`}
                   passHref
+                  sx={{
+                    color: 'primary.main',
+                    fontSize: '14px',
+                    fontWeight: '700',
+                  }}
                 >
-                  <Link
-                    sx={{
-                      color: 'primary.main',
-                      fontSize: '14px',
-                      fontWeight: '700',
-                    }}
-                  >
-                    {t('complaints.my', { ns: 'common' })}
-                  </Link>
-                </NextLink>
+                  {t('complaints.my', { ns: 'common' })}
+                </Link>
               </Button>
               {/* <Button
                 sx={{

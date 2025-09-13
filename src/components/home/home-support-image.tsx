@@ -82,11 +82,9 @@ export const HomeSupportImage = ({ data }: HomeSupportImageProps) => {
               },
             }}
           >
-            <NextLink href={item.link} passHref key={item.link}>
-              <Link target="_blank">
-                <Image loading="lazy" src={item.img} alt="Hình ảnh" layout="fill" objectFit="cover" />
-              </Link>
-            </NextLink>
+            <Link component={NextLink} target="_blank" href={item.link} passHref key={item.link}>
+              <Image loading="lazy" src={item.img} alt="Hình ảnh" layout="fill" objectFit="cover" />
+            </Link>
           </Box>
         </Stack>
       ))}

@@ -34,32 +34,33 @@ const HomeSliderEvents = ({ endEvent }: HomeSliderEventsProps) => {
         >
           {t(`event.title`)}
         </Typography>
-        <NextLink href={`/${locale === 'vi' ? 'su-kien' : 'event'}`} passHref>
-          <Link
-            sx={{
-              width: '100%',
-              color: 'primary.main',
-              marginRight: '5px',
-              fontSize: '1rem',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'end',
-            }}
-          >
-            <Typography variant="button" sx={{ mr: 1 }}>
-              {t('see-more')}
-            </Typography>
-            <Image
-              src={
-                'https://infofinance-dev.s3.ap-southeast-1.amazonaws.com/Arrow_Right_18e705d65a.png?updated_at=2022-08-25T09:28:40.108Z'
-              }
-              alt="icon"
-              width={24}
-              height={24}
-              loading="lazy"
-            />
-          </Link>
-        </NextLink>
+        <Link
+          component={NextLink}
+          href={`/${locale === 'vi' ? 'su-kien' : 'event'}`}
+          passHref
+          sx={{
+            width: '100%',
+            color: 'primary.main',
+            marginRight: '5px',
+            fontSize: '1rem',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'end',
+          }}
+        >
+          <Typography variant="button" sx={{ mr: 1 }}>
+            {t('see-more')}
+          </Typography>
+          <Image
+            src={
+              'https://infofinance-dev.s3.ap-southeast-1.amazonaws.com/Arrow_Right_18e705d65a.png?updated_at=2022-08-25T09:28:40.108Z'
+            }
+            alt="icon"
+            width={24}
+            height={24}
+            loading="lazy"
+          />
+        </Link>
       </Stack>
       <Stack>
         <Slider

@@ -18,7 +18,8 @@ export const NextLinkComposed = forwardRef<HTMLAnchorElement, NextLinkComposedPr
   const { to, linkAs, href, replace, scroll, passHref, shallow, prefetch, locale, ...other } = props
 
   return (
-    <NextLink
+    <MuiLink
+      component={NextLink}
       href={to}
       prefetch={prefetch}
       as={linkAs}
@@ -29,8 +30,8 @@ export const NextLinkComposed = forwardRef<HTMLAnchorElement, NextLinkComposedPr
       locale={locale}
     >
       {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-      <a ref={ref} {...other} />
-    </NextLink>
+      <span ref={ref} {...other} />
+    </MuiLink>
   )
 })
 

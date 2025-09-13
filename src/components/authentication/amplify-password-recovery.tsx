@@ -65,11 +65,9 @@ export const AmplifyPasswordRecovery = (props: any) => {
             </FormHelperText>
           </Box>
           {formik.errors.submit === 'Email not verified' && (
-            <NextLink href={'/authentication/register'} passHref>
-              <Link fontWeight={500} variant="body2">
-                {locale === 'vi' ? 'Đăng ký lại' : 'Re-register'}
-              </Link>
-            </NextLink>
+            <Link component={NextLink} href={'/authentication/register'} passHref fontWeight={500} variant="body2">
+              {locale === 'vi' ? 'Đăng ký lại' : 'Re-register'}
+            </Link>
           )}
         </Stack>
       )}

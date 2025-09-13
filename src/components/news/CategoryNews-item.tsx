@@ -57,30 +57,26 @@ const CategoryNewsItem = ({ data, horizontal, image = true, highlight, isMobile 
                   })
                 : format(new Date(dataArticle.publishedTime), 'd MMM uuuu')}
             </Typography>
-            <NextLink href={`/${locale === 'vi' ? 'tin-tuc' : 'news'}/${dataArticle.slug}`} passHref>
-              <Link>
-                <Typography
-                  variant="h3"
-                  sx={{
-                    color: 'text.main',
-                    textWrap: 'wrap',
-                    WebkitLineClamp: 3,
-                    display: '-webkit-box',
-                    overflow: 'hidden',
-                    WebkitBoxOrient: 'vertical',
-                    mt: 1,
-                    '&:hover': {
-                      color:
-                        NEWS_CATEGORIES_COLOR[
-                          dataArticle?.articleCategories?.data?.attributes?.slug as NEWS_CATEGORIES
-                        ],
-                    },
-                  }}
-                >
-                  {dataArticle.title}
-                </Typography>
-              </Link>
-            </NextLink>
+            <Link component={NextLink} href={`/${locale === 'vi' ? 'tin-tuc' : 'news'}/${dataArticle.slug}`} passHref>
+              <Typography
+                variant="h3"
+                sx={{
+                  color: 'text.main',
+                  textWrap: 'wrap',
+                  WebkitLineClamp: 3,
+                  display: '-webkit-box',
+                  overflow: 'hidden',
+                  WebkitBoxOrient: 'vertical',
+                  mt: 1,
+                  '&:hover': {
+                    color:
+                      NEWS_CATEGORIES_COLOR[dataArticle?.articleCategories?.data?.attributes?.slug as NEWS_CATEGORIES],
+                  },
+                }}
+              >
+                {dataArticle.title}
+              </Typography>
+            </Link>
           </Stack>
         </>
       ) : (
@@ -125,27 +121,25 @@ const CategoryNewsItem = ({ data, horizontal, image = true, highlight, isMobile 
                 })
               : format(new Date(dataArticle.publishedTime), 'd MMM uuuu')}
           </Typography>
-          <NextLink href={`/${locale === 'vi' ? 'tin-tuc' : 'news'}/${dataArticle.slug}`} passHref>
-            <Link>
-              <Typography
-                variant="h3"
-                sx={{
-                  color: 'text.main',
-                  textWrap: 'wrap',
-                  WebkitLineClamp: 3,
-                  display: '-webkit-box',
-                  overflow: 'hidden',
-                  WebkitBoxOrient: 'vertical',
-                  '&:hover': {
-                    color:
-                      NEWS_CATEGORIES_COLOR[dataArticle?.articleCategories?.data?.attributes?.slug as NEWS_CATEGORIES],
-                  },
-                }}
-              >
-                {dataArticle.title}
-              </Typography>
-            </Link>
-          </NextLink>
+          <Link component={NextLink} href={`/${locale === 'vi' ? 'tin-tuc' : 'news'}/${dataArticle.slug}`} passHref>
+            <Typography
+              variant="h3"
+              sx={{
+                color: 'text.main',
+                textWrap: 'wrap',
+                WebkitLineClamp: 3,
+                display: '-webkit-box',
+                overflow: 'hidden',
+                WebkitBoxOrient: 'vertical',
+                '&:hover': {
+                  color:
+                    NEWS_CATEGORIES_COLOR[dataArticle?.articleCategories?.data?.attributes?.slug as NEWS_CATEGORIES],
+                },
+              }}
+            >
+              {dataArticle.title}
+            </Typography>
+          </Link>
         </>
       )}
     </Stack>

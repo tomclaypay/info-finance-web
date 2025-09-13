@@ -58,14 +58,12 @@ function ComplaintLogRow({ log }: ComplaintLogRowProps) {
               <Stack>
                 {log.attachments.length > 0 &&
                   changeFiles(log.attachments, 'file').map((file: any, index: any) => (
-                    <NextLink href={file} passHref key={index}>
-                      <Link target="_blank">
-                        <Stack direction="row">
-                          {file.includes('.pdf') ? <PictureAsPdfOutlinedIcon /> : <FilePresentOutlinedIcon />}
-                          <Typography variant="body2">{file.split('/')[file.split('/').length - 1]}</Typography>
-                        </Stack>
-                      </Link>
-                    </NextLink>
+                    <Link component={NextLink} target="_blank" href={file} passHref key={index}>
+                      <Stack direction="row">
+                        {file.includes('.pdf') ? <PictureAsPdfOutlinedIcon /> : <FilePresentOutlinedIcon />}
+                        <Typography variant="body2">{file.split('/')[file.split('/').length - 1]}</Typography>
+                      </Stack>
+                    </Link>
                   ))}
               </Stack>
               <Stack direction="row" spacing={3}>

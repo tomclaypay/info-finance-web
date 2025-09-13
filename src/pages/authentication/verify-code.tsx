@@ -46,9 +46,7 @@ const VerifyCode = () => {
         >
           <Stack alignItems="center" justifyContent="center" spacing={4}>
             <NextLink href="/" passHref>
-              <a>
-                <img height={64} alt="" src={`/static/full-logo.png`} />
-              </a>
+              <img height={64} alt="" src={`/static/full-logo.png`} />
             </NextLink>
             <Card elevation={16} sx={{ p: 4 }}>
               <Box

@@ -109,27 +109,25 @@ const LatestNewsItem = ({ data, image = true, highlight = false }: LatestNewsIte
         </Typography>
       </Box>
 
-      <NextLink href={`/${locale === 'vi' ? 'tin-tuc' : 'news'}/${dataArticle?.slug}`} passHref>
-        <Link>
-          <Typography
-            variant="h3"
-            sx={{
-              height: '100%',
-              color: 'text.main',
-              textWrap: 'wrap',
-              WebkitLineClamp: 3,
-              display: '-webkit-box',
-              overflow: 'hidden',
-              WebkitBoxOrient: 'vertical',
-              '&:hover': {
-                color: NEWS_CATEGORIES_COLOR[dataArticle?.articleCategories?.data?.attributes?.slug as NEWS_CATEGORIES],
-              },
-            }}
-          >
-            {dataArticle?.title}
-          </Typography>
-        </Link>
-      </NextLink>
+      <Link href={`/${locale === 'vi' ? 'tin-tuc' : 'news'}/${dataArticle?.slug}`} passHref component={NextLink}>
+        <Typography
+          variant="h3"
+          sx={{
+            height: '100%',
+            color: 'text.main',
+            textWrap: 'wrap',
+            WebkitLineClamp: 3,
+            display: '-webkit-box',
+            overflow: 'hidden',
+            WebkitBoxOrient: 'vertical',
+            '&:hover': {
+              color: NEWS_CATEGORIES_COLOR[dataArticle?.articleCategories?.data?.attributes?.slug as NEWS_CATEGORIES],
+            },
+          }}
+        >
+          {dataArticle?.title}
+        </Typography>
+      </Link>
     </Stack>
   )
 }

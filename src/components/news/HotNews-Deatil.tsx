@@ -78,30 +78,31 @@ const HotNewsDetail = ({ data, owner = false, home = false }: HotNewsDetailProps
               <Typography variant="h2" sx={{ flex: '1', ml: 2 }}>
                 Tin tức mới nhất
               </Typography>
-              <NextLink href="/news/mart" passHref>
-                <Link
-                  sx={{
-                    color: 'primary.main',
-                    marginRight: '5px',
-                    fontSize: '1rem',
-                    display: 'flex',
-                    alignItems: 'center',
-                  }}
-                >
-                  <Typography variant="button" sx={{ mr: 1 }}>
-                    View more broker’s news
-                  </Typography>
-                  <Image
-                    src={
-                      'https://infofinance-dev.s3.ap-southeast-1.amazonaws.com/Arrow_Right_18e705d65a.png?updated_at=2022-08-25T09:28:40.108Z'
-                    }
-                    alt="icon"
-                    width={24}
-                    height={24}
-                    loading="lazy"
-                  />
-                </Link>
-              </NextLink>
+              <Link
+                component={NextLink}
+                href="/news/mart"
+                passHref
+                sx={{
+                  color: 'primary.main',
+                  marginRight: '5px',
+                  fontSize: '1rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                }}
+              >
+                <Typography variant="button" sx={{ mr: 1 }}>
+                  View more broker’s news
+                </Typography>
+                <Image
+                  src={
+                    'https://infofinance-dev.s3.ap-southeast-1.amazonaws.com/Arrow_Right_18e705d65a.png?updated_at=2022-08-25T09:28:40.108Z'
+                  }
+                  alt="icon"
+                  width={24}
+                  height={24}
+                  loading="lazy"
+                />
+              </Link>
             </Box>
           ) : (
             <Box

@@ -94,28 +94,26 @@ const HotNewsItem = ({ data, isMobile }: HotNewsItemProps) => {
           </Typography>
         </Box>
 
-        <NextLink href={`/${locale === 'vi' ? 'tin-tuc' : 'news'}/${data?.attributes?.slug}`} passHref>
-          <Link>
-            <Typography
-              variant="h3"
-              sx={{
-                color: 'text.main',
-                textWrap: 'wrap',
-                WebkitLineClamp: 3,
-                display: '-webkit-box',
-                overflow: 'hidden',
-                WebkitBoxOrient: 'vertical',
-                '&:hover': {
-                  color:
-                    NEWS_CATEGORIES_COLOR[data?.attributes.articleCategories.data?.attributes?.slug as NEWS_CATEGORIES],
-                },
-                height: isMobile ? '100px' : 'none',
-              }}
-            >
-              {data?.attributes.title}
-            </Typography>
-          </Link>
-        </NextLink>
+        <Link component={NextLink} href={`/${locale === 'vi' ? 'tin-tuc' : 'news'}/${data?.attributes?.slug}`} passHref>
+          <Typography
+            variant="h3"
+            sx={{
+              color: 'text.main',
+              textWrap: 'wrap',
+              WebkitLineClamp: 3,
+              display: '-webkit-box',
+              overflow: 'hidden',
+              WebkitBoxOrient: 'vertical',
+              '&:hover': {
+                color:
+                  NEWS_CATEGORIES_COLOR[data?.attributes.articleCategories.data?.attributes?.slug as NEWS_CATEGORIES],
+              },
+              height: isMobile ? '100px' : 'none',
+            }}
+          >
+            {data?.attributes.title}
+          </Typography>
+        </Link>
       </Box>
     </Stack>
   )

@@ -562,7 +562,7 @@ const LicenseCard = ({ license, dataSupervisories, onNameSupervisorChange }: Lic
                         src={license.supervisory_authority.national?.logo}
                         alt="flag-contry"
                         width={32}
-                        height="24px"
+                        height={24}
                         loading="lazy"
                       />
                     )}
@@ -668,20 +668,18 @@ const LicenseCard = ({ license, dataSupervisories, onNameSupervisorChange }: Lic
                       <Typography variant="body2" fontWeight="bold" textTransform="uppercase">
                         {document.title}
                       </Typography>
-                      <NextLink href={document.file} passHref>
-                        <Link target="_blank">
-                          <Typography
-                            variant="body2"
-                            fontWeight="bold"
-                            sx={{
-                              color: 'primary.main',
-                              cursor: 'pointer',
-                            }}
-                          >
-                            {t('license.check')}
-                          </Typography>
-                        </Link>
-                      </NextLink>
+                      <Link component={NextLink} href={document.file} passHref target="_blank">
+                        <Typography
+                          variant="body2"
+                          fontWeight="bold"
+                          sx={{
+                            color: 'primary.main',
+                            cursor: 'pointer',
+                          }}
+                        >
+                          {t('license.check')}
+                        </Typography>
+                      </Link>
                     </Stack>
                   ))}
                 </Stack>

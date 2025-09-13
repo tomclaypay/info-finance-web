@@ -30,45 +30,43 @@ export default function CustomImage({ internet, image, index, slides, onRemove, 
   return (
     <>
       {internet && doc ? (
-        <NextLink href={image} passHref>
-          <Link target="_blank">
-            <Stack alignItems="center">
-              <Box
-                position="relative"
-                width={100}
-                height={100}
-                borderRadius={1}
-                overflow="hidden"
-                sx={{
-                  ':hover': {
-                    cursor: 'pointer',
-                  },
-                }}
-                onClick={handleClickOpen}
-              >
-                <Image
-                  src="https://infofinance-dev.s3.ap-southeast-1.amazonaws.com/35920_c9367f9c00.png?updated_at=2022-10-07T07:59:55.903Z"
-                  layout="fill"
-                  objectFit="cover"
-                  objectPosition="center"
-                  alt="Hình ảnh của bạn"
-                  loading="lazy"
-                />
-                {onRemove && (
-                  <IconButton
-                    sx={{ position: 'absolute', top: 0, right: 0 }}
-                    onClick={() => {
-                      onRemove(index)
-                    }}
-                  >
-                    <CloseIcon sx={{ color: 'black' }} fontSize="small" />
-                  </IconButton>
-                )}
-              </Box>
-              <Typography variant="body2">{image.split('/')[image.split('/').length - 1]}</Typography>
-            </Stack>
-          </Link>
-        </NextLink>
+        <Link component={NextLink} target="_blank" href={image} passHref>
+          <Stack alignItems="center">
+            <Box
+              position="relative"
+              width={100}
+              height={100}
+              borderRadius={1}
+              overflow="hidden"
+              sx={{
+                ':hover': {
+                  cursor: 'pointer',
+                },
+              }}
+              onClick={handleClickOpen}
+            >
+              <Image
+                src="https://infofinance-dev.s3.ap-southeast-1.amazonaws.com/35920_c9367f9c00.png?updated_at=2022-10-07T07:59:55.903Z"
+                layout="fill"
+                objectFit="cover"
+                objectPosition="center"
+                alt="Hình ảnh của bạn"
+                loading="lazy"
+              />
+              {onRemove && (
+                <IconButton
+                  sx={{ position: 'absolute', top: 0, right: 0 }}
+                  onClick={() => {
+                    onRemove(index)
+                  }}
+                >
+                  <CloseIcon sx={{ color: 'black' }} fontSize="small" />
+                </IconButton>
+              )}
+            </Box>
+            <Typography variant="body2">{image.split('/')[image.split('/').length - 1]}</Typography>
+          </Stack>
+        </Link>
       ) : (
         <>
           <Box

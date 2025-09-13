@@ -173,25 +173,25 @@ export const AccountButton = () => {
 
   if (!isAuthenticated) {
     return (
-      <NextLink href="/authentication/login" passHref>
-        <Stack direction="row">
-          <Button
-            component="a"
-            sx={{
-              height: '48px',
-              padding: '13px 32px',
-              borderColor: '#2A559C',
-              borderRadius: '24px',
-              marginRight: '30px',
-              width: 'max-content',
-            }}
-            variant="outlined"
-          >
-            {t('logIn')}
-            {/* {t('footer.description2')} */}
-          </Button>
-        </Stack>
-      </NextLink>
+      <Stack direction="row">
+        <Button
+          href="/authentication/login"
+          passHref
+          component={NextLink}
+          sx={{
+            height: '48px',
+            padding: '13px 32px',
+            borderColor: '#2A559C',
+            borderRadius: '24px',
+            marginRight: '30px',
+            width: 'max-content',
+          }}
+          variant="outlined"
+        >
+          {t('logIn')}
+          {/* {t('footer.description2')} */}
+        </Button>
+      </Stack>
     )
   }
 

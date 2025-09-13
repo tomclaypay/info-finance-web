@@ -10,21 +10,21 @@ interface BackButtonProps {
 export default function BackButton({ title, link }: BackButtonProps) {
   return (
     <Box sx={{ mb: 4 }}>
-      <NextLink href={`/${link}`} passHref>
-        <Link
-          color="textPrimary"
-          component="a"
-          sx={{
-            alignItems: 'center',
-            display: 'flex',
-          }}
-        >
-          <ArrowBackIcon fontSize="small" sx={{ mr: 1 }} />
-          <Typography variant="subtitle2" textTransform="capitalize">
-            {title}
-          </Typography>
-        </Link>
-      </NextLink>
+      <Link
+        color="textPrimary"
+        component={NextLink}
+        sx={{
+          alignItems: 'center',
+          display: 'flex',
+        }}
+        href={`/${link}`}
+        passHref
+      >
+        <ArrowBackIcon fontSize="small" sx={{ mr: 1 }} />
+        <Typography variant="subtitle2" textTransform="capitalize">
+          {title}
+        </Typography>
+      </Link>
     </Box>
   )
 }

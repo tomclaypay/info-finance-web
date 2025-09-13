@@ -48,14 +48,12 @@ export default function ComplaintContractSection({ complaint }: ComplaintContrac
           {complaint?.attachments[0]?.files &&
             complaint?.attachments[0].files?.length > 0 &&
             changeFiles(complaint?.attachments[0]?.files, 'file').map((file: any, index: any) => (
-              <NextLink href={file} passHref key={index}>
-                <Link target="_blank">
-                  <Stack direction="row">
-                    {file.includes('.pdf') ? <PictureAsPdfOutlinedIcon /> : <FilePresentOutlinedIcon />}
-                    <Typography variant="body2">{file.split('/')[file.split('/').length - 1]}</Typography>
-                  </Stack>
-                </Link>
-              </NextLink>
+              <Link component={NextLink} target="_blank" href={file} passHref key={index}>
+                <Stack direction="row">
+                  {file.includes('.pdf') ? <PictureAsPdfOutlinedIcon /> : <FilePresentOutlinedIcon />}
+                  <Typography variant="body2">{file.split('/')[file.split('/').length - 1]}</Typography>
+                </Stack>
+              </Link>
             ))}
         </Stack>
         <Stack direction="row" spacing={3}>

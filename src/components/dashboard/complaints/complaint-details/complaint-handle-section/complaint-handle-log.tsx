@@ -24,11 +24,15 @@ export const ComplaintHandleLog = ({ handledBy }: ComplaintHandleLogProps) => {
           {handledBy?.id ? (
             <>
               <TableCell sx={{ minWidth: '110px' }}>
-                <NextLink href={`/dashboard/csteam/members/${handledBy?.id}`} passHref>
-                  <Link target="_blank" sx={{ color: 'primary.main', cursor: 'pointer' }}>
-                    {handledBy?.user?.displayName}
-                  </Link>
-                </NextLink>
+                <Link
+                  component={NextLink}
+                  href={`/dashboard/csteam/members/${handledBy?.id}`}
+                  passHref
+                  target="_blank"
+                  sx={{ color: 'primary.main', cursor: 'pointer' }}
+                >
+                  {handledBy?.user?.displayName}
+                </Link>
               </TableCell>
               <TableCell sx={{ minWidth: '120px' }}>Chưa cập nhập</TableCell>
               {/* <TableCell>Ghi chú</TableCell> */}

@@ -146,7 +146,7 @@ const CreateReview = () => {
                   {contactArr.map((item, index) => (
                     <Stack key={index} direction="row" spacing={2} sx={{ alignItems: 'center' }}>
                       <Stack>
-                        <Image src={item.image} alt="icon" width="48px" height="48px" loading="lazy" />
+                        <Image src={item.image} alt="icon" width={48} height={48} loading="lazy" />
                       </Stack>
                       <Stack sx={{ ml: 2, flex: '1' }}>
                         <Typography variant="body1" sx={{ color: 'subtitle.main' }}>

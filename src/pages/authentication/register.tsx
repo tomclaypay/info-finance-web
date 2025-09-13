@@ -54,9 +54,7 @@ const Register = () => {
             <Stack alignItems="center" spacing={5} pb={5}>
               <Stack alignItems="center" spacing={1}>
                 <NextLink href="/" passHref>
-                  <a>
-                    <img height={64} alt="" src={`/static/full-logo.png`} />
-                  </a>
+                  <img height={64} alt="" src={`/static/full-logo.png`} />
                 </NextLink>
                 <img width={300} alt="" src={`/static/login-graphic.png`} />
               </Stack>
@@ -81,11 +79,17 @@ const Register = () => {
                     <Typography color="#A0A4AB" fontSize={'16px'} lineHeight={'20px'}>
                       {t('authen.login')}
                     </Typography>
-                    <NextLink href={'/authentication/login'} passHref>
-                      <Link fontWeight={600} fontSize={'16px'} lineHeight={'20px'} color={'#2A559C'}>
-                        {t('authen.login')}
-                      </Link>
-                    </NextLink>
+                    <Link
+                      component={NextLink}
+                      href={'/authentication/login'}
+                      passHref
+                      fontWeight={600}
+                      fontSize={'16px'}
+                      lineHeight={'20px'}
+                      color={'#2A559C'}
+                    >
+                      {t('authen.login')}
+                    </Link>
                   </Stack>
                 </Box>
                 <Box
@@ -113,9 +117,7 @@ const Register = () => {
               >
                 <Stack spacing={4} alignItems="center">
                   <NextLink href="/" passHref>
-                    <a>
-                      <img height={64} alt="" src={`/static/full-logo.png`} />
-                    </a>
+                    <img height={64} alt="" src={`/static/full-logo.png`} />
                   </NextLink>
                   <img width={472} alt="" src={`/static/login-graphic.png`} />
                 </Stack>
@@ -145,11 +147,15 @@ const Register = () => {
                       <Typography color="textSecondary" variant="body2">
                         {t('authen.haveAcc')}
                       </Typography>
-                      <NextLink href={'/authentication/login'} passHref>
-                        <Link fontWeight={500} variant="body2">
-                          {t('authen.login')}
-                        </Link>
-                      </NextLink>
+                      <Link
+                        component={NextLink}
+                        href={'/authentication/login'}
+                        passHref
+                        fontWeight={500}
+                        variant="body2"
+                      >
+                        {t('authen.login')}
+                      </Link>
                     </Stack>
                   </Box>
                   <Box

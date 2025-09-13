@@ -38,11 +38,9 @@ export default function ComplaintAvatar({ id, email, fullname, user }: Complaint
       )}
 
       <Box sx={{ ml: 1 }}>
-        <NextLink href={`/dashboard/complaints/${id}`} passHref>
-          <Link color="inherit" variant="subtitle2">
-            {fullname}
-          </Link>
-        </NextLink>
+        <Link component={NextLink} color="inherit" variant="subtitle2" href={`/dashboard/complaints/${id}`} passHref>
+          {fullname}
+        </Link>
         <Typography color="textSecondary" variant="body2">
           {email}
         </Typography>

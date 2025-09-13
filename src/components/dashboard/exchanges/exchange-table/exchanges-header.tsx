@@ -62,13 +62,11 @@ export default function ExchangesHeader({ handleCreateExchange }: ExchangesHeade
       <Stack direction="row" alignItems="center" justifyContent="space-between">
         <Stack direction="row" alignItems="flex-end" spacing={3}>
           <Typography variant="h4">Sàn giao dịch</Typography>
-          <NextLink href="/dashboard/exchanges/general" passHref>
-            <Link>
-              <Typography color="primary.main" sx={{ fontWeight: 'bold' }}>
-                Chi tiết chung
-              </Typography>
-            </Link>
-          </NextLink>
+          <Link component={NextLink} href="/dashboard/exchanges/general" passHref>
+            <Typography color="primary.main" sx={{ fontWeight: 'bold' }}>
+              Chi tiết chung
+            </Typography>
+          </Link>
         </Stack>
 
         {auth?.user?.role === 'super_admin' && (

@@ -82,7 +82,7 @@ const About1 = () => {
             </Typography>
             {aboutArr.map((item, index) => (
               <Stack key={index} direction="row" sx={{ mt: 2, mb: 2, alignItems: 'center' }}>
-                <Image src={item.image} alt="icon" width="48px" height="48px" loading="lazy" />
+                <Image src={item.image} alt="icon" width={48} height={48} loading="lazy" />
                 <Typography variant="body1" sx={{ ml: 2 }}>
                   {item.title}
                 </Typography>

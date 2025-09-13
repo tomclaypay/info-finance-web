@@ -74,8 +74,8 @@ const NewsDetail = ({ dataArticle, dataRelateArticles, dataLatestArticles }: New
                 <Image
                   src="https://infofinance-dev.s3.ap-southeast-1.amazonaws.com/Facebook_878b974ea0.png?updated_at=2022-08-26T04:35:00.763Z"
                   alt="logo"
-                  height="24px"
-                  width="24px"
+                  height={24}
+                  width={24}
                   loading="lazy"
                 />
               </Box>
@@ -93,8 +93,8 @@ const NewsDetail = ({ dataArticle, dataRelateArticles, dataLatestArticles }: New
                 <Image
                   src="https://infofinance-dev.s3.ap-southeast-1.amazonaws.com/Twitter_3e041a0978.png?updated_at=2022-08-26T04:35:00.759Z"
                   alt="logo"
-                  height="24px"
-                  width="24px"
+                  height={24}
+                  width={24}
                   loading="lazy"
                 />
               </Box>
@@ -111,8 +111,8 @@ const NewsDetail = ({ dataArticle, dataRelateArticles, dataLatestArticles }: New
                 <Image
                   src="https://infofinance-dev.s3.ap-southeast-1.amazonaws.com/Linked_In_7072ecf9f5.png?updated_at=2022-08-26T04:35:00.676Z"
                   alt="logo"
-                  height="24px"
-                  width="24px"
+                  height={24}
+                  width={24}
                   loading="lazy"
                 />
               </Box>

@@ -176,21 +176,23 @@ export default function MainNavbar() {
                   />
                 </Box>
                 {navList.map((item, index) => (
-                  <NextLink key={index} href={item.href} passHref>
-                    <Link
-                      onClick={() => setMobileMenu(false)}
-                      sx={{
-                        color:
-                          router.pathname === item.href
-                            ? 'primary.main'
-                            : item.href !== '/' && router.pathname.startsWith(item.href.split('/lua-dao')[0])
-                            ? 'primary.main'
-                            : 'text',
-                      }}
-                    >
-                      {item.title}
-                    </Link>
-                  </NextLink>
+                  <Link
+                    key={index}
+                    href={item.href}
+                    passHref
+                    onClick={() => setMobileMenu(false)}
+                    sx={{
+                      color:
+                        router.pathname === item.href
+                          ? 'primary.main'
+                          : item.href !== '/' && router.pathname.startsWith(item.href.split('/lua-dao')[0])
+                          ? 'primary.main'
+                          : 'text',
+                    }}
+                    component={NextLink}
+                  >
+                    {item.title}
+                  </Link>
                 ))}
                 <LanguagePicker />
               </Stack>

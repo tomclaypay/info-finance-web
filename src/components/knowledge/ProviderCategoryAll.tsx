@@ -35,28 +35,29 @@ const ProviderCategoryAll = ({ dataArticlesByCategoryAll }: ProviderCategoryAllP
           <Typography variant="h2" sx={{ flex: '1', ml: isMobile ? 1 : 2 }}>
             {t('knowledge.news')}
           </Typography>
-          <NextLink href="/knowledge/category/all" passHref>
-            <Link
-              sx={{
-                color: 'primary.main',
-                fontSize: '1rem',
-                display: 'flex',
-                alignItems: 'center',
-              }}
-            >
-              <Typography variant="button" sx={{ mr: 1 }}>
-                {t('text.seeMore')}
-              </Typography>
-              <Image
-                src={
-                  'https://infofinance-dev.s3.ap-southeast-1.amazonaws.com/Arrow_Right_18e705d65a.png?updated_at=2022-08-25T09:28:40.108Z'
-                }
-                alt="icon"
-                width={24}
-                height={24}
-              />
-            </Link>
-          </NextLink>
+          <Link
+            component={NextLink}
+            href="/knowledge/category/all"
+            passHref
+            sx={{
+              color: 'primary.main',
+              fontSize: '1rem',
+              display: 'flex',
+              alignItems: 'center',
+            }}
+          >
+            <Typography variant="button" sx={{ mr: 1 }}>
+              {t('text.seeMore')}
+            </Typography>
+            <Image
+              src={
+                'https://infofinance-dev.s3.ap-southeast-1.amazonaws.com/Arrow_Right_18e705d65a.png?updated_at=2022-08-25T09:28:40.108Z'
+              }
+              alt="icon"
+              width={24}
+              height={24}
+            />
+          </Link>
         </Box>
         <Grid container spacing={5} sx={{ mt: 0 }}>
           {dataArticlesByCategoryAll &&

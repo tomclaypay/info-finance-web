@@ -12,9 +12,9 @@ export default function ComplaintLink({ content, id }: ComplaintLinkProps) {
     <Box>
       {content && id ? (
         <Stack>
-          <NextLink href={`/dashboard/csteam/members/${id}`} passHref>
-            <Link>{content?.user?.displayName}</Link>
-          </NextLink>
+          <Link component={NextLink} href={`/dashboard/csteam/members/${id}`} passHref>
+            {content?.user?.displayName}
+          </Link>
           <Typography variant="body2">{content?.user?.email}</Typography>
         </Stack>
       ) : (
