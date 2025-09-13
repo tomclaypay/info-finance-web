@@ -7,6 +7,10 @@ import ServicesSection from '@app/components/payment-service/ServiceSection'
 import UnderstandingMissionSection from '@app/components/payment-service/UnderstandingMissionSection'
 import WhyChooseUs from '@app/components/payment-service/WhyChooseUs'
 import { domain } from '@app/constants/common'
+import { client } from '@app/contexts/apollo-client-context'
+import { BannerPosition } from '@app/hooks/useBanner'
+import { BannersListResponse } from '@app/interfaces/banner'
+import GET_BANNERS from '@app/operations/queries/banners/get-banners'
 import { Box } from '@mui/material'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Head from 'next/head'
@@ -14,7 +18,15 @@ import { useRouter } from 'next/router'
 import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 
-const PaymentService = () => {
+const PaymentService = ({
+  leftPaymentServiceBannerData,
+  rightPaymentServiceBannerData,
+  paymentServiceBannerData,
+}: {
+  leftPaymentServiceBannerData: BannersListResponse | null
+  rightPaymentServiceBannerData: BannersListResponse | null
+  paymentServiceBannerData: BannersListResponse | null
+}) => {
   const { t } = useTranslation(['common', 'seo'])
   const isMobile = useMobile()
   const router = useRouter()
@@ -24,6 +36,10 @@ const PaymentService = () => {
   const scrollTo = () => {
     ref.current?.scrollIntoView({ behavior: 'smooth' })
   }
+
+  console.log('leftPaymentServiceBannerData', leftPaymentServiceBannerData)
+  console.log('rightPaymentServiceBannerData', rightPaymentServiceBannerData)
+
   return (
     <>
       <Head>
@@ -81,13 +97,16 @@ const PaymentService = () => {
           py: isMobile ? 2 : 5,
         }}
       >
-        <PaymentServiceBanner scrollTo={scrollTo} />
+        <PaymentServiceBanner paymentServiceBannerData={paymentServiceBannerData?.banners[0]} scrollTo={scrollTo} />
         <div ref={ref}>
           <AboutPaymentService />
         </div>
         <ServicesSection />
         <WhyChooseUs />
-        <UnderstandingMissionSection />
+        <UnderstandingMissionSection
+          leftPaymentServiceBanner={leftPaymentServiceBannerData?.banners[0]}
+          rightPaymentServiceBanner={rightPaymentServiceBannerData?.banners[0]}
+        />
         <ContactSection />
       </Box>
     </>
@@ -99,15 +118,49 @@ export default PaymentService
 
 export async function getServerSideProps(context: any) {
   const { locale } = context
+
   try {
+    const [
+      { data: paymentServiceBannerData },
+      { data: leftPaymentServiceBannerData },
+      { data: rightPaymentServiceBannerData },
+    ] = await Promise.all([
+      client.query({
+        query: GET_BANNERS,
+        variables: {
+          positionEqual: BannerPosition.PaymentServiceDesktop,
+          languageEqual: locale === 'en' ? 'en' : 'vn',
+        },
+      }),
+      client.query({
+        query: GET_BANNERS,
+        variables: {
+          positionEqual: BannerPosition.LeftPaymentServiceDesktop,
+          languageEqual: locale === 'en' ? 'en' : 'vn',
+        },
+      }),
+      client.query({
+        query: GET_BANNERS,
+        variables: {
+          positionEqual: BannerPosition.RightPaymentServiceDesktop,
+          languageEqual: locale === 'en' ? 'en' : 'vn',
+        },
+      }),
+    ])
     return {
       props: {
+        paymentServiceBannerData,
+        leftPaymentServiceBannerData,
+        rightPaymentServiceBannerData,
         ...(await serverSideTranslations(locale, ['common', 'payment-service', 'seo'])),
       },
     }
   } catch (error) {
     return {
       props: {
+        paymentServiceBannerData: null,
+        leftPaymentServiceBannerData: null,
+        rightPaymentServiceBannerData: null,
         ...(await serverSideTranslations(locale, ['common', 'payment-service', 'seo'])),
       },
     }

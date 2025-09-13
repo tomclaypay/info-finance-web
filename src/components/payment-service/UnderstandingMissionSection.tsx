@@ -1,19 +1,25 @@
 import { useMobile } from '@app/components/common'
-import useBanner, { BannerPosition } from '@app/hooks/useBanner'
+import { Banner } from '@app/interfaces/banner'
 import { Box, Container, Grid, Typography } from '@mui/material'
 import Image from 'next/image'
 import { useTranslation } from 'react-i18next'
 
-const UnderstandingMissionSection = () => {
+const UnderstandingMissionSection = ({
+  leftPaymentServiceBanner,
+  rightPaymentServiceBanner,
+}: {
+  leftPaymentServiceBanner?: Banner
+  rightPaymentServiceBanner?: Banner
+}) => {
   const isMobile = useMobile()
   const { t } = useTranslation('payment-service')
-  const { data: LeftBanner } = useBanner({
-    position: isMobile ? BannerPosition.LeftPaymentServiceMobile : BannerPosition.LeftPaymentServiceDesktop,
-  })
+  // const { data: LeftBanner } = useBanner({
+  //   position: isMobile ? BannerPosition.LeftPaymentServiceMobile : BannerPosition.LeftPaymentServiceDesktop,
+  // })
 
-  const { data: RightBanner } = useBanner({
-    position: isMobile ? BannerPosition.RightPaymentServiceMobile : BannerPosition.RightPaymentServiceDesktop,
-  })
+  // const { data: RightBanner } = useBanner({
+  //   position: isMobile ? BannerPosition.RightPaymentServiceMobile : BannerPosition.RightPaymentServiceDesktop,
+  // })
   return (
     <>
       {/* Client Understanding Section */}
@@ -28,7 +34,7 @@ const UnderstandingMissionSection = () => {
                 }}
               >
                 <Image
-                  src={LeftBanner?.link?.[0] || ''}
+                  src={leftPaymentServiceBanner?.link?.[0] || ''}
                   alt="Client Understanding"
                   width={600}
                   height={400}
@@ -64,7 +70,7 @@ const UnderstandingMissionSection = () => {
                 }}
               >
                 <Image
-                  src={RightBanner?.link?.[0] || ''}
+                  src={rightPaymentServiceBanner?.link?.[0] || ''}
                   alt="Our Mission"
                   width={600}
                   height={400}

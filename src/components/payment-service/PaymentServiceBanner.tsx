@@ -4,6 +4,7 @@ import { Box, keyframes } from '@mui/material'
 import Image from 'next/image'
 import NextLink from 'next/link'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
+import { Banner } from '@app/interfaces/banner'
 
 const bounce = keyframes`
   0%, 100% {
@@ -13,12 +14,15 @@ const bounce = keyframes`
     transform: translateY(-10px);
   }
 `
-const PaymentServiceBanner = ({ scrollTo }: { scrollTo: () => void }) => {
+const PaymentServiceBanner = ({
+  paymentServiceBannerData,
+  scrollTo,
+}: {
+  scrollTo: () => void
+  paymentServiceBannerData?: Banner
+}) => {
   const isMobile = useMobile()
   const isDesktop = useDesktop()
-  const { data } = useBanner({
-    position: isMobile ? BannerPosition.PaymentServiceMobile : BannerPosition.PaymentServiceDesktop,
-  })
   return (
     <Box
       sx={{
@@ -29,11 +33,11 @@ const PaymentServiceBanner = ({ scrollTo }: { scrollTo: () => void }) => {
         position: 'relative',
       }}
     >
-      <NextLink href={data?.url?.[0] || ''}>
+      <NextLink href={paymentServiceBannerData?.url?.[0] || ''}>
         <Image
           loading="lazy"
           alt="payment-service-banner"
-          src={data?.link[0] || ''}
+          src={paymentServiceBannerData?.link[0] || ''}
           layout="fill"
           objectFit="cover"
           quality={isMobile ? 65 : 70}
