@@ -1,51 +1,64 @@
 // middleware.ts
-import { NextResponse, type NextRequest } from 'next/server'
-import createIntlMiddleware from 'next-intl/middleware'
+import type { NextRequest } from 'next/server'
+import { NextResponse } from 'next/server'
 
+// Locale đang dùng trong app
 const locales = ['vi', 'en'] as const
 const defaultLocale = 'vi'
 
-// 1) i18n middleware (tự thêm prefix locale, detect theo Accept-Language)
-const intl = createIntlMiddleware({
-  locales: [...locales],
-  defaultLocale,
-  localeDetection: true,
-})
-
-// 2) Danh sách path bỏ qua kiểm tra bảo trì
-const excludedPaths = ['/_next', '/favicon.ico', '/maintenance', '/authentication/login', '/dashboard', '/static']
-
+// Bật/tắt chế độ bảo trì
 const maintenanceMode = false
 
-export default function middleware(req: NextRequest) {
-  // Chạy i18n trước để URL luôn có prefix locale nhất quán
-  const intlResponse = intl(req)
-  // Nếu i18n đã yêu cầu redirect (thêm prefix locale), trả luôn
-  if (intlResponse) {
-    // next-intl trả NextResponse hoặc undefined; nếu là redirect thì đã đủ
-    if (intlResponse.headers.get('Location')) return intlResponse
-  }
+// Các prefix cần bỏ qua (asset/API/static pages)
+const excludedPrefixes = [
+  '/_next',
+  '/favicon.ico',
+  '/robots.txt',
+  '/sitemap.xml',
+  '/manifest.json',
+  '/maintenance',
+  '/authentication/login',
+  '/dashboard',
+  '/static',
+  '/api',
+]
 
-  // Lấy locale hiện tại từ path sau khi i18n xử lý
-  const segments = req.nextUrl.pathname.split('/').filter(Boolean)
-  const maybeLocale = segments[0]
-  const hasLocale = locales.includes(maybeLocale as any)
-  const localePrefix = hasLocale ? `/${maybeLocale}` : `/${defaultLocale}`
+function isExcluded(pathname: string) {
+  return excludedPrefixes.some((p) => pathname.startsWith(p))
+}
 
-  // 3) Maintenance redirect (nhưng bỏ qua asset/static)
-  const isExcluded = excludedPaths.some((p) => req.nextUrl.pathname.startsWith(p))
+export function middleware(req: NextRequest) {
+  const { pathname, search } = req.nextUrl
 
-  if (maintenanceMode && !isExcluded) {
+  // 1) Bỏ qua asset/API
+  if (isExcluded(pathname)) return NextResponse.next()
+
+  // 2) Đảm bảo có prefix locale (mặc định /vi)
+  const segs = pathname.split('/').filter(Boolean)
+  const hasLocale = segs.length > 0 && (locales as readonly string[]).includes(segs[0] as any)
+
+  if (!hasLocale) {
     const url = req.nextUrl.clone()
-    url.pathname = `${localePrefix}/maintenance`
+    url.pathname = `/${defaultLocale}${pathname}`
+    url.search = search // giữ nguyên query string
     return NextResponse.redirect(url)
   }
 
-  // Không redirect gì thêm
+  // 3) Maintenance redirect (giữ đúng locale hiện tại)
+  if (maintenanceMode) {
+    const locale = segs[0]
+    if (pathname !== `/${locale}/maintenance`) {
+      const url = req.nextUrl.clone()
+      url.pathname = `/${locale}/maintenance`
+      return NextResponse.redirect(url)
+    }
+  }
+
+  // 4) Cho qua bình thường
   return NextResponse.next()
 }
 
-// 4) Matcher: áp cho tất cả route app, tránh asset/_next
+// Matcher: áp cho tất cả route app, trừ asset/file tĩnh
 export const config = {
   matcher: ['/((?!_next|.*\\..*).*)'],
 }

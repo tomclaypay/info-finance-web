@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require('path')
 
 module.exports = {
@@ -6,6 +5,6 @@ module.exports = {
     locales: ['vi', 'en'],
     defaultLocale: 'vi',
   },
-  localePath: path.resolve('./public/locales'),
-  localeDetection: true,
+  localePath: path.resolve('./public/locales'), // QUAN TRỌNG cho build/prod
+  reloadOnPrerender: false,
 }
