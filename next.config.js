@@ -58,6 +58,10 @@ const nextConfig = {
       '@fullcalendar/timeline',
       'date-fns',
     ],
+    staleTimes: {
+      dynamic: 30, // giây cho route động (detail, search…)
+      static: 180, // giây cho route tĩnh
+    },
   },
 
   // i18n của Next CHỈ có 4 key hợp lệ; phần localePath đặt ở next-i18next.config.js
