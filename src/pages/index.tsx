@@ -206,7 +206,7 @@ export async function getServerSideProps({ locale }: any) {
         dataExchanges: dataExchanges,
         dataHighlightTopBrokerExchanges: dataHighlightTopBrokerExchanges,
         dataHotArticles: dataHotArticles,
-        ...(await serverSideTranslations(locale, ['common', 'complaints', 'home-page', 'exchange', 'seo'])),
+        ...(await serverSideTranslations(locale ?? 'vi', ['common', 'complaints', 'home-page', 'exchange', 'seo'])),
       },
     }
   } catch (error) {
@@ -218,7 +218,7 @@ export async function getServerSideProps({ locale }: any) {
         dataExchanges: null,
         dataHighlightTopBrokerExchanges: null,
         dataHotArticles: null,
-        ...(await serverSideTranslations(locale, ['common', 'complaints', 'home-page', 'exchange', 'seo'])),
+        ...(await serverSideTranslations(locale ?? 'vi', ['common', 'complaints', 'home-page', 'exchange', 'seo'])),
       },
     }
   }
