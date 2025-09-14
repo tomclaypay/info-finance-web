@@ -7,5 +7,5 @@ module.exports = {
     defaultLocale: 'vi',
   },
   localePath: path.resolve('./public/locales'),
-  localeDetection: false,
+  localeDetection: true,
 }
