@@ -60,109 +60,112 @@ const HomeSupport = ({
             paddingLeft: '0px !important',
           }}
         >
-          <Stack
-            direction={'row'}
-            flexWrap={'wrap'}
-            justifyContent="center"
-            alignItems="center"
-            gap={isMobile ? '0' : '10px'}
+          <Box
+            sx={{
+              display: 'grid',
+              gridTemplateColumns: {
+                xs: 'repeat(1, minmax(0, 1fr))', // mobile: 2 cột
+                sm: 'repeat(1, minmax(0, 1fr))', // tablet: 3 cột
+                md: 'repeat(2, minmax(0, 1fr))', // desktop: 4 cột
+              },
+              gap: isMobile ? 1 : 2, // khoảng cách giữa các card
+              alignItems: 'stretch',
+              p: 6,
+            }}
           >
             {dataExchanges?.exchanges.map((exchange, index) => (
-              <Stack
-                onClick={() => {
-                  event({
-                    action: 'access',
-                    params: {
-                      access: 'access-test',
-                    },
-                  })
-                }}
+              <Box
                 key={index}
-                minHeight={isMobile ? '200px' : '332px'}
                 sx={{
-                  ':hover': {
-                    transform: 'scale(1.1)',
-                  },
-                  transition: 'transform 0.5s ease',
-                  width: isMobile ? '45%' : '310px',
-                  boxShadow: '0px 0px 24px rgba(42, 85, 156, 0.15)',
-                  borderRadius: '16px',
-                  padding: index < 4 ? '0px' : isMobile ? '20px !important' : '32px',
-                  zIndex: '2',
-                  marginY: 1,
-                  marginX: 1,
+                  height: '100%', // card cao đều
                 }}
-                spacing={2}
-                justifyContent="space-between"
               >
-                <Link
-                  component={NextLink}
-                  href={`/${locale === 'vi' ? 'tra-cuu-san' : 'broker'}/${exchange.slug}`}
-                  passHref
+                <Stack
+                  onClick={() => {
+                    event({
+                      action: 'access',
+                      params: { access: 'access-test' },
+                    })
+                  }}
+                  spacing={2}
+                  justifyContent="space-between"
+                  sx={{
+                    height: '100%',
+                    minHeight: isMobile ? '200px' : '332px',
+                    transition: 'transform 0.5s ease',
+                    ':hover': { transform: 'scale(1.03)' }, // hover nhẹ hơn để tránh vỡ grid
+                    boxShadow: '0px 0px 24px rgba(42, 85, 156, 0.15)',
+                    borderRadius: '16px',
+                    p: index < 4 ? 0 : isMobile ? 2 : 4,
+                  }}
                 >
-                  <Stack
-                    sx={{
-                      width: '100%',
-                      height: '100%',
-                      borderRadius: '8px',
-                      cursor: 'pointer',
-                    }}
-                    position="relative"
-                    padding={0}
+                  <Link
+                    component={NextLink}
+                    href={`/${router.locale === 'vi' ? 'tra-cuu-san' : 'broker'}/${exchange.slug}`}
+                    passHref
+                    sx={{ display: 'block', height: '100%' }}
                   >
-                    <Box sx={{ padding: index < 4 ? '0px' : 2 }}>
-                      <Image
-                        src={
-                          exchange?.logo ||
-                          'https://infofinance-dev.s3.ap-southeast-1.amazonaws.com/Screenshot_2018_12_16_at_21_06_29_f07726afef.png?updated_at=2022-11-30T08:25:12.500Z'
-                        }
-                        alt="logo"
-                        objectFit="contain"
-                        width={index < 4 ? 310 : 200}
-                        height={index < 4 ? 296 : 200}
-                        loading="lazy"
-                      />
-                    </Box>
-                    <Divider />
+                    <Stack
+                      sx={{
+                        width: '100%',
+                        height: '100%',
+                        borderRadius: '8px',
+                        cursor: 'pointer',
+                      }}
+                      position="relative"
+                      padding={0}
+                    >
+                      <Box sx={{ p: index < 4 ? 0 : 2, display: 'flex', justifyContent: 'center' }}>
+                        <Image
+                          src={
+                            exchange?.logo ||
+                            'https://infofinance-dev.s3.ap-southeast-1.amazonaws.com/Screenshot_2018_12_16_at_21_06_29_f07726afef.png?updated_at=2022-11-30T08:25:12.500Z'
+                          }
+                          alt="logo"
+                          width={index < 4 ? 310 : 200}
+                          height={index < 4 ? 296 : 200}
+                          loading="lazy"
+                        />
+                      </Box>
 
-                    <Stack sx={{ padding: 2, height: '100%' }} spacing={2}>
-                      <Typography
-                        sx={{
-                          ...getColorFromScore(exchange.total_point ?? 0),
-                          fontWeight: 600,
-                          fontSize: isMobile ? 16 : 14,
-                          borderRadius: isMobile ? 1 : 2,
-                          paddingX: isMobile ? 1 : 3,
-                          paddingY: isMobile ? 1 : 0.75,
-                          textAlign: 'center',
-                          width: isMobile ? 'fit-content' : 'none',
-                          position: isMobile ? 'absolute' : 'none',
-                          top: '8px',
-                          right: '8.5px',
-                        }}
-                      >
-                        <Typography sx={{ display: 'inline', fontSize: 16, fontWeight: 700 }}>
-                          {exchange.total_point}
-                        </Typography>
-                      </Typography>
-                      <Stack direction="row" alignItems={'center'} justifyContent={'center'} gap={'12px'}>
+                      <Divider />
+
+                      <Stack sx={{ p: 2, height: '100%' }} spacing={2}>
                         <Typography
-                          variant="subtitle2"
                           sx={{
-                            fontSize: '16px',
-                            fontWeight: 'bold',
-                            color: 'primary.main',
+                            ...getColorFromScore(exchange.total_point ?? 0),
+                            fontWeight: 600,
+                            fontSize: isMobile ? 16 : 14,
+                            borderRadius: isMobile ? 1 : 2,
+                            px: isMobile ? 1 : 3,
+                            py: isMobile ? 1 : 0.75,
+                            textAlign: 'center',
+                            width: isMobile ? 'fit-content' : 'auto',
+                            position: isMobile ? 'absolute' : 'static',
+                            top: '8px',
+                            right: '8.5px',
                           }}
                         >
-                          {exchange?.name}
+                          <Typography sx={{ display: 'inline', fontSize: 16, fontWeight: 700 }}>
+                            {exchange.total_point}
+                          </Typography>
                         </Typography>
+
+                        <Stack direction="row" alignItems="center" justifyContent="center" gap="12px">
+                          <Typography
+                            variant="subtitle2"
+                            sx={{ fontSize: '16px', fontWeight: 'bold', color: 'primary.main' }}
+                          >
+                            {exchange?.name}
+                          </Typography>
+                        </Stack>
                       </Stack>
                     </Stack>
-                  </Stack>
-                </Link>
-              </Stack>
+                  </Link>
+                </Stack>
+              </Box>
             ))}
-          </Stack>
+          </Box>
         </Container>
       </Box>
 
