@@ -25,7 +25,7 @@ const LatestNewsItem = ({ data, image = true, highlight = false }: LatestNewsIte
         height: '100%',
       }}
     >
-      {image ? (
+      {/* {image ? (
         <Box
           sx={{
             borderRadius: '8px',
@@ -51,6 +51,26 @@ const LatestNewsItem = ({ data, image = true, highlight = false }: LatestNewsIte
             objectPosition="center"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 60vw"
             loading="lazy"
+          />
+        </Box>
+      ) : null} */}
+      {image ? (
+        <Box
+          sx={{
+            position: 'relative',
+            width: '100%',
+            aspectRatio: '16 / 9', // khung cố định, không cần paddingTop/height
+            borderRadius: '8px',
+            overflow: 'hidden',
+          }}
+        >
+          <Image
+            src={dataArticle?.thumbnail?.data?.attributes?.url || '/images/placeholder.png'}
+            alt={dataArticle?.title || 'thumbnail'}
+            fill
+            style={{ objectFit: 'contain', objectPosition: 'center' }}
+            sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority={true}
           />
         </Box>
       ) : null}
