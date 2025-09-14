@@ -5,6 +5,6 @@ module.exports = {
     locales: ['vi', 'en'],
     defaultLocale: 'vi',
   },
-  localePath: path.resolve('./public/locales'), // QUAN TRỌNG cho build/prod
+  localePath: path.resolve('./public/locales'),
   reloadOnPrerender: false,
 }

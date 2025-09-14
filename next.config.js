@@ -7,6 +7,9 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   openAnalyzer: false,
 })
 
+// Chỉ import phần i18n từ next-i18next (KHÔNG kéo các key khác như localePath vào i18n)
+// const { i18n } = require('./next-i18next.config.js')
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -65,7 +68,7 @@ const nextConfig = {
   i18n: {
     locales: ['vi', 'en'],
     defaultLocale: 'vi',
-    localeDetection: true,
+    localeDetection: false,
   },
 
   turbopack: {
