@@ -1,5 +1,5 @@
 // middleware.ts
-import {NextResponse, type NextRequest} from 'next/server'
+import { NextResponse, type NextRequest } from 'next/server'
 import createIntlMiddleware from 'next-intl/middleware'
 
 const locales = ['vi', 'en'] as const
@@ -9,18 +9,11 @@ const defaultLocale = 'vi'
 const intl = createIntlMiddleware({
   locales: [...locales],
   defaultLocale,
-  localeDetection: true
+  localeDetection: true,
 })
 
 // 2) Danh sách path bỏ qua kiểm tra bảo trì
-const excludedPaths = [
-  '/_next',
-  '/favicon.ico',
-  '/maintenance',
-  '/authentication/login',
-  '/dashboard',
-  '/static',
-]
+const excludedPaths = ['/_next', '/favicon.ico', '/maintenance', '/authentication/login', '/dashboard', '/static']
 
 const maintenanceMode = false
 
@@ -40,9 +33,7 @@ export default function middleware(req: NextRequest) {
   const localePrefix = hasLocale ? `/${maybeLocale}` : `/${defaultLocale}`
 
   // 3) Maintenance redirect (nhưng bỏ qua asset/static)
-  const isExcluded = excludedPaths.some((p) =>
-    req.nextUrl.pathname.startsWith(p)
-  )
+  const isExcluded = excludedPaths.some((p) => req.nextUrl.pathname.startsWith(p))
 
   if (maintenanceMode && !isExcluded) {
     const url = req.nextUrl.clone()
