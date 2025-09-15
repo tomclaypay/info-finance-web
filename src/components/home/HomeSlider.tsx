@@ -50,8 +50,7 @@ const HomeSlider = React.memo(({ banners }: HomeSliderProps) => {
   return (
     <Box
       sx={{
-        height: isDesktop ? '520px' : isMobile ? '120px' : 'auto',
-        mt: !headerBanner ? 4 : isDesktop ? '220px' : '80px',
+        mt: !headerBanner ? 4 : { xs: '80px', lg: '160px' },
       }}
     >
       <Carousel
@@ -62,7 +61,7 @@ const HomeSlider = React.memo(({ banners }: HomeSliderProps) => {
         indicatorContainerProps={{
           style: {
             position: 'absolute',
-            bottom: isDesktop ? '100px' : '00px',
+            bottom: isDesktop ? '24px' : '8px',
             zIndex: 1,
             textAlign: 'center',
             width: '100%',
@@ -93,8 +92,8 @@ const HomeSlider = React.memo(({ banners }: HomeSliderProps) => {
               display: 'block',
               position: 'relative',
               width: '100%',
-              paddingTop: isMobile ? '29.25%' : '31.00%',
               // height: '100%',
+              ...(isDesktop ? { paddingTop: '31.00%' } : { aspectRatio: '16/5' }),
             }}
           >
             <Image
@@ -102,10 +101,9 @@ const HomeSlider = React.memo(({ banners }: HomeSliderProps) => {
               alt={`home-slider-${index}`}
               fill
               style={{ objectFit: 'contain' }}
-              priority={index < 2}
-              loading={index < 2 ? 'eager' : 'lazy'}
-              quality={isMobile ? 65 : 70}
-              sizes={isMobile ? '80vw' : '(max-width: 768px) 768px, 70vw'}
+              priority={index === 0}
+              loading={index === 0 ? 'eager' : 'lazy'}
+              sizes="100vw"
             />
           </Box>
         ))}
