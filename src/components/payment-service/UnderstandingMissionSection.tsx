@@ -11,15 +11,8 @@ const UnderstandingMissionSection = ({
   leftPaymentServiceBanner?: Banner
   rightPaymentServiceBanner?: Banner
 }) => {
-  const isMobile = useMobile()
   const { t } = useTranslation('payment-service')
-  // const { data: LeftBanner } = useBanner({
-  //   position: isMobile ? BannerPosition.LeftPaymentServiceMobile : BannerPosition.LeftPaymentServiceDesktop,
-  // })
 
-  // const { data: RightBanner } = useBanner({
-  //   position: isMobile ? BannerPosition.RightPaymentServiceMobile : BannerPosition.RightPaymentServiceDesktop,
-  // })
   return (
     <>
       {/* Client Understanding Section */}
@@ -39,7 +32,6 @@ const UnderstandingMissionSection = ({
                   width={600}
                   height={400}
                   style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
-                  // priority
                   loading="lazy"
                 />
               </Box>
@@ -75,7 +67,6 @@ const UnderstandingMissionSection = ({
                   width={600}
                   height={400}
                   style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
-                  // priority
                   loading="lazy"
                 />
               </Box>

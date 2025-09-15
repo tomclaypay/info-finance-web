@@ -35,10 +35,10 @@ const PaymentServiceBanner = ({
     >
       <NextLink href={paymentServiceBannerData?.url?.[0] || ''}>
         <Image
-          loading="lazy"
           alt="payment-service-banner"
           src={paymentServiceBannerData?.link[0] || ''}
           layout="fill"
+          priority
           objectFit="cover"
           quality={isMobile ? 65 : 70}
         />

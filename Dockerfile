@@ -1,47 +1,35 @@
-# Use a minimal Node.js base image
-FROM node:14-alpine as builder
+# ========= deps =========
+FROM node:20-alpine AS deps
+WORKDIR /app
+# Một số native addon (vd. sharp) cần libc6-compat
+RUN apk add --no-cache libc6-compat
+COPY package.json ./
+# Dùng 1 package manager duy nhất: yarn
+RUN corepack enable && yarn install --frozen-lockfile
 
-# Set working directory
-WORKDIR /usr/src/app
-
-# Copy only the necessary files for installing dependencies
-COPY package.json yarn.lock ./
-# COPY bun.lockb ./
-
-# Install dependencies
-RUN yarn install --frozen-lockfile
-# RUN bun install --frozen-lockfile
-
-# Copy the rest of the application files
+# ========= build =========
+FROM node:20-alpine AS builder
+WORKDIR /app
+ENV NEXT_TELEMETRY_DISABLED=1
+COPY --from=deps /app/node_modules ./node_modules
 COPY . .
+# Yêu cầu next.config.js có: module.exports = { output: 'standalone' }
+RUN yarn build
 
-# Build the Next.js application
-RUN rm -rf .next && npm run build
-# RUN bun run build
+# ========= runner =========
+FROM node:20-alpine AS runner
+WORKDIR /app
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+# Tạo user không phải root
+RUN addgroup -g 1001 -S nodejs && adduser -S nextjs -u 1001
+# Chỉ mang những gì cần để chạy
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/.next/standalone ./
+COPY --from=builder /app/.next/static ./.next/static
+USER nextjs
 
-# Production image
-FROM node:14-alpine
-# FROM oven/bun:latest
-
-# Set working directory
-WORKDIR /usr/src/app
-
-# Copy only necessary files from the builder stage
-COPY --from=builder /usr/src/app/package.json /usr/src/app/yarn.lock ./
-COPY --from=builder /usr/src/app/.next ./.next
-COPY --from=builder /usr/src/app/public ./public
-COPY --from=builder /usr/src/app/next.config.js ./next.config.js
-COPY --from=builder /usr/src/app/next-i18next.config.js ./next-i18next.config.js
-COPY --from=builder /usr/src/app/tsconfig.json ./tsconfig.json
-COPY --from=builder /usr/src/app/.env.local ./.env.local
-
-# Install only production dependencies
-RUN yarn install --production --frozen-lockfile
-# RUN bun install --production --frozen-lockfile
-
-# Expose the port that your Next.js app will run on
 EXPOSE 3000
-
-# Start the Next.js application
-CMD ["yarn", "start"]
-# CMD ["bun", "start"]
+ENV PORT=3000
+# server.js được Next tạo trong .next/standalone
+CMD ["node", "server.js"]
