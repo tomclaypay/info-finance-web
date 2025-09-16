@@ -50,7 +50,7 @@ const HomeSlider = React.memo(({ banners }: HomeSliderProps) => {
   return (
     <Box
       sx={{
-        height: isDesktop ? '520px' : isMobile ? '130px' : 'auto',
+        height: isDesktop ? '520px' : isMobile ? '145px' : 'auto',
         mt: !headerBanner ? 4 : isDesktop ? '220px' : '80px',
       }}
     >
