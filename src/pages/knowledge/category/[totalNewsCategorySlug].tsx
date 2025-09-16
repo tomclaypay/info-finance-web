@@ -1,6 +1,6 @@
 import { MainLayout } from '../../../components/main-layout'
 import Image from 'next/image'
-import { Box, Container, Pagination, PaginationItem, Stack, Typography } from '@mui/material'
+import { Box, Container, Link, Pagination, PaginationItem, Stack, Typography } from '@mui/material'
 import NextLink from 'next/link'
 import { useRouter } from 'next/router'
 import GET_LATEST_ARTICLES from '@app/operations/rests/articles/get-latest-articles'
@@ -64,7 +64,7 @@ const TotalNewsCategorySlug = ({ dataArticlesEachPage, dataArticlesCategories }:
           <Stack direction="row" sx={{ position: 'relative' }}>
             <Stack sx={{ flex: '3' }}>
               <Stack direction="row">
-                <NextLink href="/knowledge" passHref>
+                <Link component={NextLink} href="/knowledge" passHref>
                   <Typography
                     variant="body2"
                     sx={{ color: 'unactive.main', mr: 1, cursor: 'pointer' }}
@@ -72,7 +72,7 @@ const TotalNewsCategorySlug = ({ dataArticlesEachPage, dataArticlesCategories }:
                   >
                     {t('knowledge.title')}
                   </Typography>
-                </NextLink>
+                </Link>
                 <Image
                   src="https://infofinance-dev.s3.ap-southeast-1.amazonaws.com/Caret_Right_042bc78de9.png?updated_at=2022-08-26T03:51:08.034Z"
                   width={16}
@@ -80,7 +80,7 @@ const TotalNewsCategorySlug = ({ dataArticlesEachPage, dataArticlesCategories }:
                   alt="icon"
                   loading="lazy"
                 />
-                <NextLink href={`/knowledge/category/${totalNewsCategorySlug}`} passHref>
+                <Link component={NextLink} href={`/knowledge/category/${totalNewsCategorySlug}`} passHref>
                   <Typography
                     variant="body2"
                     sx={{
@@ -97,12 +97,11 @@ const TotalNewsCategorySlug = ({ dataArticlesEachPage, dataArticlesCategories }:
                   >
                     {`${dataArticlesCategories.articleCategories.data[0]?.attributes?.name}`}
                   </Typography>
-                </NextLink>
+                </Link>
               </Stack>
             </Stack>
           </Stack>
           <Stack spacing={2} sx={{ my: 2 }}>
-            {/*<TotalNewsItem key={article.id} data={article} />*/}
             {dataArticlesEachPage.articles.data.map((article: any) => (
               <CategoryNewsItem key={article?.id} data={article} horizontal={!isMobile} isMobile={isMobile} />
             ))}

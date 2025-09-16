@@ -16,6 +16,7 @@ import { FILTER_KEY, LAYOUT_TYPE } from '@app/constants/exchange'
 import ExchangeMobileCard from '../card/ExchangeMobileCard'
 import BrokerSidebarBanner from '@app/components/banner/BrokerSidebarBanner'
 import TopBrokerBanner from '@app/components/banner/TopBrokerBanner'
+import { Banner } from '@app/interfaces/banner'
 
 interface ExchangesProps {
   dataExchanges?: ExchangeListResponse
@@ -26,6 +27,7 @@ interface ExchangesProps {
   dataGeneralExchange?: GeneralExchangeResponse
   hidden?: boolean
   isFilter?: boolean
+  dataListTopBanner: Banner
 }
 
 const ExchangeFavourites = ({
@@ -110,6 +112,7 @@ const ExchangeContainer = ({
   dataHighlightTradersAllChooseExchanges,
   dataGeneralExchange,
   isFilter,
+  dataListTopBanner,
 }: ExchangesProps) => {
   const { t } = useTranslation(['exchange', 'common'])
   const { locale, query } = useRouter()
@@ -123,13 +126,13 @@ const ExchangeContainer = ({
     <>
       {!isDesktop && (
         <Stack sx={{ mb: 4 }}>
-          <TopBrokerBanner />
+          <TopBrokerBanner dataListTopBanner={dataListTopBanner} />
         </Stack>
       )}
       <Container maxWidth="lg">
         <Stack direction={!isDesktop ? 'column' : 'row'}>
           <Stack spacing={3} width={isDesktop ? '75%' : '100%'}>
-            {isDesktop && <TopBrokerBanner />}
+            {isDesktop && <TopBrokerBanner dataListTopBanner={dataListTopBanner} />}
 
             <Stack spacing={1}>
               <Typography variant="h1" sx={{ fontSize: 32, fontWeight: 700, color: '#0E0E2C' }}>

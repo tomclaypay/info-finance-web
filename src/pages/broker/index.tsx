@@ -6,6 +6,8 @@ import { domain } from '@app/constants/common'
 import { COMPLAINT_STATUS } from '@app/constants/complaint'
 import { FILTER_KEY, SCORE_RANGE } from '@app/constants/exchange'
 import { client } from '@app/contexts/apollo-client-context'
+import { BannerPosition } from '@app/hooks/useBanner'
+import { BannersListResponse } from '@app/interfaces/banner'
 import { ComplaintListResponse } from '@app/interfaces/complaint'
 import { ExchangeListResponse, GeneralExchangeResponse } from '@app/interfaces/exchange'
 import GET_BANNERS from '@app/operations/queries/banners/get-banners'
@@ -22,7 +24,7 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { ChangeEvent, useState } from 'react'
 
-const Exchanges = () => {
+const Exchanges = ({ dataListTopBanner }: { dataListTopBanner: BannersListResponse }) => {
   const router = useRouter()
   const { query } = router
   const isDesktop = useDesktop()
@@ -122,6 +124,7 @@ const Exchanges = () => {
           dataGeneralExchange={dataGeneralExchange}
           hidden={hidden}
           isFilter={scoreRange !== SCORE_RANGE.ALL || keyword !== ''}
+          dataListTopBanner={dataListTopBanner.banners?.[0]}
         />
       </Box>
     </>
@@ -133,9 +136,26 @@ Exchanges.getLayout = (page: any) => <MainLayout>{page}</MainLayout>
 export default Exchanges
 
 export async function getStaticProps({ locale }: GetStaticPropsContext) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale ?? 'vi', ['common', 'exchange', 'seo'])),
-    },
+  try {
+    const { data: dataListTopBanner } = await client.query({
+      query: GET_BANNERS,
+      variables: {
+        positionEqual: BannerPosition.ListTopDesktop,
+        languageEqual: locale === 'en' ? 'en' : 'vn',
+      },
+    })
+    return {
+      props: {
+        dataListTopBanner,
+        ...(await serverSideTranslations(locale ?? 'vi', ['common', 'exchange', 'seo'])),
+      },
+    }
+  } catch (error) {
+    return {
+      props: {
+        dataListTopBanner: null,
+        ...(await serverSideTranslations(locale ?? 'vi', ['common', 'exchange', 'seo'])),
+      },
+    }
   }
 }

@@ -15,9 +15,9 @@ const PaginationNextLink = ({
   rel?: string
 } & PaginationItemProps) => (
   <Link href={href}>
-    <a {...(rel && { rel })} {...props}>
+    <p {...(rel && { rel })} {...props}>
       {children}
-    </a>
+    </p>
   </Link>
 )
 
