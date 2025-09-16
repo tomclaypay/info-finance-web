@@ -28,7 +28,9 @@ import '../../public/assets/css/global.css'
 import '../../public/assets/css/content.css'
 import BannerProvider from '@app/contexts/bannerContext'
 import nextI18NextConfig from '../../next-i18next.config'
+
 import { useFixQuillAnchors } from '@app/hooks/useFixQuillAnchors'
+import { montserrat, roboto, robotoMono, robotoSlab } from '@app/styles/fonts'
 Router.events.on('routeChangeStart', nProgress.start)
 Router.events.on('routeChangeError', nProgress.done)
 Router.events.on('routeChangeComplete', nProgress.done)
@@ -77,6 +79,9 @@ const App = (props: any) => {
         <meta property="og:image:width" content="200" />
         <meta property="og:image:height" content="200" />
       </Head>
+      <div
+        className={`${montserrat.className} ${roboto.className} ${robotoMono.className} ${robotoSlab.className}`}
+      ></div>
       <ApolloClientContextProvider>
         <ApolloClientContext.Consumer>
           {([apolloClient]) => (
@@ -91,6 +96,8 @@ const App = (props: any) => {
                             direction: settings.direction,
                             responsiveFontSizes: settings.responsiveFontSizes,
                             mode: settings.theme,
+                            // ⬇️ thêm fontFamily vào theme builder của bạn (xem bước 3)
+                            fontFamily: `var(--font-montserrat), var(--font-roboto), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif`,
                           })}
                         >
                           <RTL direction={settings.direction}>
