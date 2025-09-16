@@ -28,6 +28,7 @@ import '../../public/assets/css/global.css'
 import '../../public/assets/css/content.css'
 import BannerProvider from '@app/contexts/bannerContext'
 import nextI18NextConfig from '../../next-i18next.config'
+import { useFixQuillAnchors } from '@app/hooks/useFixQuillAnchors'
 Router.events.on('routeChangeStart', nProgress.start)
 Router.events.on('routeChangeError', nProgress.done)
 Router.events.on('routeChangeComplete', nProgress.done)
@@ -39,6 +40,7 @@ LicenseInfo.setLicenseKey(
 )
 
 const App = (props: any) => {
+  useFixQuillAnchors()
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props
 
   const getLayout = Component.getLayout ?? ((page: any) => page)
