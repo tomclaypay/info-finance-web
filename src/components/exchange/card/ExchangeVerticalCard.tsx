@@ -72,7 +72,8 @@ const ExchangeVerticalCard = ({ exchange, small, home }: ExchangeVerticalCardPro
             objectFit="cover"
             objectPosition="center"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 60vw"
-            loading="lazy"
+            priority // ✅ Next sẽ preload + bỏ lazy
+            fetchPriority="high" // ✅ gợi ý trình duyệt ưu tiên tải
           />
         </Box>
 
