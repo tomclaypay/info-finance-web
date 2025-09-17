@@ -79,44 +79,44 @@ const App = (props: any) => {
         <meta property="og:image:width" content="200" />
         <meta property="og:image:height" content="200" />
       </Head>
-      <div
-        className={`${montserrat.className} ${roboto.className} ${robotoMono.className} ${robotoSlab.className}`}
-      ></div>
-      <ApolloClientContextProvider>
-        <ApolloClientContext.Consumer>
-          {([apolloClient]) => (
-            <ApolloProvider client={apolloClient}>
-              <LocalizationProvider dateAdapter={AdapterDateFns}>
-                <AuthProvider>
-                  <SettingsProvider>
-                    <SettingsConsumer>
-                      {({ settings }) => (
-                        <ThemeProvider
-                          theme={createTheme({
-                            direction: settings.direction,
-                            responsiveFontSizes: settings.responsiveFontSizes,
-                            mode: settings.theme,
-                            // ⬇️ thêm fontFamily vào theme builder của bạn (xem bước 3)
-                            fontFamily: `var(--font-montserrat), var(--font-roboto), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif`,
-                          })}
-                        >
-                          <RTL direction={settings.direction}>
-                            <CssBaseline />
-                            <Toaster position="top-center" />
-                            <BannerProvider>
-                              <AuthConsumer>{() => getLayout(<Component {...pageProps} />)}</AuthConsumer>
-                            </BannerProvider>
-                          </RTL>
-                        </ThemeProvider>
-                      )}
-                    </SettingsConsumer>
-                  </SettingsProvider>
-                </AuthProvider>
-              </LocalizationProvider>
-            </ApolloProvider>
-          )}
-        </ApolloClientContext.Consumer>
-      </ApolloClientContextProvider>
+
+      {/* ✅ Bọc toàn bộ app + dùng .variable để khai báo --font-* */}
+      <div className={`${montserrat.variable} ${roboto.variable} ${robotoMono.variable} ${robotoSlab.variable}`}>
+        <ApolloClientContextProvider>
+          <ApolloClientContext.Consumer>
+            {([apolloClient]) => (
+              <ApolloProvider client={apolloClient}>
+                <LocalizationProvider dateAdapter={AdapterDateFns}>
+                  <AuthProvider>
+                    <SettingsProvider>
+                      <SettingsConsumer>
+                        {({ settings }) => (
+                          <ThemeProvider
+                            theme={createTheme({
+                              direction: settings.direction,
+                              responsiveFontSizes: settings.responsiveFontSizes,
+                              mode: settings.theme,
+                              fontFamily: `var(--font-montserrat), var(--font-roboto), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif`,
+                            })}
+                          >
+                            <RTL direction={settings.direction}>
+                              <CssBaseline />
+                              <Toaster position="top-center" />
+                              <BannerProvider>
+                                <AuthConsumer>{() => getLayout(<Component {...pageProps} />)}</AuthConsumer>
+                              </BannerProvider>
+                            </RTL>
+                          </ThemeProvider>
+                        )}
+                      </SettingsConsumer>
+                    </SettingsProvider>
+                  </AuthProvider>
+                </LocalizationProvider>
+              </ApolloProvider>
+            )}
+          </ApolloClientContext.Consumer>
+        </ApolloClientContextProvider>
+      </div>
     </CacheProvider>
   )
 }
