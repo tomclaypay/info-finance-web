@@ -104,6 +104,7 @@ const HomeSlider = React.memo(({ banners }: HomeSliderProps) => {
               style={{ objectFit: 'contain' }}
               priority={index < 2}
               loading={index < 2 ? 'eager' : 'lazy'}
+              fetchpriority={index < 2 ? 'high' : 'auto'}
               quality={isMobile ? 65 : 70}
               sizes={isMobile ? '80vw' : '(max-width: 768px) 768px, 70vw'}
             />
