@@ -25,6 +25,9 @@ const nextConfig = {
       'images.dmca.com',
     ],
     formats: ['image/avif', 'image/webp'],
+    deviceSizes: [360, 414, 640, 768, 920, 1024, 1280, 1536], // thêm 920 cho banner
+    imageSizes: [64, 96, 128, 164, 180, 232, 256, 320, 384], // thumbnail/card
+    minimumCacheTTL: 60 * 60 * 24 * 30,
   },
 
   eslint: { ignoreDuringBuilds: true },
